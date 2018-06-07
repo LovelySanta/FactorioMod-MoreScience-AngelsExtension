@@ -10,6 +10,7 @@
     "base",
     "MoreScience >= 0.1.9",
 
-    "? angelsrefining >= 0.9.11"
+    "? angelsrefining >= 0.9.11",
+    "? angelspetrochem >= 0.7.8"
   ]
 }

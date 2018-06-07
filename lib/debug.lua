@@ -2,7 +2,7 @@
 Debug = {}
 
 Debug.enabled = true
-Debug.returnValue = 10
+Debug.returnValue = 6
 
 function Debug:reseachAllTechnologies()
   force = game.forces["player"]
@@ -34,7 +34,6 @@ function Debug:reseachAllTechnologies()
 
   -- PART 1: vanilla research
   researchTechnology("basic-automation")
-  researchTechnology("basic-automation")
   researchTechnology("automation")
   researchTechnology("logistics")
   researchTechnology("military")
@@ -58,7 +57,17 @@ function Debug:reseachAllTechnologies()
     researchTechnology("water-treatment-2")
   end
 
-  -- PART 3: morescience
+  -- PART 3: angelspetrochem
+  if game.active_mods["angelspetrochem"] then
+    researchTechnology("basic-chemistry")
+    researchTechnology("angels-fluid-control")
+    researchTechnology("angels-coal-processing")
+    researchTechnology("basic-chemistry-2")
+    researchTechnology("angels-nitrogen-processing-1")
+    researchTechnology("angels-sulfur-processing-1")
+  end
+
+  -- PART 4: morescience
   researchTechnology("basic-science-research-1")
   researchTechnology("research-speed-1")
   researchTechnology("bottling-research")
@@ -92,6 +101,24 @@ function Debug:reseachAllTechnologies()
   if game.active_mods["angelsrefining"] then
     researchTechnology("advanced-ore-refining-1")
     researchTechnology("slag-processing-1")
+  end
+
+  -- PART 3: angelspetrochem
+  if game.active_mods["angelspetrochem"] then
+    researchTechnology("chlorine-processing-1")
+    researchTechnology("angels-sulfur-processing-2")
+    researchTechnology("oil-gas-extraction")
+    researchTechnology("angels-flare-stack")
+    researchTechnology("gas-processing")
+    researchTechnology("gas-steam-cracking-1")
+    researchTechnology("angels-oil-processing")
+    researchTechnology("angels-advanced-chemistry-1")
+    researchTechnology("angels-coal-processing-2")
+    researchTechnology("angels-nitrogen-processing-2")
+    researchTechnology("rocket-booster-1")
+    researchTechnology("oil-steam-cracking-1")
+    researchTechnology("angels-electric-boiler")
+    researchTechnology("resin-1")
   end
 
   -- PART 3: morescience
@@ -167,9 +194,24 @@ function Debug:reseachAllTechnologies()
   if game.active_mods["angelsrefining"] then
     researchTechnology("ore-floatation")
     researchTechnology("advanced-ore-refining-2")
+
+    if game.active_mods["angelspetrochem"] then
+      researchTechnology("water-treatment-3")
+    else
+      researchTechnology("angels-explosives")
+    end
   end
 
-  -- PART 3: morescience
+
+  -- PART 3: angelspetrochem
+  if game.active_mods["angelspetrochem"] then
+    researchTechnology("angels-advanced-chemistry-2")
+    researchTechnology("rubber")
+    researchTechnology("angels-explosives-1")
+    researchTechnology("plastic-1")
+  end
+
+  -- PART 4: morescience
   researchTechnology("basic-power-science-research")
 
   if self.returnValue == 4 then
@@ -265,10 +307,24 @@ function Debug:reseachAllTechnologies()
     researchTechnology("thermal-water-extraction")
     researchTechnology("ore-refining")
     researchTechnology("advanced-ore-refining-4")
+
+    if game.active_mods["angelspetrochem"] then
+      researchTechnology("water-treatment-4")
+    end
   end
 
-  -- PART 3: morescience
-  researchTechnology("basic-logistics-science-research")
+  -- PART 3: angelspetrochem
+  if game.active_mods["angelspetrochem"] then
+    researchTechnology("gas-steam-cracking-2")
+    researchTechnology("oil-steam-cracking-2")
+    researchTechnology("angels-advanced-gas-processing")
+    researchTechnology("angels-advanced-chemistry-3")
+
+    researchTechnology("plastic-2")
+  end
+
+  -- PART 4: morescience
+  --researchTechnology("basic-logistics-science-research")
 
   if self.returnValue == 6 then
     return

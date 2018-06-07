@@ -54,10 +54,41 @@ if mods["angelsrefining"] then
   -- add orange science requirements
   addScienceIngredient("ore-floatation", 1, "basic-automation-science-pack")
   addScienceIngredient("advanced-ore-refining-2", 1, "basic-automation-science-pack")
+  addScienceIngredient("advanced-ore-refining-3", 1, "basic-automation-science-pack")
+  addScienceIngredient("ore-leaching", 1, "basic-automation-science-pack")
+  addScienceIngredient("slag-processing-2", 1, "basic-automation-science-pack")
+  addScienceIngredient("thermal-water-extraction", 1, "basic-automation-science-pack")
+  addScienceIngredient("ore-refining", 1, "basic-automation-science-pack")
 
   -- add blue science requirements
   addPrerequisiteTechnology("thermal-water-extraction", "basic-science-research-2")
   addPrerequisiteTechnology("slag-processing-2", "basic-science-research-2")
   addPrerequisiteTechnology("ore-leaching", "basic-science-research-2")
+
+
+
+
+--------------------------------------------------------------------------------
+----- Angels PetroChem                                                     -----
+--------------------------------------------------------------------------------
+  if mods["angelspetrochem"] then
+    -- add green science requirements
+    addPrerequisiteTechnology("water-treatment-3", "basic-science-research-1")
+
+    -- adapt fluid handling
+    addPrerequisiteTechnology("angels-fluid-control", "fluid-handling")
+    removePrerequisiteTechnology("fluid-handling-2", "fluid-handling")
+    addPrerequisiteTechnology("fluid-handling-2", "angels-fluid-control")
+    data.raw["technology"]["fluid-handling-2"].icon = data.raw["technology"]["angels-fluid-control"].icon
+    data.raw["technology"]["fluid-handling-3"].icon = data.raw["technology"]["angels-fluid-control"].icon
+    data.raw["technology"]["fluid-handling-2"].icon_size = data.raw["technology"]["angels-fluid-control"].icon_size
+    data.raw["technology"]["fluid-handling-3"].icon_size = data.raw["technology"]["angels-fluid-control"].icon_size
+
+    -- add orange science requirements
+    addPrerequisiteTechnology("ore-floatation", "basic-automation-science-research")
+    addPrerequisiteTechnology("water-treatment-3", "basic-automation-science-research")
+    addScienceIngredient("water-treatment-3", 1, "basic-automation-science-pack")
+    addScienceIngredient("water-treatment-4", 1, "basic-automation-science-pack")
+  end
 
 end
