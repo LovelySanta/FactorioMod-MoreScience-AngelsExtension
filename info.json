@@ -1,0 +1,15 @@
+{
+  "name": "MoreScience-AngelsExtension",
+  "version": "0.1.0",
+  "factorio_version": "0.16",
+  "title": "More Science - Angels Extension",
+  "author": "lovely_santa",
+  "homepage": "https://mods.factorio.com/mod/MoreScience",
+  "description": "An extension to angels mods: Change the way science is beiing made.",
+  "dependencies": [
+    "base",
+    "MoreScience >= 0.1.9",
+
+    "? angelsrefining >= 0.9.11"
+  ]
+}
