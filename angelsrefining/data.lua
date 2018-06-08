@@ -68,6 +68,7 @@ if mods["angelsrefining"] then
 
 
 
+
 --------------------------------------------------------------------------------
 ----- Angels PetroChem                                                     -----
 --------------------------------------------------------------------------------
@@ -89,6 +90,38 @@ if mods["angelsrefining"] then
     addPrerequisiteTechnology("water-treatment-3", "basic-automation-science-research")
     addScienceIngredient("water-treatment-3", 1, "basic-automation-science-pack")
     addScienceIngredient("water-treatment-4", 1, "basic-automation-science-pack")
+  end
+
+
+
+
+
+--------------------------------------------------------------------------------
+----- Angels Smelting                                                      -----
+--------------------------------------------------------------------------------
+  if mods["angelssmelting"] then
+    -- move sand over to solid-sand
+    if data.raw["item"]["solid-sand"] and data.raw["item"]["sand"] then
+      -- delete sand
+      removeRecipeUnlock("bottling-research", "sand")
+      data.raw["recipe"]["sand"] = nil
+      data.raw["item"]["sand"] = nil
+
+      -- use solid-sand instead
+      editRecipeIngredient("glass", "sand", "solid-sand", 1)
+      addPrerequisiteTechnology("bottling-research", "water-washing-1")
+      editRecipeIngredient("tree-seed-creator", "sand", "solid-sand", 1)
+      editRecipeIngredient("wood-plantation", "sand", "solid-sand", 1)
+
+      for index,result in pairs(data.raw["recipe"]["tree-seed-creator"].results) do
+        if result.name == "sand" then
+          data.raw["recipe"]["tree-seed-creator"].results[index].name = "solid-sand"
+          break
+        end
+      end
+    end
+
+    
   end
 
 end

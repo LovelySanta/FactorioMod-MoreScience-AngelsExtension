@@ -6,6 +6,7 @@ TechTreeCleanup = {}
 
 function TechTreeCleanup:getAllPrerequisites(technologyName)
   if self.prereqcache[technologyName] then return self.prereqcache[technologyName] end
+  if not data.raw["technology"][technologyName] then return nil end
   if not data.raw["technology"][technologyName].prerequisites then return nil end
 
   local prerequisites = util.table.deepcopy(data.raw["technology"][technologyName].prerequisites)
@@ -38,6 +39,7 @@ function TechTreeCleanup:removeRedundantPrerequisites(technologyName)
               for k,v in pairs(data.raw["technology"][technologyName].prerequisites) do
                 if v == prerequisite then
                   table.remove(data.raw["technology"][technologyName].prerequisites, k)
+                  log("TechTreeCleanup: Removing prerequisite '" .. prerequisite .. "' from technology '" .. technologyName .. "'.")
                 end
               end
             end

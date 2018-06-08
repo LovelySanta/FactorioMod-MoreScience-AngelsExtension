@@ -108,6 +108,8 @@ if mods["angelspetrochem"] then
   ------------------------------------------------------------------------------
   addPrerequisiteTechnology("angels-advanced-gas-processing", "basic-science-research-2")
   addPrerequisiteTechnology("angels-advanced-oil-processing", "basic-science-research-2")
+  addPrerequisiteTechnology("oil-steam-cracking-2", "basic-science-research-2")
+  addPrerequisiteTechnology("gas-steam-cracking-2", "basic-science-research-2")
   addPrerequisiteTechnology("chlorine-processing-2", "basic-science-research-2")
 
 
