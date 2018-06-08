@@ -2,7 +2,7 @@
 Debug = {}
 
 Debug.enabled = true
-Debug.returnValue = 6
+Debug.returnValue = 10
 
 function Debug:reseachAllTechnologies()
   force = game.forces["player"]
@@ -197,8 +197,6 @@ function Debug:reseachAllTechnologies()
 
     if game.active_mods["angelspetrochem"] then
       researchTechnology("water-treatment-3")
-    else
-      researchTechnology("angels-explosives")
     end
   end
 
@@ -319,12 +317,22 @@ function Debug:reseachAllTechnologies()
     researchTechnology("oil-steam-cracking-2")
     researchTechnology("angels-advanced-gas-processing")
     researchTechnology("angels-advanced-chemistry-3")
+    researchTechnology("resin-2")
 
     researchTechnology("plastic-2")
+    researchTechnology("angels-explosives-2")
+    researchTechnology("angels-advanced-oil-processing")
+    researchTechnology("angels-coal-cracking")
+    researchTechnology("angels-nitrogen-processing-3")
+    researchTechnology("rocket-booster-2")
+    researchTechnology("chlorine-processing-2")
+    researchTechnology("chlorine-processing-3")
+    researchTechnology("sodium-processing")
+    researchTechnology("gas-synthesis")
   end
 
   -- PART 4: morescience
-  --researchTechnology("basic-logistics-science-research")
+  researchTechnology("basic-logistics-science-research")
 
   if self.returnValue == 6 then
     return
@@ -401,7 +409,7 @@ function Debug:reseachAllTechnologies()
   researchTechnology("nuclear-fuel-reprocessing")
 
   -- PART 2: morescience
-  researchTechnology("advanced-science-research-2")
+  --researchTechnology("advanced-science-research-2")
 
   if self.returnValue == 8 then
     return
@@ -461,7 +469,17 @@ function Debug:reseachAllTechnologies()
   researchTechnology("cannon-shell-speed-4")
   researchTechnology("cannon-shell-speed-5")
 
-  -- PART 2: morescience
+  -- PART 2: angelspetrochem
+  if game.active_mods["angelspetrochem"] then
+    researchTechnology("angels-advanced-chemistry-4")
+    researchTechnology("resin-3")
+
+    researchTechnology("plastic-3")
+    researchTechnology("angels-nitrogen-processing-4")
+    researchTechnology("angels-rocket-fuel")
+  end
+
+  -- PART 3: morescience
   researchTechnology("rocket")
   researchTechnology("rocketpart-hull-component")
   researchTechnology("rocketpart-ion-thruster")

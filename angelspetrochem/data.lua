@@ -81,6 +81,7 @@ if mods["angelspetrochem"] then
   addScienceIngredient("angels-advanced-oil-processing", 1, "basic-automation-science-pack")
 
   addScienceIngredient("chlorine-processing-2", 1, "basic-automation-science-pack")
+  addScienceIngredient("chlorine-processing-3", 1, "basic-automation-science-pack")
   addScienceIngredient("resin-2", 1, "basic-automation-science-pack")
   addScienceIngredient("resin-3", 1, "basic-automation-science-pack")
   addScienceIngredient("flammables", 1, "basic-automation-science-pack")
@@ -94,7 +95,11 @@ if mods["angelspetrochem"] then
   addScienceIngredient("plastic-2", 1, "basic-automation-science-pack")
   addScienceIngredient("plastic-3", 1, "basic-automation-science-pack")
   addScienceIngredient("rubber", 1, "basic-automation-science-pack")
-
+  addScienceIngredient("angels-coal-cracking", 1, "basic-automation-science-pack")
+  addScienceIngredient("angels-nitrogen-processing-3", 1, "basic-automation-science-pack")
+  addScienceIngredient("angels-nitrogen-processing-4", 1, "basic-automation-science-pack")
+  addScienceIngredient("rocket-booster-2", 1, "basic-automation-science-pack")
+  addScienceIngredient("gas-synthesis", 1, "basic-automation-science-pack")
 
 
 
@@ -105,4 +110,27 @@ if mods["angelspetrochem"] then
   addPrerequisiteTechnology("angels-advanced-oil-processing", "basic-science-research-2")
   addPrerequisiteTechnology("chlorine-processing-2", "basic-science-research-2")
 
+
+
+
+
+  -- add yellow science requirements -------------------------------------------
+  ------------------------------------------------------------------------------
+  addPrerequisiteTechnology("angels-advanced-chemistry-4", "advanced-science-research-2")
+  addPrerequisiteTechnology("resin-3", "advanced-science-research-2")
+
+
+
+
+
+  -- add rocket science requirements -------------------------------------------
+  ------------------------------------------------------------------------------
+  if data.raw["technology"]["angels-rocket-fuel"] then
+    removeRecipeUnlock("rocket", "rocket-fuel")
+    removePrerequisiteTechnology("rocket-silo", "angels-rocket-fuel")
+    addPrerequisiteTechnology("rocketpart-fusion-reactor", "angels-rocket-fuel")
+    addPrerequisiteTechnology("rocketpart-ion-thruster", "angels-rocket-fuel")
+    data.raw["technology"]["angels-rocket-fuel"].icon = data.raw["technology"]["rocket"].icon
+    data.raw["technology"]["angels-rocket-fuel"].icon_size = data.raw["technology"]["rocket"].icon_size
+  end
 end
