@@ -1,3 +1,6 @@
+
+
+
 function removePrerequisiteTechnology(technologyName, prerequisiteToRemove)
   if data.raw["technology"][technologyName] and data.raw["technology"][technologyName].prerequisites then
     for index, prerequisite in pairs(data.raw["technology"][technologyName].prerequisites) do
@@ -26,6 +29,25 @@ function addPrerequisiteTechnology(technologyName, prerequisiteToAdd)
       end
     end
     table.insert(data.raw["technology"][technologyName].prerequisites, prerequisiteToAdd)
+  end
+end
+
+
+
+function movePrerequisiteTechnology(technologyName, oldPrerequisite, newPrerequisite)
+  if data.raw["technology"][technologyName] and data.raw["technology"][technologyName].prerequisites then
+    local moved = false
+    for index, prerequisite in pairs(data.raw["technology"][technologyName].prerequisites) do
+      if prerequisite == oldPrerequisite then
+        data.raw["technology"][technologyName].prerequisites[index] = newPrerequisite
+        moved = true
+        break
+      end
+    end
+    if not moved then
+      log("WARNING: Could not change '" .. oldPrerequisite .. "' in research '" .. technologyName .. "' to '" .. newPrerequisite .. "'. Adding it instead.")
+      addPrerequisiteTechnology(technologyName, newPrerequisite)
+    end
   end
 end
 
@@ -95,6 +117,8 @@ end
 
 
 local function recipePrototypeCleanup(recipeName)
+  if not data.raw["recipe"][recipeName] then return end
+
   -- clean up recipe becose other mods...
   if data.raw["recipe"][recipeName].normal or data.raw["recipe"][recipeName].expensive then
     data.raw["recipe"][recipeName].ingredients = nil
@@ -105,7 +129,7 @@ end
 
 
 function disableRecipe(recipe)
-   if not data.raw.recipe[recipe] then return end
+   if not data.raw["recipe"][recipe] then return end
    recipePrototypeCleanup(recipe)
 
    if data.raw["recipe"][recipe].normal then
@@ -252,6 +276,10 @@ end
 
 function setRecipeEngergyRequired(recipeName, energyRequired)
   recipePrototypeCleanup(recipeName)
+
+  if data.raw["recipe"][recipeName].ingredients then
+    data.raw["recipe"][recipeName].energy_required = energyRequired
+  end
 
   if data.raw["recipe"][recipeName].normal then
     data.raw["recipe"][recipeName].normal.energy_required = energyRequired

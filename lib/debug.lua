@@ -2,7 +2,7 @@
 Debug = {}
 
 Debug.enabled = true
-Debug.returnValue = 5
+Debug.returnValue = -1
 
 function Debug:reseachAllTechnologies()
   force = game.forces["player"]
@@ -157,9 +157,9 @@ function Debug:reseachAllTechnologies()
     researchTechnology("angels-steel-smelting-1")
     researchTechnology("angels-titanium-smelting-1")
     researchTechnology("angels-zinc-smelting-1")
-    researchTechnology("angels-solder-smelting-2")
     researchTechnology("angels-aluminium-smelting-1")
     researchTechnology("angels-glass-smelting-1")
+    researchTechnology("angels-solder-smelting-2")
   end
 
   if Debug.returnValue == 2 then
@@ -392,11 +392,43 @@ function Debug:reseachAllTechnologies()
     researchTechnology("gas-synthesis")
   end
 
+  -- PART 4: angelssmelting
+  if game.active_mods["angelssmelting"] then
+    researchTechnology("angels-metallurgy-3")
+    researchTechnology("ore-processing-2")
+    researchTechnology("strand-casting-2")
+    researchTechnology("powder-metallurgy-2")
+    researchTechnology("angels-coolant-2")
+
+    researchTechnology("angels-tungsten-smelting-1")
+    researchTechnology("angels-steel-smelting-2")
+    researchTechnology("angels-chrome-smelting-2")
+    researchTechnology("angels-cobalt-smelting-2")
+    researchTechnology("angels-manganese-smelting-2")
+    researchTechnology("angels-nickel-smelting-2")
+    researchTechnology("angels-lead-smelting-2")
+    researchTechnology("angels-zinc-smelting-2")
+    researchTechnology("angels-aluminium-smelting-2")
+    researchTechnology("angels-gold-smelting-2")
+    researchTechnology("angels-platinum-smelting-2")
+    researchTechnology("angels-silver-smelting-2")
+    researchTechnology("angels-titanium-smelting-2")
+    researchTechnology("angels-silicon-smelting-2")
+    researchTechnology("angels-solder-smelting-3")
+    researchTechnology("angels-copper-smelting-3")
+    researchTechnology("angels-iron-smelting-3")
+    researchTechnology("angels-lead-smelting-3")
+    researchTechnology("angels-tin-smelting-3")
+    researchTechnology("angels-glass-smelting-3")
+    researchTechnology("angels-stone-smelting-3")
+  end
+
+
   if self.returnValue == 6 then
     return
   end
 
-  -- PART 4: morescience
+  -- PART 5: morescience
   researchTechnology("basic-logistics-science-research")
 
 
@@ -471,11 +503,18 @@ function Debug:reseachAllTechnologies()
   researchTechnology("worker-robots-speed-4")
   researchTechnology("nuclear-fuel-reprocessing")
 
+  -- PART 2: angelssmelting
+  if game.active_mods["angelssmelting"] then
+    researchTechnology("ore-processing-3")
+    researchTechnology("strand-casting-3")
+    researchTechnology("powder-metallurgy-3")
+  end
+
   if self.returnValue == 8 then
     return
   end
 
-  -- PART 2: morescience
+  -- PART 3: morescience
   researchTechnology("advanced-science-research-2")
 
 
@@ -542,17 +581,53 @@ function Debug:reseachAllTechnologies()
     researchTechnology("angels-rocket-fuel")
   end
 
+  -- PART 3: angelssmelting
+  if game.active_mods["angelssmelting"] then
+    researchTechnology("angels-metallurgy-4")
+    researchTechnology("ore-processing-4")
+    researchTechnology("ore-processing-5")
+    researchTechnology("strand-casting-4")
+    researchTechnology("powder-metallurgy-4")
+
+    researchTechnology("angels-tungsten-smelting-2")
+    researchTechnology("angels-steel-smelting-3")
+    researchTechnology("angels-aluminium-smelting-3")
+    researchTechnology("angels-titanium-smelting-3")
+    researchTechnology("angels-chrome-smelting-3")
+    researchTechnology("angels-cobalt-smelting-3")
+    researchTechnology("angels-gold-smelting-3")
+    researchTechnology("angels-manganese-smelting-3")
+    researchTechnology("angels-nickel-smelting-3")
+    researchTechnology("angels-platinum-smelting-3")
+    researchTechnology("angels-silicon-smelting-3")
+    researchTechnology("angels-silver-smelting-3")
+    researchTechnology("angels-tungsten-smelting-3")
+    researchTechnology("angels-zinc-smelting-3")
+  end
+
   if self.returnValue == 9 then
     return
   end
 
-  -- PART 3: morescience
+  -- PART 4: morescience
   researchTechnology("rocket")
   researchTechnology("rocketpart-hull-component")
   researchTechnology("rocketpart-ion-thruster")
   researchTechnology("rocketpart-fusion-reactor")
   researchTechnology("rocketpart-shield-array")
   researchTechnology("rocket-silo")
+
+
+
+--------------------------------------------------------------------------------
+----- Infinite science research                                            -----
+--------------------------------------------------------------------------------
+
+  if self.returnValue == 10 then
+    return
+  end
+
+  -- PART 1: infinite science research
   researchTechnology("infinite-science-research")
   researchTechnology("infused-basic-science-research-1")
   researchTechnology("infused-basic-science-research-2")
@@ -565,16 +640,6 @@ function Debug:reseachAllTechnologies()
   researchTechnology("infused-basic-logistics-science-research")
 
 
-
---------------------------------------------------------------------------------
------ Infinite science research                                            -----
---------------------------------------------------------------------------------
-
-  -- nothing new here, just the infinite sciences
-
-  if self.returnValue == 10 then
-    return
-  end
 
 
 end
