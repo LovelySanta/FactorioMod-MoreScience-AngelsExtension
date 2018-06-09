@@ -38,11 +38,9 @@ if mods["bobtech"] then
       end
     end
 
-
   end
 
-  log(serpent.block(data.raw["lab"]))
-  log(serpent.block(data.raw["recipe"]["lab-mk2"]))
-
+  -- let rocket depend on advanced research
+  addPrerequisiteTechnology("rocket", "advanced-research")
 
 end

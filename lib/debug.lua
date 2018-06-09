@@ -2,7 +2,7 @@
 Debug = {}
 
 Debug.enabled = true
-Debug.returnValue = -1
+Debug.returnValue = 5
 
 function Debug:reseachAllTechnologies()
   force = game.forces["player"]
@@ -58,6 +58,9 @@ function Debug:reseachAllTechnologies()
     if game.active_mods["angelssmelting"] then
       researchTechnology("water-washing-1")
     end
+    if game.active_mods["bobplates"] then
+      researchTechnology("ore-advanced-crushing")
+    end
   end
 
   -- PART 3: angelspetrochem
@@ -79,13 +82,24 @@ function Debug:reseachAllTechnologies()
     researchTechnology("angels-copper-smelting-1")
     researchTechnology("angels-iron-smelting-1")
     researchTechnology("angels-stone-smelting-1")
+    if game.active_mods["bobplates"] then
+      researchTechnology("angels-bronze-smelting-1")
+    end
+  end
+
+  -- PART 5: bobplates
+  if game.active_mods["bobplates"] then
+    researchTechnology("electrolysis-1")
+    researchTechnology("chemical-processing-1")
+    researchTechnology("water-bore-1")
+    researchTechnology("alloy-processing-1")
   end
 
   if Debug.returnValue == 1 then
     return
   end
 
-  -- PART 5: morescience
+  -- PART 6: morescience
   researchTechnology("basic-science-research-1")
   researchTechnology("research-speed-1")
   researchTechnology("bottling-research")
@@ -120,6 +134,9 @@ function Debug:reseachAllTechnologies()
     if game.active_mods["angelssmelting"] then
       researchTechnology("water-washing-2")
     end
+    if game.active_mods["bobplates"] then
+      researchTechnology("geode-processing-1")
+    end
   end
 
   -- PART 3: angelspetrochem
@@ -151,7 +168,6 @@ function Debug:reseachAllTechnologies()
     researchTechnology("angels-gold-smelting-1")
     researchTechnology("angels-manganese-smelting-1")
     researchTechnology("angels-nickel-smelting-1")
-    researchTechnology("angels-platinum-smelting-1")
     researchTechnology("angels-silicon-smelting-1")
     researchTechnology("angels-silver-smelting-1")
     researchTechnology("angels-steel-smelting-1")
@@ -160,13 +176,40 @@ function Debug:reseachAllTechnologies()
     researchTechnology("angels-aluminium-smelting-1")
     researchTechnology("angels-glass-smelting-1")
     researchTechnology("angels-solder-smelting-2")
+    if game.active_mods["bobplates"] then
+      researchTechnology("angels-brass-smelting-1")
+      researchTechnology("angels-cobalt-steel-smelting-1")
+      researchTechnology("angels-electrum-smelting-1")
+      researchTechnology("angels-gunmetal-smelting-1")
+      researchTechnology("angels-invar-smelting-1")
+      researchTechnology("angels-bronze-smelting-2")
+    else
+      researchTechnology("angels-platinum-smelting-1")
+    end
+  end
+
+  -- PART 5: bobplates
+  if game.active_mods["bobplates"] then
+    researchTechnology("electrolysis-2")
+    researchTechnology("chemical-processing-2")
+    researchTechnology("water-bore-1")
+    researchTechnology("alloy-processing-1")
+    researchTechnology("lithium-processing")
+    researchTechnology("zinc-processing")
+    researchTechnology("silicon-processing")
+    researchTechnology("cobalt-processing")
+    researchTechnology("grinding")
+    researchTechnology("gem-processing-1")
+    if game.active_mods["angelsrefining"] then
+      researchTechnology("ore-powderizer")
+    end
   end
 
   if Debug.returnValue == 2 then
     return
   end
 
-  -- PART 3: morescience
+  -- PART 6: morescience
   researchTechnology("basic-military-science-research")
 
 
@@ -239,9 +282,11 @@ function Debug:reseachAllTechnologies()
   if game.active_mods["angelsrefining"] then
     researchTechnology("ore-floatation")
     researchTechnology("advanced-ore-refining-2")
-
     if game.active_mods["angelspetrochem"] then
       researchTechnology("water-treatment-3")
+    end
+    if game.active_mods["bobplates"] then
+      researchTechnology("geode-processing-2")
     end
   end
 
@@ -266,11 +311,18 @@ function Debug:reseachAllTechnologies()
     researchTechnology("angels-tin-smelting-2")
   end
 
+  -- PART 5: bobplates
+  if game.active_mods["bobplates"] then
+    researchTechnology("mixing-steel-furnace")
+    researchTechnology("water-bore-2")
+    researchTechnology("polishing")
+  end
+
   if self.returnValue == 4 then
     return
   end
 
-  -- PART 4: morescience
+  -- PART 6: morescience
   researchTechnology("basic-power-science-research")
 
 
@@ -510,11 +562,16 @@ function Debug:reseachAllTechnologies()
     researchTechnology("powder-metallurgy-3")
   end
 
+  -- PART 3: bobtech
+  if game.active_mods["bobtech"] then
+    researchTechnology("advanced-research")
+  end
+
   if self.returnValue == 8 then
     return
   end
 
-  -- PART 3: morescience
+  -- PART 4: morescience
   researchTechnology("advanced-science-research-2")
 
 

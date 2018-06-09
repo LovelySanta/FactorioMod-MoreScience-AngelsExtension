@@ -236,7 +236,7 @@ if mods["angelssmelting"] then
 
   -- smelting 3:
   movePrerequisiteTechnology("angels-silver-smelting-3", "ore-processing-2", "ore-processing-4")
-  addScienceIngredient("angels-silver-smelting-2", 1, "basic-automation-science-pack")
+  addScienceIngredient("angels-silver-smelting-3", 1, "basic-automation-science-pack")
 
 
 

@@ -15,9 +15,5 @@ if mods["angelsrefining"] then
       addRecipeUnlock("fluid-handling-2", effect.recipe)
     end
   end
-
-  -- add stuff angel deleted again
-  if mods["angelspetrochem"] then
-    
-  end
+  
 end

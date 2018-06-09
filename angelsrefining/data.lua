@@ -121,7 +121,32 @@ if mods["angelsrefining"] then
       end
     end
 
-    
+
   end
+
+
+
+
+
+--------------------------------------------------------------------------------
+----- bobs plates                                                          -----
+--------------------------------------------------------------------------------
+  if mods["bobplates"] then
+    -- add green science prerequisites
+    addPrerequisiteTechnology("geode-processing-1", "basic-science-research-1")
+
+    -- add orange science prerequisites
+    addPrerequisiteTechnology("geode-processing-2", "basic-automation-science-research")
+    addScienceIngredient("geode-processing-2", 1, "basic-automation-science-pack")
+
+  end
+
+
+
+
+
+
+
+
 
 end

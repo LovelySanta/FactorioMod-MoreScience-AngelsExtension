@@ -10,9 +10,9 @@ function TechTreeCleanup:getAllPrerequisites(technologyName)
 
   if self.prereqcache[technologyName] then return self.prereqcache[technologyName] end
 
-  -- first clean up the prerequisites
-  self:removeRedundantPrerequisites(technologyName)
-
+  -- temporary till we find all prerequisites (this is to prevent loop, stack overflow)
+  self.prereqcache[technologyName] = util.table.deepcopy(data.raw["technology"][technologyName].prerequisites)
+  
   -- get all none-reduntant prerequisites now
   local prerequisites = util.table.deepcopy(data.raw["technology"][technologyName].prerequisites)
   for _,prerequisiteName in pairs(data.raw["technology"][technologyName].prerequisites) do
