@@ -103,6 +103,11 @@ function Debug:reseachAllTechnologies()
     researchTechnology("bio-swamp-farming")
   end
 
+  -- PART 6: angelswarehouses
+  if game.active_mods["angelsaddons-warehouses"] then
+    researchTechnology("angels-warehouses")
+  end
+
   -- PART 6: bobplates
   if game.active_mods["bobplates"] then
     researchTechnology("electrolysis-1")
@@ -768,6 +773,12 @@ function Debug:reseachAllTechnologies()
     end
   end
 
+  -- PART 4: angels warehouses
+  if game.active_mods["angelsaddons-warehouses"] then
+    researchTechnology("angels-logistic-warehouses")
+  end
+
+  -- PART 5: bobplates
   if game.active_mods["bobplates"] then
     researchTechnology("battery-3")
     researchTechnology("advanced-electronics-3")

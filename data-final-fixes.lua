@@ -8,6 +8,7 @@ require("angelsrefining.data-final-fixes")
 --require("angelspetrochem.data-final-fixes")
 --require("angelssmelting.data-final-fixes")
 --require("angelsbioprocessing.data-final-fixes")
+--require("angelsaddons-warehouses.data-final-fixes")
 
 
 
