@@ -138,6 +138,8 @@ if mods["angelsrefining"] then
     -- add orange science prerequisites
     addPrerequisiteTechnology("geode-processing-2", "basic-automation-science-research")
     addScienceIngredient("geode-processing-2", 1, "basic-automation-science-pack")
+    addScienceIngredient("ore-advanced-floatation", 1, "basic-automation-science-pack")
+    addScienceIngredient("ore-electro-whinning-cell", 1, "basic-automation-science-pack")
 
   end
 

@@ -320,7 +320,7 @@ if mods["angelssmelting"] then
 
 
 
-  --SOLDER (ally)
+  --SOLDER (alloy)
   -- smelting 1:
 
   -- smelting 2:
