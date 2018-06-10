@@ -7,6 +7,7 @@ if mods["angelsrefining"] then
     ["storage-tank"] = true,
     ["empty-barrel"] = true,
     ["pipe-to-ground"] = true,
+    ["empty-canister"] = true,
   }
 
   for _,effect in pairs(util.table.deepcopy(data.raw["technology"]["fluid-handling"].effects)) do
@@ -15,5 +16,5 @@ if mods["angelsrefining"] then
       addRecipeUnlock("fluid-handling-2", effect.recipe)
     end
   end
-  
+
 end

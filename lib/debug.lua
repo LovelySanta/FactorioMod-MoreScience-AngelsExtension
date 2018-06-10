@@ -95,6 +95,12 @@ function Debug:reseachAllTechnologies()
     researchTechnology("alloy-processing-1")
   end
 
+  -- PART 6: bobinserters
+  if game.active_mods["bobinserters"] then
+    researchTechnology("long-inserters-1")
+    researchTechnology("near-inserters")
+  end
+
   if Debug.returnValue == 1 then
     return
   end
@@ -543,6 +549,11 @@ function Debug:reseachAllTechnologies()
   researchTechnology("cannon-shell-speed-2")
   researchTechnology("cannon-shell-speed-3")
 
+  -- PART 2: bobinserters
+  if game.active_mods["bobinserters"] then
+    researchTechnology("more-inserters-1")
+  end
+
   if self.returnValue == 7 then
     return
   end
@@ -596,11 +607,17 @@ function Debug:reseachAllTechnologies()
     researchTechnology("battery-3")
   end
 
+  -- PART 5: bobinserters
+  if game.active_mods["bobinserters"] then
+    researchTechnology("more-inserters-2")
+    researchTechnology("long-inserters-2")
+  end
+
   if self.returnValue == 8 then
     return
   end
 
-  -- PART 4: morescience
+  -- PART 6: morescience
   researchTechnology("advanced-science-research-2")
 
 
