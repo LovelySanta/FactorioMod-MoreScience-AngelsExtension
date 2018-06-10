@@ -1,4 +1,3 @@
-require "lib/prototyping"
 require "util"
 
 if mods["angelsrefining"] then
@@ -12,8 +11,8 @@ if mods["angelsrefining"] then
 
   for _,effect in pairs(util.table.deepcopy(data.raw["technology"]["fluid-handling"].effects)) do
     if effect.type == "unlock-recipe" and not unlocksNotToMove[effect.recipe] then
-      removeRecipeUnlock("fluid-handling", effect.recipe)
-      addRecipeUnlock("fluid-handling-2", effect.recipe)
+      MoreScience.lib.technology.removeRecipeUnlock("fluid-handling", effect.recipe)
+      MoreScience.lib.technology.addRecipeUnlock("fluid-handling-2", effect.recipe)
     end
   end
 

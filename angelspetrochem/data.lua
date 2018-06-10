@@ -6,15 +6,15 @@ if mods["angelspetrochem"] then
 
   -- add green science requirements -------------------------------------------
   ------------------------------------------------------------------------------
-  addPrerequisiteTechnology("angels-sulfur-processing-2", "basic-science-research-1")
-  addPrerequisiteTechnology("chlorine-processing-1", "basic-science-research-1")
-  addPrerequisiteTechnology("oil-gas-extraction", "basic-science-research-1")
+  MoreScience.lib.technology.addPrerequisite("angels-sulfur-processing-2", "basic-science-research-1")
+  MoreScience.lib.technology.addPrerequisite("chlorine-processing-1", "basic-science-research-1")
+  MoreScience.lib.technology.addPrerequisite("oil-gas-extraction", "basic-science-research-1")
 
   -- replace chemical plant with angelschemical plants
-  removeRecipeUnlock("basic-science-research-1", "chemical-plant")
-  removePrerequisiteTechnology("basic-science-research-1", "steel-processing")
-  addPrerequisiteTechnology("basic-science-research-1", "basic-chemistry-2")
-  addPrerequisiteTechnology("basic-chemistry-2", "steel-processing")
+  MoreScience.lib.technology.removeRecipeUnlock("basic-science-research-1", "chemical-plant")
+  MoreScience.lib.technology.removePrerequisite("basic-science-research-1", "steel-processing")
+  MoreScience.lib.technology.addPrerequisite("basic-science-research-1", "basic-chemistry-2")
+  MoreScience.lib.technology.addPrerequisite("basic-chemistry-2", "steel-processing")
 
   -- add new recipe category to only use the regular chemical plants
   data:extend({
@@ -70,47 +70,47 @@ if mods["angelspetrochem"] then
 
   -- add orange science requirements -------------------------------------------
   ------------------------------------------------------------------------------
-  addScienceIngredient("angels-advanced-chemistry-2", 1, "basic-automation-science-pack")
-  addScienceIngredient("angels-advanced-chemistry-3", 1, "basic-automation-science-pack")
-  addScienceIngredient("angels-advanced-chemistry-4", 1, "basic-automation-science-pack")
-  addPrerequisiteTechnology("angels-advanced-chemistry-2", "basic-automation-science-research")
-  addPrerequisiteTechnology("angels-advanced-chemistry-3", "basic-automation-science-research")
-  addScienceIngredient("gas-steam-cracking-2", 1, "basic-automation-science-pack")
-  addScienceIngredient("oil-steam-cracking-2", 1, "basic-automation-science-pack")
-  addScienceIngredient("angels-advanced-gas-processing", 1, "basic-automation-science-pack")
-  addScienceIngredient("angels-advanced-oil-processing", 1, "basic-automation-science-pack")
+  MoreScience.lib.technology.addIngredient("angels-advanced-chemistry-2", 1, "basic-automation-science-pack")
+  MoreScience.lib.technology.addIngredient("angels-advanced-chemistry-3", 1, "basic-automation-science-pack")
+  MoreScience.lib.technology.addIngredient("angels-advanced-chemistry-4", 1, "basic-automation-science-pack")
+  MoreScience.lib.technology.addPrerequisite("angels-advanced-chemistry-2", "basic-automation-science-research")
+  MoreScience.lib.technology.addPrerequisite("angels-advanced-chemistry-3", "basic-automation-science-research")
+  MoreScience.lib.technology.addIngredient("gas-steam-cracking-2", 1, "basic-automation-science-pack")
+  MoreScience.lib.technology.addIngredient("oil-steam-cracking-2", 1, "basic-automation-science-pack")
+  MoreScience.lib.technology.addIngredient("angels-advanced-gas-processing", 1, "basic-automation-science-pack")
+  MoreScience.lib.technology.addIngredient("angels-advanced-oil-processing", 1, "basic-automation-science-pack")
 
-  addScienceIngredient("chlorine-processing-2", 1, "basic-automation-science-pack")
-  addScienceIngredient("chlorine-processing-3", 1, "basic-automation-science-pack")
-  addScienceIngredient("resin-2", 1, "basic-automation-science-pack")
-  addScienceIngredient("resin-3", 1, "basic-automation-science-pack")
-  addScienceIngredient("flammables", 1, "basic-automation-science-pack")
-  addPrerequisiteTechnology("flammables", "basic-automation-science-research")
-  addPrerequisiteTechnology("explosives", "flammables")
-  addPrerequisiteTechnology("battery", "basic-automation-science-research")
-  addPrerequisiteTechnology("battery", "oil-processing")
-  addPrerequisiteTechnology("plastics", "basic-automation-science-research")
-  addPrerequisiteTechnology("plastic-1", "plastics")
-  addScienceIngredient("plastic-1", 1, "basic-automation-science-pack")
-  addScienceIngredient("plastic-2", 1, "basic-automation-science-pack")
-  addScienceIngredient("plastic-3", 1, "basic-automation-science-pack")
-  addScienceIngredient("rubber", 1, "basic-automation-science-pack")
-  addScienceIngredient("angels-coal-cracking", 1, "basic-automation-science-pack")
-  addScienceIngredient("angels-nitrogen-processing-3", 1, "basic-automation-science-pack")
-  addScienceIngredient("angels-nitrogen-processing-4", 1, "basic-automation-science-pack")
-  addScienceIngredient("rocket-booster-2", 1, "basic-automation-science-pack")
-  addScienceIngredient("gas-synthesis", 1, "basic-automation-science-pack")
+  MoreScience.lib.technology.addIngredient("chlorine-processing-2", 1, "basic-automation-science-pack")
+  MoreScience.lib.technology.addIngredient("chlorine-processing-3", 1, "basic-automation-science-pack")
+  MoreScience.lib.technology.addIngredient("resin-2", 1, "basic-automation-science-pack")
+  MoreScience.lib.technology.addIngredient("resin-3", 1, "basic-automation-science-pack")
+  MoreScience.lib.technology.addIngredient("flammables", 1, "basic-automation-science-pack")
+  MoreScience.lib.technology.addPrerequisite("flammables", "basic-automation-science-research")
+  MoreScience.lib.technology.addPrerequisite("explosives", "flammables")
+  MoreScience.lib.technology.addPrerequisite("battery", "basic-automation-science-research")
+  MoreScience.lib.technology.addPrerequisite("battery", "oil-processing")
+  MoreScience.lib.technology.addPrerequisite("plastics", "basic-automation-science-research")
+  MoreScience.lib.technology.addPrerequisite("plastic-1", "plastics")
+  MoreScience.lib.technology.addIngredient("plastic-1", 1, "basic-automation-science-pack")
+  MoreScience.lib.technology.addIngredient("plastic-2", 1, "basic-automation-science-pack")
+  MoreScience.lib.technology.addIngredient("plastic-3", 1, "basic-automation-science-pack")
+  MoreScience.lib.technology.addIngredient("rubber", 1, "basic-automation-science-pack")
+  MoreScience.lib.technology.addIngredient("angels-coal-cracking", 1, "basic-automation-science-pack")
+  MoreScience.lib.technology.addIngredient("angels-nitrogen-processing-3", 1, "basic-automation-science-pack")
+  MoreScience.lib.technology.addIngredient("angels-nitrogen-processing-4", 1, "basic-automation-science-pack")
+  MoreScience.lib.technology.addIngredient("rocket-booster-2", 1, "basic-automation-science-pack")
+  MoreScience.lib.technology.addIngredient("gas-synthesis", 1, "basic-automation-science-pack")
 
 
 
 
   -- add blue science requirements ---------------------------------------------
   ------------------------------------------------------------------------------
-  addPrerequisiteTechnology("angels-advanced-gas-processing", "basic-science-research-2")
-  addPrerequisiteTechnology("angels-advanced-oil-processing", "basic-science-research-2")
-  addPrerequisiteTechnology("oil-steam-cracking-2", "basic-science-research-2")
-  addPrerequisiteTechnology("gas-steam-cracking-2", "basic-science-research-2")
-  addPrerequisiteTechnology("chlorine-processing-2", "basic-science-research-2")
+  MoreScience.lib.technology.addPrerequisite("angels-advanced-gas-processing", "basic-science-research-2")
+  MoreScience.lib.technology.addPrerequisite("angels-advanced-oil-processing", "basic-science-research-2")
+  MoreScience.lib.technology.addPrerequisite("oil-steam-cracking-2", "basic-science-research-2")
+  MoreScience.lib.technology.addPrerequisite("gas-steam-cracking-2", "basic-science-research-2")
+  MoreScience.lib.technology.addPrerequisite("chlorine-processing-2", "basic-science-research-2")
 
 
 
@@ -118,8 +118,8 @@ if mods["angelspetrochem"] then
 
   -- add yellow science requirements -------------------------------------------
   ------------------------------------------------------------------------------
-  addPrerequisiteTechnology("angels-advanced-chemistry-4", "advanced-science-research-2")
-  addPrerequisiteTechnology("resin-3", "advanced-science-research-2")
+  MoreScience.lib.technology.addPrerequisite("angels-advanced-chemistry-4", "advanced-science-research-2")
+  MoreScience.lib.technology.addPrerequisite("resin-3", "advanced-science-research-2")
 
 
 
@@ -128,10 +128,10 @@ if mods["angelspetrochem"] then
   -- add rocket science requirements -------------------------------------------
   ------------------------------------------------------------------------------
   if data.raw["technology"]["angels-rocket-fuel"] then
-    removeRecipeUnlock("rocket", "rocket-fuel")
-    removePrerequisiteTechnology("rocket-silo", "angels-rocket-fuel")
-    addPrerequisiteTechnology("rocketpart-fusion-reactor", "angels-rocket-fuel")
-    addPrerequisiteTechnology("rocketpart-ion-thruster", "angels-rocket-fuel")
+    MoreScience.lib.technology.removeRecipeUnlock("rocket", "rocket-fuel")
+    MoreScience.lib.technology.removePrerequisite("rocket-silo", "angels-rocket-fuel")
+    MoreScience.lib.technology.addPrerequisite("rocketpart-fusion-reactor", "angels-rocket-fuel")
+    MoreScience.lib.technology.addPrerequisite("rocketpart-ion-thruster", "angels-rocket-fuel")
     data.raw["technology"]["angels-rocket-fuel"].icon = data.raw["technology"]["rocket"].icon
     data.raw["technology"]["angels-rocket-fuel"].icon_size = data.raw["technology"]["rocket"].icon_size
   end

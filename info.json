@@ -9,13 +9,14 @@
   "dependencies": [
     "MoreScience >= 0.1.9",
 
-    "? angelsrefining >= 0.9.11",
-    "? angelspetrochem >= 0.7.8",
-    "? angelssmelting >= 0.4.3",
+    "? angelsrefining",
+    "? angelspetrochem",
+    "? angelssmelting",
+    "? angelsbioprocessing",
 
-    "? bobenemies >= 0.16.0",
-    "? bobtech >= 0.16.5",
-    "? bobplates >= 0.16.3",
-    "? bobinserters >= 0.16.8"
+    "? bobenemies",
+    "? bobtech",
+    "? bobplates",
+    "? bobinserters"
   ]
 }

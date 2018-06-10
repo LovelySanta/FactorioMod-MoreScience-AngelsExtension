@@ -87,7 +87,23 @@ function Debug:reseachAllTechnologies()
     end
   end
 
-  -- PART 5: bobplates
+  -- PART 5: angelsbioprocessing
+  if game.active_mods["angelsbioprocessing"] then
+    researchTechnology("bio-processing-green")
+    researchTechnology("bio-processing-brown")
+    researchTechnology("bio-wood-processing")
+    researchTechnology("bio-wood-processing-2")
+    researchTechnology("gardens")
+    researchTechnology("bio-farm")
+    researchTechnology("bio-aboretum-1")
+    researchTechnology("bio-paper-1")
+
+    researchTechnology("bio-desert-farming")
+    researchTechnology("bio-temperate-farming")
+    researchTechnology("bio-swamp-farming")
+  end
+
+  -- PART 6: bobplates
   if game.active_mods["bobplates"] then
     researchTechnology("electrolysis-1")
     researchTechnology("chemical-processing-1")
@@ -95,7 +111,7 @@ function Debug:reseachAllTechnologies()
     researchTechnology("alloy-processing-1")
   end
 
-  -- PART 6: bobinserters
+  -- PART 7: bobinserters
   if game.active_mods["bobinserters"] then
     researchTechnology("long-inserters-1")
     researchTechnology("near-inserters")
@@ -194,7 +210,23 @@ function Debug:reseachAllTechnologies()
     end
   end
 
-  -- PART 5: bobplates
+  -- PART 5: angelsbioprocessing
+  if game.active_mods["angelsbioprocessing"] then
+    researchTechnology("bio-fermentation")
+    researchTechnology("bio-nutrient-paste")
+    researchTechnology("bio-desert-farm")
+    researchTechnology("bio-temperate-farm")
+    researchTechnology("bio-swamp-farm")
+    researchTechnology("bio-pressing")
+    researchTechnology("bio-aboretum-2")
+    researchTechnology("bio-paper-2")
+    researchTechnology("bio-processing-blue")
+    researchTechnology("bio-wood-processing-3")
+    researchTechnology("bio-plastic-1")
+    researchTechnology("bio-processing-paste")
+  end
+
+  -- PART 6: bobplates
   if game.active_mods["bobplates"] then
     researchTechnology("electrolysis-2")
     researchTechnology("chemical-processing-2")
@@ -215,7 +247,7 @@ function Debug:reseachAllTechnologies()
     return
   end
 
-  -- PART 6: morescience
+  -- PART 7: morescience
   researchTechnology("basic-military-science-research")
 
 
@@ -317,7 +349,15 @@ function Debug:reseachAllTechnologies()
     researchTechnology("angels-tin-smelting-2")
   end
 
-  -- PART 5: bobplates
+  -- PART 5: angelsbioprocessing
+  if game.active_mods["angelsbioprocessing"] then
+    researchTechnology("bio-aboretum-temperate-1")
+    researchTechnology("bio-aboretum-swamp-1")
+    researchTechnology("bio-aboretum-desert-1")
+  end
+
+
+  -- PART 6: bobplates
   if game.active_mods["bobplates"] then
     researchTechnology("mixing-steel-furnace")
     researchTechnology("water-bore-2")
@@ -328,7 +368,7 @@ function Debug:reseachAllTechnologies()
     return
   end
 
-  -- PART 6: morescience
+  -- PART 7: morescience
   researchTechnology("basic-power-science-research")
 
 
@@ -492,7 +532,22 @@ function Debug:reseachAllTechnologies()
     end
   end
 
-  -- PART 5: bobplates
+  -- PART 5: angelsbioprocessing
+  if game.active_mods["angelsbioprocessing"] then
+    researchTechnology("bio-plastic-2")
+    researchTechnology("bio-aboretum-3")
+    researchTechnology("bio-paper-3")
+    researchTechnology("bio-processing-red")
+    researchTechnology("bio-aboretum-temperate-2")
+    researchTechnology("bio-aboretum-temperate-3")
+    researchTechnology("bio-aboretum-swamp-2")
+    researchTechnology("bio-aboretum-swamp-3")
+    researchTechnology("bio-aboretum-desert-2")
+    researchTechnology("bio-aboretum-desert-3")
+    researchTechnology("bio-processing-alien")
+  end
+
+  -- PART 6: bobplates
   if game.active_mods["bobplates"] then
     researchTechnology("ceramics")
     researchTechnology("titanium-processing")
@@ -508,7 +563,7 @@ function Debug:reseachAllTechnologies()
     return
   end
 
-  -- PART 6: morescience
+  -- PART 7: morescience
   researchTechnology("basic-logistics-science-research")
 
 

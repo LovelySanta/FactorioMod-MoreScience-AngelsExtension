@@ -1,4 +1,3 @@
-require "lib/prototyping"
 
 
 
@@ -13,10 +12,10 @@ if mods["angelssmelting"] then
     -- smelting 1:
 
     -- smelting 2:
-    addPrerequisiteTechnology("angels-brass-smelting-2", "angels-metallurgy-3")
+    MoreScience.lib.technology.addPrerequisite("angels-brass-smelting-2", "angels-metallurgy-3")
 
     -- smelting 3:
-    addPrerequisiteTechnology("angels-brass-smelting-3", "angels-metallurgy-4")
+    MoreScience.lib.technology.addPrerequisite("angels-brass-smelting-3", "angels-metallurgy-4")
 
 
 
@@ -26,7 +25,7 @@ if mods["angelssmelting"] then
     -- smelting 2:
 
     -- smelting 3:
-    addPrerequisiteTechnology("angels-bronze-smelting-3", "angels-metallurgy-3")
+    MoreScience.lib.technology.addPrerequisite("angels-bronze-smelting-3", "angels-metallurgy-3")
 
 
 
@@ -34,7 +33,7 @@ if mods["angelssmelting"] then
     -- smelting 1:
 
     -- smelting 2:
-    addPrerequisiteTechnology("angels-nitinol-smelting-1", "angels-metallurgy-3")
+    MoreScience.lib.technology.addPrerequisite("angels-nitinol-smelting-1", "angels-metallurgy-3")
 
     -- smelting 3:
 

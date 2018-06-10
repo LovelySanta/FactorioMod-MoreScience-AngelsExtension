@@ -1,6 +1,3 @@
-require "lib/prototyping"
-
-
 
 --------------------------------------------------------------------------------
 ----- Bob technology                                                       -----
@@ -13,13 +10,13 @@ if mods["bobtech"] then
   if data.raw["tool"]["logistic-science-pack"] then
     data.raw["tool"]["logistic-science-pack"] = nil
     data.raw["recipe"]["logistic-science-pack"] = nil
-    removeRecipeUnlock("logistics-3", "logistic-science-pack")
+    MoreScience.lib.technology.removeRecipeUnlock("logistics-3", "logistic-science-pack")
 
     -- bobs lab-2 is obsolete now, so we just remove that too
     data.raw["lab"]["lab-2"] = nil
     data.raw["item"]["lab-2"] = nil
     data.raw["recipe"]["lab-2"] = nil
-    removeRecipeUnlock("advanced-research", "lab-2")
+    MoreScience.lib.technology.removeRecipeUnlock("advanced-research", "lab-2")
 
     -- remove science pack from the lab
     for inputIndex, inputName in pairs(data.raw["lab"]["lab"].inputs) do
@@ -41,6 +38,6 @@ if mods["bobtech"] then
   end
 
   -- let rocket depend on advanced research
-  addPrerequisiteTechnology("rocket", "advanced-research")
+  MoreScience.lib.technology.addPrerequisite("rocket", "advanced-research")
 
 end
