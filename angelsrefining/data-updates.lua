@@ -2,17 +2,14 @@ require "util"
 
 if mods["angelsrefining"] then
   -- move all barreling recipes over to fluid-handling-2
-  local unlocksNotToMove = {
-    ["storage-tank"] = true,
-    ["empty-barrel"] = true,
-    ["pipe-to-ground"] = true,
-    ["empty-canister"] = true,
-  }
-
   for _,effect in pairs(util.table.deepcopy(data.raw["technology"]["fluid-handling"].effects)) do
-    if effect.type == "unlock-recipe" and not unlocksNotToMove[effect.recipe] then
-      MoreScience.lib.technology.removeRecipeUnlock("fluid-handling", effect.recipe)
-      MoreScience.lib.technology.addRecipeUnlock("fluid-handling-2", effect.recipe)
+    if effect.type == "unlock-recipe" then
+      -- analyse recipe name to check for barreling recipes
+      local effectNameParts = MoreScience.lib.util.stringSplit(effect.recipe, "-")
+      if (#effectNameParts > 2 and effectNameParts[#effectNameParts] =="barrel") and (effectNameParts[1] == "fill" or effectNameParts[1] =="empty") then
+        MoreScience.lib.technology.removeRecipeUnlock("fluid-handling", effect.recipe)
+        MoreScience.lib.technology.addRecipeUnlock("fluid-handling-2", effect.recipe)
+      end
     end
   end
 

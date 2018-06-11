@@ -135,4 +135,5 @@ if mods["angelspetrochem"] then
     data.raw["technology"]["angels-rocket-fuel"].icon = data.raw["technology"]["rocket"].icon
     data.raw["technology"]["angels-rocket-fuel"].icon_size = data.raw["technology"]["rocket"].icon_size
   end
+
 end

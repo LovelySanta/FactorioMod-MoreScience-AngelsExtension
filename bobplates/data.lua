@@ -21,6 +21,7 @@ if mods["bobplates"] then
   MoreScience.lib.technology.addIngredient("gem-processing-2", 1, "basic-automation-science-pack")
   MoreScience.lib.technology.addIngredient("battery-2", 1, "basic-automation-science-pack")
   MoreScience.lib.technology.addIngredient("battery-3", 1, "basic-automation-science-pack")
+  --MoreScience.lib.technology.addIngredient("titanium-processing", 1, "basic-automation-science-pack")
 
   -- add blue science requirements
   MoreScience.lib.technology.addPrerequisite("gem-processing-2", "basic-science-research-2")

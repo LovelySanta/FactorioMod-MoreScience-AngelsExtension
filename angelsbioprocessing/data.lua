@@ -1,4 +1,3 @@
-require "lib/util"
 require "util"
 
 
@@ -18,7 +17,7 @@ if mods["angelsbioprocessing"] then
     "tree-arboretum-3",
   }) do
     if data.raw["recipe"][recipeName] then
-      local recipeIndex = stringSplit(recipeName, "-")[3]
+      local recipeIndex = MoreScience.lib.util.stringSplit(recipeName, "-")[3]
 
       -- create the tree
       local treeItem =
