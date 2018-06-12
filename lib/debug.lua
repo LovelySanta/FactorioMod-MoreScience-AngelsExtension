@@ -116,13 +116,18 @@ function Debug:reseachAllTechnologies()
     researchTechnology("alloy-processing-1")
   end
 
-  -- PART 7: bobinserters
+  -- PART 7: bobassembly
+  if game.active_mods["bobassembly"] then
+    researchTechnology("electronics-machine-1")
+  end
+
+  -- PART 8: bobinserters
   if game.active_mods["bobinserters"] then
     researchTechnology("long-inserters-1")
     researchTechnology("near-inserters")
   end
 
-  -- PART 8: bobmining
+  -- PART 9: bobmining
   if game.active_mods["bobmining"] then
     researchTechnology("bob-drills-1")
     researchTechnology("bob-area-drills-1")
@@ -132,7 +137,7 @@ function Debug:reseachAllTechnologies()
     return
   end
 
-  -- PART 9: morescience
+  -- PART 10: morescience
   researchTechnology("basic-science-research-1")
   researchTechnology("research-speed-1")
   researchTechnology("bottling-research")
@@ -386,14 +391,21 @@ function Debug:reseachAllTechnologies()
     researchTechnology("polishing")
   end
 
-  --PART 7: boblogistics
+  -- PART 7: bobassembly
+  if game.active_mods["bobassembly"] then
+    researchTechnology("automation-3")
+    researchTechnology("electronics-machine-2")
+    researchTechnology("electrolyser-2")
+  end
+
+  --PART 8: boblogistics
   if game.active_mods["boblogistics"] then
     researchTechnology("bob-fluid-handling-2")
     researchTechnology("bob-railway-2")
     researchTechnology("inserter-stack-size-bonus-1")
   end
 
-  -- PART 8: bobmining
+  -- PART 9: bobmining
   if game.active_mods["bobmining"] then
     researchTechnology("bob-drills-2")
     researchTechnology("bob-area-drills-2")
@@ -404,7 +416,7 @@ function Debug:reseachAllTechnologies()
     return
   end
 
-  -- PART 9: morescience
+  -- PART 10: morescience
   researchTechnology("basic-power-science-research")
 
 
@@ -595,7 +607,18 @@ function Debug:reseachAllTechnologies()
     researchTechnology("gem-processing-2")
   end
 
-  --PART 7: boblogistics
+  -- PART 7: bobassembly
+  if game.active_mods["bobassembly"] then
+    researchTechnology("automation-4")
+    researchTechnology("electronics-machine-3")
+    researchTechnology("electrolyser-3")
+    researchTechnology("chemical-plant-2")
+    researchTechnology("chemical-plant-3")
+    researchTechnology("advanced-material-processing-3")
+    researchTechnology("multi-purpose-furnace-1")
+  end
+
+  --PART 8: boblogistics
   if game.active_mods["boblogistics"] then
     researchTechnology("bob-fluid-handling-3")
     researchTechnology("bob-railway-3")
@@ -606,7 +629,7 @@ function Debug:reseachAllTechnologies()
     researchTechnology("toolbelt-2")
   end
 
-  -- PART 8: bobmining
+  -- PART 9: bobmining
   if game.active_mods["bobmining"] then
     researchTechnology("bob-drills-3")
     researchTechnology("bob-area-drills-3")
@@ -617,7 +640,7 @@ function Debug:reseachAllTechnologies()
     return
   end
 
-  -- PART 9: morescience
+  -- PART 10: morescience
   researchTechnology("basic-logistics-science-research")
 
 
@@ -737,7 +760,12 @@ function Debug:reseachAllTechnologies()
     researchTechnology("long-inserters-2")
   end
 
-  --PART 6: boblogistics
+  -- PART 6: bobassembly
+  if game.active_mods["bobassembly"] then
+    researchTechnology("automation-5")
+  end
+
+  --PART 7: boblogistics
   if game.active_mods["boblogistics"] then
     researchTechnology("bob-fluid-wagon-3")
     researchTechnology("bob-armoured-fluid-wagon-2")
@@ -761,7 +789,7 @@ function Debug:reseachAllTechnologies()
     return
   end
 
-  -- PART 7: morescience
+  -- PART 8: morescience
   researchTechnology("advanced-science-research-2")
 
 
@@ -864,7 +892,16 @@ function Debug:reseachAllTechnologies()
     researchTechnology("water-bore-4")
   end
 
-  --PART 5: boblogistics
+  -- PART 5: bobassembly
+  if game.active_mods["bobassembly"] then
+    researchTechnology("automation-6")
+    researchTechnology("multi-purpose-furnace-2")
+    researchTechnology("electrolyser-4")
+    researchTechnology("chemical-plant-4")
+    researchTechnology("advanced-material-processing-4")
+  end
+
+  --PART 6: boblogistics
   if game.active_mods["boblogistics"] then
     researchTechnology("bob-robotics-4")
     researchTechnology("bob-robo-modular-4")
@@ -877,12 +914,12 @@ function Debug:reseachAllTechnologies()
     researchTechnology("logistic-system-3")
   end
 
-  -- PART 6: angels warehouses
+  -- PART 7: angels warehouses
   if game.active_mods["angelsaddons-warehouses"] then
     researchTechnology("angels-logistic-warehouses")
   end
 
-  -- PART 7: bobmining
+  -- PART 8: bobmining
   if game.active_mods["bobmining"] then
     researchTechnology("bob-drills-4")
     researchTechnology("bob-area-drills-4")
@@ -893,7 +930,7 @@ function Debug:reseachAllTechnologies()
     return
   end
 
-  -- PART 8: morescience
+  -- PART 9: morescience
   researchTechnology("rocket")
   researchTechnology("rocketpart-hull-component")
   researchTechnology("rocketpart-ion-thruster")

@@ -127,6 +127,7 @@ if mods["boblogistics"] then
   MoreScience.lib.technology.addIngredient("bob-robots-4", 1, "military-science-pack")
   MoreScience.lib.technology.addIngredient("bob-robots-4", 1, "basic-power-science-pack")
   MoreScience.lib.technology.addIngredient("bob-robots-4", 1, "space-science-pack")
+  MoreScience.lib.technology.changeCount("bob-robots-4", 25000)
   MoreScience.infusedScience.changeToInfusedSciencePack("bob-robots-4", {"military-science-pack","production-science-pack","high-tech-science-pack","basic-logistics-science-pack"})
 
   MoreScience.lib.technology.addIngredient("worker-robots-storage-4", 1, "basic-logistics-science-pack")
