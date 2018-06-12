@@ -1,8 +1,8 @@
 
 Debug = {}
 
-Debug.enabled = false
-Debug.returnValue = -1
+Debug.enabled = true
+Debug.returnValue = 11
 
 function Debug:reseachAllTechnologies()
   force = game.forces["player"]
@@ -122,11 +122,17 @@ function Debug:reseachAllTechnologies()
     researchTechnology("near-inserters")
   end
 
+  -- PART 8: bobmining
+  if game.active_mods["bobmining"] then
+    researchTechnology("bob-drills-1")
+    researchTechnology("bob-area-drills-1")
+  end
+
   if Debug.returnValue == 1 then
     return
   end
 
-  -- PART 6: morescience
+  -- PART 9: morescience
   researchTechnology("basic-science-research-1")
   researchTechnology("research-speed-1")
   researchTechnology("bottling-research")
@@ -255,11 +261,16 @@ function Debug:reseachAllTechnologies()
     researchTechnology("toolbelt")
   end
 
+  -- PART 8: bobmining
+  if game.active_mods["bobmining"] then
+    researchTechnology("bob-pumpjacks-1")
+  end
+
   if Debug.returnValue == 2 then
     return
   end
 
-  -- PART 8: morescience
+  -- PART 9: morescience
   researchTechnology("basic-military-science-research")
 
 
@@ -382,11 +393,18 @@ function Debug:reseachAllTechnologies()
     researchTechnology("inserter-stack-size-bonus-1")
   end
 
+  -- PART 8: bobmining
+  if game.active_mods["bobmining"] then
+    researchTechnology("bob-drills-2")
+    researchTechnology("bob-area-drills-2")
+    researchTechnology("bob-pumpjacks-2")
+  end
+
   if self.returnValue == 4 then
     return
   end
 
-  -- PART 8: morescience
+  -- PART 9: morescience
   researchTechnology("basic-power-science-research")
 
 
@@ -588,11 +606,18 @@ function Debug:reseachAllTechnologies()
     researchTechnology("toolbelt-2")
   end
 
+  -- PART 8: bobmining
+  if game.active_mods["bobmining"] then
+    researchTechnology("bob-drills-3")
+    researchTechnology("bob-area-drills-3")
+    researchTechnology("bob-pumpjacks-3")
+  end
+
   if self.returnValue == 6 then
     return
   end
 
-  -- PART 8: morescience
+  -- PART 9: morescience
   researchTechnology("basic-logistics-science-research")
 
 
@@ -857,11 +882,18 @@ function Debug:reseachAllTechnologies()
     researchTechnology("angels-logistic-warehouses")
   end
 
+  -- PART 7: bobmining
+  if game.active_mods["bobmining"] then
+    researchTechnology("bob-drills-4")
+    researchTechnology("bob-area-drills-4")
+    researchTechnology("bob-pumpjacks-4")
+  end
+
   if self.returnValue == 9 then
     return
   end
 
-  -- PART 7: morescience
+  -- PART 8: morescience
   researchTechnology("rocket")
   researchTechnology("rocketpart-hull-component")
   researchTechnology("rocketpart-ion-thruster")
