@@ -5,6 +5,7 @@ require("bobplates.data")
 require("bobinserters.data")
 require("boblogistics.data")
 require("bobmining.data")
+require("bobelectronics.data")
 
 require("angelsrefining.data")
 require("angelspetrochem.data")
