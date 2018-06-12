@@ -143,5 +143,29 @@ if mods["boblogistics"] then
   MoreScience.lib.technology.addPrerequisite("logistic-system-2", "advanced-science-research-1")
   MoreScience.lib.technology.addPrerequisite("logistic-system-3", "advanced-science-research-2")
 
+  if mods["angelspetrochem"] then
+    -- move storage tanks over to angels barreling
+    if data.raw["item"]["angels-storage-tank-3"] then
+      for level = 2, 4, 1 do
+        if data.raw["item"]["storage-tank-" .. level] then
+          data.raw["item"]["storage-tank-" .. level].subgroup = data.raw["item"]["angels-storage-tank-3"].subgroup
+        end
+      end
+    end
+
+    -- change the order
+    for tankId  = 1, 3, 1 do
+      if data.raw["item"]["angels-storage-tank-" .. tankId] then
+        data.raw["item"]["angels-storage-tank-" .. tankId].order = "a" .. tankId .. string.format("-a[%s]", data.raw["item"]["angels-storage-tank-" .. tankId].name)
+      end
+    end
+    for level = 1, 4, 1 do
+      if level == 1 then
+        data.raw["item"]["storage-tank"].order = "b" .. level .. string.format("-a[%s]", data.raw["item"]["storage-tank"].name)
+      elseif data.raw["item"]["storage-tank-" .. level] then
+        data.raw["item"]["storage-tank-" .. level].order = "b" .. level .. string.format("-b[%s]", data.raw["item"]["storage-tank-" .. level].name)
+      end
+    end
+  end
 
 end

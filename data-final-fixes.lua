@@ -3,10 +3,10 @@
 --require("bobtech.data-final-fixes")
 --require("bobplates.data-final-fixes")
 --require("bobinserters.data-final-fixes")
---require("boblogistics.data-final-fixes")
+require("boblogistics.data-final-fixes")
 --require("bobmining.data-final-fixes")
 --require("bobelectronics.data-final-fixes")
---require("bobassembly.data-final-fixes")
+require("bobassembly.data-final-fixes")
 
 require("angelsrefining.data-final-fixes")
 --require("angelspetrochem.data-final-fixes")

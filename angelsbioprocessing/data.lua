@@ -10,6 +10,13 @@ if mods["angelsbioprocessing"] then
   -- disable wood production as this is part of angel now
   data.raw["technology"]["wood-plantation"].enabled = false
 
+  -- fuel category for the organic trees
+  local fuelCategory =
+  {
+    type = "fuel-category",
+    name = "organic",
+  }
+
   -- use the handsaw to cut trees to raw wood, different trees give different amount of wood
   for _,recipeName in pairs({
     "tree-arboretum-1",
@@ -42,6 +49,8 @@ if mods["angelsbioprocessing"] then
         },
         place_result = nil,
         stack_size = 1,
+        fuel_value = (1 + recipeIndex * 3) * 10 .. "MJ",
+        fuel_category = fuelCategory.name,
       }
 
       -- create recipe to convert tree into wood
@@ -90,6 +99,7 @@ if mods["angelsbioprocessing"] then
       data:extend({
         treeItem,
         treeRecipe,
+        fuelCategory,
       })
     end
   end
@@ -97,6 +107,57 @@ if mods["angelsbioprocessing"] then
   -- add the handsaw recipe
   MoreScience.lib.technology.addRecipeUnlock("bio-aboretum-1", "hand-saw")
   MoreScience.lib.technology.addPrerequisite("bio-aboretum-1", "steel-processing")
+  MoreScience.lib.technology.addPrerequisite("bio-aboretum-1", "bio-farm")
+
+  if data.raw["tool"]["token-bio"] then
+    -- create the lab for the bio token
+    local bioLabItem = util.table.deepcopy(data.raw["item"]["lab-burner"])
+    local bioLabRecipe = util.table.deepcopy(data.raw["recipe"]["lab-burner"])
+    local bioLabEntity = util.table.deepcopy(data.raw["lab"]["lab-burner"])
+
+    bioLabItem.name = "lab-bio"
+    bioLabEntity.name = bioLabItem.name
+    bioLabRecipe.name = bioLabItem.name
+
+    bioLabItem.localised_name = {"item-name.lab-bio", {[1] = "item-name.lab"}}
+    bioLabEntity.localised_name = util.table.deepcopy(bioLabItem.localised_name)
+
+    bioLabEntity.minable.result = bioLabItem.name
+    bioLabItem.place_result = bioLabEntity.name
+    bioLabRecipe.result = bioLabItem.name
+
+    data.raw["item"]["lab-burner"].order = bioLabItem.order .. "-a[regular]"
+    bioLabItem.order = bioLabItem.order .. "-b[bio]"
+
+    bioLabRecipe.enabled = false
+    bioLabRecipe.energy_required = bioLabRecipe.energy_required * 10
+    bioLabEntity.energy_source.fuel_category = fuelCategory.name
+
+    bioLabRecipe.ingredients =
+    {
+      {"lab-burner", 1},
+      {"token-bio", 5},
+      {"organic-tree-1", 1},
+    }
+    bioLabEntity.inputs =
+    {
+      "token-bio",
+      "science-pack-1",
+      "science-pack-2",
+    }
+
+    data:extend({
+      bioLabItem,
+      bioLabRecipe,
+      bioLabEntity,
+    })
+
+    -- add researches requiring the bio token
+    MoreScience.lib.technology.addRecipeUnlock("bio-aboretum-1", bioLabRecipe.name)
+    MoreScience.lib.technology.addPrerequisite("bio-desert-farming", "bio-aboretum-1")
+    MoreScience.lib.technology.addPrerequisite("bio-temperate-farming", "bio-aboretum-1")
+    MoreScience.lib.technology.addPrerequisite("bio-swamp-farming", "bio-aboretum-1")
+  end
 
   -- bottling requires wood production now
   MoreScience.lib.technology.addPrerequisite("bottling-research", "bio-aboretum-1")
