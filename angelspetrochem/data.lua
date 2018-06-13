@@ -4,7 +4,7 @@
 --------------------------------------------------------------------------------
 if mods["angelspetrochem"] then
 
-  -- add green science requirements -------------------------------------------
+  -- add green science requirements --------------------------------------------
   ------------------------------------------------------------------------------
   MoreScience.lib.technology.addPrerequisite("angels-sulfur-processing-2", "basic-science-research-1")
   MoreScience.lib.technology.addPrerequisite("chlorine-processing-1", "basic-science-research-1")

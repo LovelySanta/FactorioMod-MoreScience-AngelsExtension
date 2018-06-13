@@ -120,7 +120,7 @@ if mods["angelsbioprocessing"] then
       bioLabEntity = util.table.deepcopy(data.raw["lab"]["lab-2"])
 
       bioLabItem.subgroup = data.raw["item"]["lab-burner"].subgroup
-      bioLabItem.order = data.raw["item"]["lab-burner"].order
+      bioLabItem.order = data.raw["item"]["lab-burner"].order .. "-b[bio]"
       bioLabEntity.energy_source = util.table.deepcopy(data.raw["lab"]["lab-burner"].energy_source)
       bioLabEntity.energy_usage = data.raw["lab"]["lab-burner"].energy_usage
     end
@@ -135,9 +135,6 @@ if mods["angelsbioprocessing"] then
     bioLabEntity.minable.result = bioLabItem.name
     bioLabItem.place_result = bioLabEntity.name
     bioLabRecipe.result = bioLabItem.name
-
-    data.raw["item"]["lab-burner"].order = bioLabItem.order .. "-a[regular]"
-    bioLabItem.order = bioLabItem.order .. "-b[bio]"
 
     bioLabRecipe.enabled = false
     bioLabRecipe.energy_required = bioLabRecipe.energy_required * 10

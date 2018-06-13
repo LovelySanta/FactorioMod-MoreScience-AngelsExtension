@@ -8,6 +8,7 @@ require("bobmining.data")
 require("bobelectronics.data")
 require("bobassembly.data")
 require("bobmodules.data")
+require("bobpower.data")
 
 require("angelsrefining.data")
 require("angelspetrochem.data")

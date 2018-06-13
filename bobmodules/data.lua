@@ -26,4 +26,9 @@ if mods["bobmodules"] then
   MoreScience.lib.technology.addPrerequisite("speed-module-7", "infinite-science-research")
   MoreScience.lib.technology.addPrerequisite("effectivity-module-7", "infinite-science-research")
   MoreScience.lib.technology.addPrerequisite("productivity-module-7", "infinite-science-research")
+
+  -- move the lab
+  data.raw["item"]["lab-module"].subgroup = data.raw["item"]["lab-burner"].subgroup
+  data.raw["item"]["lab-module"].order = data.raw["item"]["lab"].order .. "-m[module]"
+
 end

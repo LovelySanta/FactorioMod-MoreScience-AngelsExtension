@@ -133,11 +133,16 @@ function Debug:reseachAllTechnologies()
     researchTechnology("bob-area-drills-1")
   end
 
+  -- PART 10: bobpower
+  if game.active_mods["bobpower"] then
+    researchTechnology("bob-steam-power-1")
+  end
+
   if Debug.returnValue == 1 then
     return
   end
 
-  -- PART 10: morescience
+  -- PART 11: morescience
   researchTechnology("basic-science-research-1")
   researchTechnology("research-speed-1")
   researchTechnology("bottling-research")
@@ -271,11 +276,17 @@ function Debug:reseachAllTechnologies()
     researchTechnology("bob-pumpjacks-1")
   end
 
+  -- PART 9: bobpower
+  if game.active_mods["bobpower"] then
+    researchTechnology("bob-steam-power-2")
+    researchTechnology("electric-pole-2")
+  end
+
   if Debug.returnValue == 2 then
     return
   end
 
-  -- PART 9: morescience
+  -- PART 10: morescience
   researchTechnology("basic-military-science-research")
 
 
@@ -453,11 +464,17 @@ function Debug:reseachAllTechnologies()
     researchTechnology("green-module-1")
   end
 
+  -- PART 3: bobpower
+  if game.active_mods["bobpower"] then
+    researchTechnology("bob-electric-energy-accumulators-2")
+    researchTechnology("fluid-generator-1")
+  end
+
   if self.returnValue == 5 then
     return
   end
 
-  -- PART 2: morescience
+  -- PART 4: morescience
   researchTechnology("basic-science-research-2")
 
 
@@ -661,11 +678,25 @@ function Debug:reseachAllTechnologies()
     researchTechnology("green-module-2")
   end
 
+  -- PART 11: bobpower
+  if game.active_mods["bobpower"] then
+    researchTechnology("bob-steam-power-3")
+    researchTechnology("advanced-steam-power-1")
+    researchTechnology("electric-pole-3")
+    researchTechnology("electric-substation-2")
+    researchTechnology("electric-substation-3")
+    researchTechnology("bob-electric-energy-accumulators-3")
+    researchTechnology("fluid-generator-1")
+    researchTechnology("fluid-generator-2")
+    researchTechnology("bob-solar-energy-2")
+    researchTechnology("bob-solar-energy-3")
+  end
+
   if self.returnValue == 6 then
     return
   end
 
-  -- PART 11: morescience
+  -- PART 12: morescience
   researchTechnology("basic-logistics-science-research")
 
 
@@ -816,11 +847,19 @@ function Debug:reseachAllTechnologies()
     researchTechnology("productivity-module-5")
   end
 
+  -- PART 11: bobpower
+  if game.active_mods["bobpower"] then
+    researchTechnology("advanced-steam-power-2")
+    researchTechnology("bob-electric-energy-accumulators-4")
+    researchTechnology("fluid-generator-3")
+    researchTechnology("bob-solar-energy-4")
+  end
+
   if self.returnValue == 8 then
     return
   end
 
-  -- PART 8: morescience
+  -- PART 12: morescience
   researchTechnology("advanced-science-research-2")
 
 
@@ -992,11 +1031,17 @@ function Debug:reseachAllTechnologies()
     researchTechnology("effect-transmission-3")
   end
 
+  -- PART 10: bobpower
+  if game.active_mods["bobpower"] then
+    researchTechnology("electric-pole-4")
+    researchTechnology("electric-substation-4")
+  end
+
   if self.returnValue == 9 then
     return
   end
 
-  -- PART 10: morescience
+  -- PART 11: morescience
   researchTechnology("rocket")
   researchTechnology("rocketpart-hull-component")
   researchTechnology("rocketpart-ion-thruster")
