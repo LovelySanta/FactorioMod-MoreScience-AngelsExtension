@@ -34,6 +34,11 @@ if mods["bobpower"] then
     MoreScience.lib.technology.addIngredient("fluid-generator-" .. level, 1, "basic-power-science-pack")
   end
   MoreScience.lib.technology.addPrerequisite("fluid-generator-3", "advanced-science-research-1")
+  if mods["bobrevamp"] then
+    MoreScience.lib.technology.addIngredient("hydrazine-generator", 1, "basic-automation-science-pack")
+    MoreScience.lib.technology.addIngredient("hydrazine-generator", 1, "basic-power-science-pack")
+    MoreScience.lib.technology.addPrerequisite("hydrazine-generator", "advanced-science-research-2")
+  end
 
   -- substations
   for level = 2, 4, 1 do

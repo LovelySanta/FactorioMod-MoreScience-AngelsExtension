@@ -9,6 +9,7 @@ require("boblogistics.data-updates")
 require("bobassembly.data-updates")
 --require("bobmodules.data-updates")
 --require("bobpower.data-updates")
+--require("bobrevamp.data-updates")
 
 require("angelsrefining.data-updates")
 require("angelspetrochem.data-updates")

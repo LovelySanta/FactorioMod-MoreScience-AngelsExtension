@@ -132,8 +132,9 @@ if mods["angelspetrochem"] then
     MoreScience.lib.technology.removePrerequisite("rocket-silo", "angels-rocket-fuel")
     MoreScience.lib.technology.addPrerequisite("rocketpart-fusion-reactor", "angels-rocket-fuel")
     MoreScience.lib.technology.addPrerequisite("rocketpart-ion-thruster", "angels-rocket-fuel")
-    data.raw["technology"]["angels-rocket-fuel"].icon = data.raw["technology"]["rocket"].icon
-    data.raw["technology"]["angels-rocket-fuel"].icon_size = data.raw["technology"]["rocket"].icon_size
+    data.raw["technology"]["angels-rocket-fuel"].icon = data.raw["technology"]["rocketry"].icon
+    data.raw["technology"]["angels-rocket-fuel"].icon_size = data.raw["technology"]["rocketry"].icon_size
+    MoreScience.lib.technology.addPrerequisite("angels-rocket-fuel", "rocketry")
   end
 
 end
