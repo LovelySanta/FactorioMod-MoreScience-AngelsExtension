@@ -19,4 +19,8 @@ if mods["bobtech"] then
     MoreScience.lib.recipe.addIngredient("advanced-science-fluid-2", "silicon-nitride", 2, "item")
     MoreScience.lib.technology.addPrerequisite("advanced-science-research-2", "ceramics")
   end
+
+  -- bobs lab-2 is obsolete now, so we just remove that too
+  data.raw["lab"]["lab-2"] = nil
+  data.raw["item"]["lab-2"] = nil
 end

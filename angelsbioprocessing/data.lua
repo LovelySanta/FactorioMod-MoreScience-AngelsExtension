@@ -115,6 +115,16 @@ if mods["angelsbioprocessing"] then
     local bioLabRecipe = util.table.deepcopy(data.raw["recipe"]["lab-burner"])
     local bioLabEntity = util.table.deepcopy(data.raw["lab"]["lab-burner"])
 
+    if mods["bobtech"] then
+      bioLabItem = util.table.deepcopy(data.raw["item"]["lab-2"])
+      bioLabEntity = util.table.deepcopy(data.raw["lab"]["lab-2"])
+
+      bioLabItem.subgroup = data.raw["item"]["lab-burner"].subgroup
+      bioLabItem.order = data.raw["item"]["lab-burner"].order
+      bioLabEntity.energy_source = util.table.deepcopy(data.raw["lab"]["lab-burner"].energy_source)
+      bioLabEntity.energy_usage = data.raw["lab"]["lab-burner"].energy_usage
+    end
+
     bioLabItem.name = "lab-bio"
     bioLabEntity.name = bioLabItem.name
     bioLabRecipe.name = bioLabItem.name
@@ -157,6 +167,8 @@ if mods["angelsbioprocessing"] then
     MoreScience.lib.technology.addPrerequisite("bio-desert-farming", "bio-aboretum-1")
     MoreScience.lib.technology.addPrerequisite("bio-temperate-farming", "bio-aboretum-1")
     MoreScience.lib.technology.addPrerequisite("bio-swamp-farming", "bio-aboretum-1")
+
+
   end
 
   -- bottling requires wood production now
@@ -197,4 +209,7 @@ if mods["angelsbioprocessing"] then
   MoreScience.lib.technology.addPrerequisite("bio-aboretum-temperate-2", "bio-aboretum-3")
   MoreScience.lib.technology.addPrerequisite("bio-aboretum-swamp-2", "bio-aboretum-3")
   MoreScience.lib.technology.addPrerequisite("bio-aboretum-desert-2", "bio-aboretum-3")
+
+
+
 end
