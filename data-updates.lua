@@ -7,6 +7,7 @@ require("boblogistics.data-updates")
 --require("bobmining.data-updates")
 --require("bobelectronics.data-updates")
 require("bobassembly.data-updates")
+--require("bobmodules.data-updates")
 
 require("angelsrefining.data-updates")
 require("angelspetrochem.data-updates")

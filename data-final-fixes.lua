@@ -7,6 +7,7 @@ require("boblogistics.data-final-fixes")
 --require("bobmining.data-final-fixes")
 --require("bobelectronics.data-final-fixes")
 require("bobassembly.data-final-fixes")
+--require("bobmodules.data-final-fixes")
 
 require("angelsrefining.data-final-fixes")
 --require("angelspetrochem.data-final-fixes")
