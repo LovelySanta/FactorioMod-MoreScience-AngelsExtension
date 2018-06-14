@@ -12,8 +12,13 @@ require("bobassembly.data-updates")
 --require("bobrevamp.data-updates")
 --require("bobwarfare.data-updates")
 
+--require("CircuitProcessing.data-updates")
+
+
+
 require("angelsrefining.data-updates")
 require("angelspetrochem.data-updates")
 require("angelssmelting.data-updates")
 require("angelsbioprocessing.data-updates")
+
 --require("angelsaddons-warehouses.data-updates")

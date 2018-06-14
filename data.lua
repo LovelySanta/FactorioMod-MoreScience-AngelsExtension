@@ -12,8 +12,13 @@ require("bobpower.data")
 require("bobrevamp.data")
 require("bobwarfare.data")
 
+require("CircuitProcessing.data")
+
+
+
 require("angelsrefining.data")
 require("angelspetrochem.data")
 require("angelssmelting.data")
 require("angelsbioprocessing.data")
+
 require("angelsaddons-warehouses.data")

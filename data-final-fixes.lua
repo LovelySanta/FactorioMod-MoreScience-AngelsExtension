@@ -12,10 +12,15 @@ require("bobassembly.data-final-fixes")
 --require("bobrevamp.data-final-fixes")
 --require("bobwarfare.data-final-fixes")
 
+--require("CircuitProcessing.data-final-fixes")
+
+
+
 require("angelsrefining.data-final-fixes")
 --require("angelspetrochem.data-final-fixes")
 --require("angelssmelting.data-final-fixes")
 --require("angelsbioprocessing.data-final-fixes")
+
 --require("angelsaddons-warehouses.data-final-fixes")
 
 
