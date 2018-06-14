@@ -11,4 +11,7 @@ if mods["boblogistics"] then
     end
   end
 
+  MoreScience.lib.technology.addPrerequisite("logistics-3", "advanced-science-research-1")
+  MoreScience.lib.technology.addIngredient("logistics-3", 1, "production-science-pack")
+
 end

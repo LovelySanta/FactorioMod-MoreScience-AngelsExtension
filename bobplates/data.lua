@@ -14,13 +14,14 @@ if mods["bobplates"] then
   MoreScience.lib.technology.addPrerequisite("polishing", "gem-processing-1")
   MoreScience.lib.technology.addIngredient("polishing", 1, "basic-automation-science-pack")
 
-  MoreScience.lib.technology.addIngredient("water-bore-2", 1, "basic-automation-science-pack")
-  MoreScience.lib.technology.addIngredient("water-bore-3", 1, "basic-automation-science-pack")
-  MoreScience.lib.technology.addIngredient("water-bore-4", 1, "basic-automation-science-pack")
+  for level = 2, 4, 1 do
+    MoreScience.lib.technology.addIngredient("water-bore-" .. level, 1, "basic-automation-science-pack")
+  end
   MoreScience.lib.technology.addIngredient("mixing-steel-furnace", 1, "basic-automation-science-pack")
   MoreScience.lib.technology.addIngredient("gem-processing-2", 1, "basic-automation-science-pack")
-  MoreScience.lib.technology.addIngredient("battery-2", 1, "basic-automation-science-pack")
-  MoreScience.lib.technology.addIngredient("battery-3", 1, "basic-automation-science-pack")
+  for level = 2, 3, 1 do
+    MoreScience.lib.technology.addIngredient("battery-" .. level, 1, "basic-automation-science-pack")
+  end
   --MoreScience.lib.technology.addIngredient("titanium-processing", 1, "basic-automation-science-pack")
 
   -- add blue science requirements
@@ -36,6 +37,10 @@ if mods["bobplates"] then
 
   -- add yellow science requirements
   MoreScience.lib.technology.addPrerequisite("advanced-electronics-3", "advanced-science-research-2")
+
+  -- add light blue science requirements
+  MoreScience.lib.technology.addPrerequisite("battery-3", "basic-power-science-research")
+  MoreScience.lib.technology.addIngredient("battery-3", 1, "basic-power-science-pack")
 
 
 

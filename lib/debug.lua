@@ -2,7 +2,7 @@
 Debug = {}
 
 Debug.enabled = true
-Debug.returnValue = -1
+Debug.returnValue = 11
 
 function Debug:reseachAllTechnologies()
   force = game.forces["player"]
@@ -143,11 +143,16 @@ function Debug:reseachAllTechnologies()
     researchTechnology("chemical-plant")
   end
 
+  -- PART 12: bobwarfare
+  if game.active_mods["bobwarfare"] then
+    researchTechnology("radars")
+  end
+
   if Debug.returnValue == 1 then
     return
   end
 
-  -- PART 11: morescience
+  -- PART 13: morescience
   researchTechnology("basic-science-research-1")
   researchTechnology("research-speed-1")
   researchTechnology("bottling-research")
@@ -292,11 +297,18 @@ function Debug:reseachAllTechnologies()
     researchTechnology("electric-pole-2")
   end
 
+  -- PART 11: bobwarfare
+  if game.active_mods["bobwarfare"] then
+    researchTechnology("reinforced-wall")
+    researchTechnology("bob-turrets-2")
+    researchTechnology("bob-armor-making-3")
+  end
+
   if Debug.returnValue == 2 then
     return
   end
 
-  -- PART 11: morescience
+  -- PART 12: morescience
   researchTechnology("basic-military-science-research")
 
 
@@ -317,6 +329,16 @@ function Debug:reseachAllTechnologies()
   researchTechnology("grenade-damage-1", false)
   researchTechnology("grenade-damage-2", false)
   researchTechnology("grenade-damage-3", false)
+
+  -- PART 2: bobwarfare
+  if game.active_mods["bobwarfare"] then
+    researchTechnology("bob-turrets-3")
+    researchTechnology("bob-sniper-turrets-1")
+    researchTechnology("bob-sniper-turret-damage-1")
+    researchTechnology("bob-sniper-turret-damage-2")
+    researchTechnology("bob-sniper-turret-damage-3")
+    researchTechnology("bob-sniper-turret-damage-4")
+  end
 
   if Debug.returnValue == 3 then
     return
@@ -441,11 +463,16 @@ function Debug:reseachAllTechnologies()
     researchTechnology("pollution-clean-module-1")
   end
 
+  -- PART 11: bobwarfare
+  if game.active_mods["bobwarfare"] then
+    researchTechnology("radars-2")
+  end
+
   if self.returnValue == 4 then
     return
   end
 
-  -- PART 11: morescience
+  -- PART 12: morescience
   researchTechnology("basic-power-science-research")
 
 
@@ -456,6 +483,7 @@ function Debug:reseachAllTechnologies()
 
   -- PART 1: vanilla research
   researchTechnology("solar-energy", false)
+  researchTechnology("bob-solar-energy-2")
   researchTechnology("electric-energy-accumulators-1", false)
   researchTechnology("effectivity-module", false)
   researchTechnology("laser-turrets", false)
@@ -480,11 +508,16 @@ function Debug:reseachAllTechnologies()
     researchTechnology("fluid-generator-1")
   end
 
+  -- PART 4: bobwarfare
+  if game.active_mods["bobwarfare"] then
+    researchTechnology("solar-panel-equipment-2")
+  end
+
   if self.returnValue == 5 then
     return
   end
 
-  -- PART 4: morescience
+  -- PART 5: morescience
   researchTechnology("basic-science-research-2")
 
 
@@ -698,15 +731,84 @@ function Debug:reseachAllTechnologies()
     researchTechnology("bob-electric-energy-accumulators-3")
     researchTechnology("fluid-generator-1")
     researchTechnology("fluid-generator-2")
-    researchTechnology("bob-solar-energy-2")
     researchTechnology("bob-solar-energy-3")
+  end
+
+  -- PART 12: bobwarfare
+  if game.active_mods["bobwarfare"] then
+    researchTechnology("radars-3")
+    researchTechnology("poison-mine")
+    researchTechnology("slowdown-mine")
+
+    researchTechnology("bob-armor-making-4")
+
+    researchTechnology("solar-panel-equipment-3")
+    researchTechnology("battery-equipment-3")
+    researchTechnology("personal-laser-defense-equipment-2")
+    researchTechnology("personal-laser-defense-equipment-3")
+    researchTechnology("night-vision-equipment-2")
+
+    researchTechnology("bob-turrets-4")
+    researchTechnology("bob-sniper-turrets-2")
+    researchTechnology("bob-sniper-turret-damage-5")
+
+    researchTechnology("bob-laser-turrets-2")
+    researchTechnology("bob-laser-turrets-3")
+    researchTechnology("bob-laser-turrets-4")
+
+    researchTechnology("bob-laser-rifle")
+    researchTechnology("bob-laser-rifle-ammo-1")
+    researchTechnology("bob-laser-rifle-ammo-2")
+    researchTechnology("bob-laser-rifle-ammo-3")
+    researchTechnology("bob-laser-rifle-ammo-4")
+    researchTechnology("bob-laser-rifle-damage-1")
+    researchTechnology("bob-laser-rifle-damage-2")
+    researchTechnology("bob-laser-rifle-damage-3")
+    researchTechnology("bob-laser-rifle-damage-4")
+    researchTechnology("bob-laser-rifle-damage-5")
+    researchTechnology("bob-laser-rifle-speed-1")
+    researchTechnology("bob-laser-rifle-speed-2")
+    researchTechnology("bob-laser-rifle-speed-3")
+    researchTechnology("bob-laser-rifle-speed-4")
+    researchTechnology("bob-laser-rifle-speed-5")
+
+    researchTechnology("nitroglycerin-processing")
+    researchTechnology("cordite-processing")
+
+    researchTechnology("bob-bullets")
+    researchTechnology("bob-ap-bullets")
+    researchTechnology("bob-he-bullets")
+    researchTechnology("bob-acid-bullets")
+    researchTechnology("bob-flame-bullets")
+    researchTechnology("bob-poison-bullets")
+    researchTechnology("bob-impact-bullets")
+    researchTechnology("bob-electric-bullets")
+
+    researchTechnology("bob-shotgun-shells")
+    researchTechnology("bob-shotgun-ap-shells")
+    researchTechnology("bob-shotgun-explosive-shells")
+    researchTechnology("bob-shotgun-acid-shells")
+    researchTechnology("bob-shotgun-flame-shells")
+    researchTechnology("bob-shotgun-poison-shells")
+    researchTechnology("bob-shotgun-impact-shells")
+    researchTechnology("bob-shotgun-electric-shells")
+
+    researchTechnology("bob-rocket")
+    researchTechnology("bob-piercing-rocket")
+    researchTechnology("bob-impact-rocket")
+    researchTechnology("bob-explosive-rocket")
+    researchTechnology("bob-flame-rocket")
+    researchTechnology("bob-poison-rocket")
+    researchTechnology("bob-acid-rocket")
+    researchTechnology("bob-electric-rocket")
+
   end
 
   if self.returnValue == 6 then
     return
   end
 
-  -- PART 12: morescience
+  -- PART 13: morescience
   researchTechnology("basic-logistics-science-research")
 
 
@@ -752,7 +854,7 @@ function Debug:reseachAllTechnologies()
     researchTechnology("more-inserters-1")
   end
 
-  --PART 3: boblogistics
+  -- PART 3: boblogistics
   if game.active_mods["boblogistics"] then
     researchTechnology("bob-fluid-wagon-2")
     researchTechnology("bob-armoured-fluid-wagon")
@@ -767,11 +869,32 @@ function Debug:reseachAllTechnologies()
     researchTechnology("logistic-system")
   end
 
+  -- PART 4: bobwarfare
+  if game.active_mods["bobwarfare"] then
+    researchTechnology("combat-robotics")
+    researchTechnology("combat-robotics-2")
+    researchTechnology("distractor-mine")
+
+    for level = 1, 6, 1 do
+      researchTechnology("follower-robot-count-" .. level)
+      if level < 6 then
+        researchTechnology("combat-robot-damage-" .. level)
+      end
+    end
+
+    researchTechnology("bob-tanks-2")
+    researchTechnology("bob-robot-tanks")
+    for level = 1, 3, 1 do
+      researchTechnology("bob-artillery-damage-" .. level)
+    end
+
+  end
+
   if self.returnValue == 7 then
     return
   end
 
-  -- PART 4: morescience
+  -- PART 5: morescience
   researchTechnology("advanced-science-research-1")
 
 
@@ -871,11 +994,17 @@ function Debug:reseachAllTechnologies()
     researchTechnology("heat-shield")
   end
 
+  -- PART 11: bobwarfare
+  if game.active_mods["bobwarfare"] then
+    researchTechnology("bob-laser-rifle-ammo-5")
+    researchTechnology("bob-laser-rifle-ammo-6")
+  end
+
   if self.returnValue == 8 then
     return
   end
 
-  -- PART 11: morescience
+  -- PART 12: morescience
   researchTechnology("advanced-science-research-2")
 
 
@@ -1057,11 +1186,62 @@ function Debug:reseachAllTechnologies()
     end
   end
 
+  -- PART 11: bobwarfare
+  if game.active_mods["bobwarfare"] then
+    researchTechnology("radars-4")
+
+    researchTechnology("bob-tanks-3")
+    researchTechnology("bob-turrets-5")
+    researchTechnology("bob-sniper-turrets-3")
+    researchTechnology("bob-sniper-turret-damage-6")
+
+    researchTechnology("bob-laser-turrets-5")
+
+    researchTechnology("bob-artillery-turret-2")
+    researchTechnology("bob-artillery-turret-3")
+    researchTechnology("bob-artillery-wagon-2")
+    researchTechnology("bob-artillery-wagon-3")
+    for level = 4, 5, 1 do
+      researchTechnology("bob-artillery-damage-" .. level)
+    end
+
+    researchTechnology("bob-laser-rifle-speed-6")
+    researchTechnology("bob-laser-rifle-damage-6")
+
+    researchTechnology("combat-robotics-4")
+
+    researchTechnology("bob-power-armor-3")
+    researchTechnology("bob-power-armor-4")
+
+    researchTechnology("energy-shield-equipment-3")
+    researchTechnology("energy-shield-equipment-4")
+    researchTechnology("energy-shield-equipment-5")
+
+    researchTechnology("personal-laser-defense-equipment-4")
+    researchTechnology("personal-laser-defense-equipment-5")
+    researchTechnology("personal-laser-defense-equipment-6")
+
+    researchTechnology("fusion-reactor-equipment-2")
+    researchTechnology("fusion-reactor-equipment-3")
+
+    researchTechnology("night-vision-equipment-3")
+
+    researchTechnology("solar-panel-equipment-4")
+
+    researchTechnology("battery-equipment-4")
+    researchTechnology("battery-equipment-5")
+    researchTechnology("battery-equipment-6")
+
+    researchTechnology("exoskeleton-equipment-2")
+    researchTechnology("exoskeleton-equipment-3")
+
+  end
+
   if self.returnValue == 9 then
     return
   end
 
-  -- PART 11: morescience
+  -- PART 12: morescience
   researchTechnology("rocket")
   researchTechnology("rocketpart-hull-component")
   researchTechnology("rocketpart-ion-thruster")
@@ -1116,6 +1296,13 @@ function Debug:reseachAllTechnologies()
     researchTechnology("raw-productivity-module-8")
     researchTechnology("green-module-7")
     researchTechnology("green-module-8")
+  end
+
+  -- PART 4: bobwarfare
+  if game.active_mods["bobwarfare"] then
+    researchTechnology("bob-power-armor-5")
+    researchTechnology("fusion-reactor-equipment-4")
+    researchTechnology("energy-shield-equipment-6")
   end
 
 end

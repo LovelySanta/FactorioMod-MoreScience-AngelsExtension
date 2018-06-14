@@ -23,7 +23,8 @@ if mods["bobrevamp"] then
   end
 
   -- rocket part: low density
-  MoreScience.lib.technology.removePrerequisite("rocket" ,"low-density-structure")
+  MoreScience.lib.technology.addPrerequisite("low-density-structure" ,"advanced-science-research-1")
+  MoreScience.lib.technology.removeRecipeUnlock("rocket" ,"low-density-structure")
   MoreScience.lib.technology.addPrerequisite("rocketpart-ion-thruster" ,"low-density-structure")
   MoreScience.lib.technology.addPrerequisite("rocketpart-hull-component" ,"low-density-structure")
   MoreScience.lib.technology.addPrerequisite("rocketpart-shield-array" ,"low-density-structure")
