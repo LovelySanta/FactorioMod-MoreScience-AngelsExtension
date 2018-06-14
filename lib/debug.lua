@@ -1,7 +1,7 @@
 
 Debug = {}
 
-Debug.enabled = true
+Debug.enabled = false
 Debug.returnValue = 11
 
 function Debug:reseachAllTechnologies()
@@ -505,7 +505,7 @@ function Debug:reseachAllTechnologies()
   -- PART 3: bobpower
   if game.active_mods["bobpower"] then
     researchTechnology("bob-electric-energy-accumulators-2")
-    researchTechnology("fluid-generator-1")
+    --researchTechnology("fluid-generator-1")
   end
 
   -- PART 4: bobwarfare
