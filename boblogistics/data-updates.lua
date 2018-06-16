@@ -13,5 +13,8 @@ if mods["boblogistics"] then
 
   MoreScience.lib.technology.addPrerequisite("logistics-3", "advanced-science-research-1")
   MoreScience.lib.technology.addIngredient("logistics-3", 1, "production-science-pack")
+  
+  -- disable underground pipes
+  MoreScience.lib.technology.removeRecipeUnlock("steel-processing", "steel-pipe-to-ground")
 
 end

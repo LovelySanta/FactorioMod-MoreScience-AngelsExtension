@@ -34,7 +34,7 @@ if mods["boblogistics"] then
       end
     end
   end
-  MoreScience.lib.technology.removeRecipeUnlock("steel-processing", "steel-pipe-to-ground")
+  MoreScience.lib.technology.addRecipeUnlock("fluid-handling", "steel-pipe-to-ground")
   MoreScience.lib.technology.addPrerequisite("alloy-processing-1", "fluid-handling")
   MoreScience.lib.technology.addPrerequisite("zinc-processing", "fluid-handling")
   MoreScience.lib.technology.addPrerequisite("plastics", "fluid-handling")
