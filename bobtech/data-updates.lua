@@ -23,7 +23,13 @@ if mods["bobtech"] then
     MoreScience.lib.technology.addPrerequisite("advanced-science-research-2", "ceramics")
   end
 
-  -- bobs lab-2 is obsolete now, so we just remove that too
-  data.raw["lab"]["lab-2"] = nil
-  data.raw["item"]["lab-2"] = nil
+  -- check all researches to make sure it does not require logistics-science-pack
+  for technologyName, technology in pairs(data.raw["technology"]) do
+    for ingredientIndex, ingredient in pairs(technology.unit.ingredients) do
+      if ingredient[1] == "logistic-science-pack" or ingredient["name"] == "logistic-science-pack" then
+        table.remove(data.raw["technology"][technologyName].unit.ingredients, ingredientIndex)
+      end
+    end
+  end
+
 end
