@@ -34,6 +34,13 @@ if mods["boblogistics"] then
       end
     end
   end
+  MoreScience.lib.technology.removeRecipeUnlock("steel-processing", "steel-pipe-to-ground")
+  MoreScience.lib.technology.addPrerequisite("alloy-processing-1", "fluid-handling")
+  MoreScience.lib.technology.addPrerequisite("zinc-processing", "fluid-handling")
+  MoreScience.lib.technology.addPrerequisite("plastics", "fluid-handling")
+  MoreScience.lib.technology.addPrerequisite("ceramics", "fluid-handling")
+  MoreScience.lib.technology.addPrerequisite("titanium-processing", "fluid-handling")
+  MoreScience.lib.technology.addPrerequisite("tungsten-processing", "fluid-handling")
 
   -- railway
   MoreScience.lib.technology.addIngredient("bob-railway-2", 1, "basic-automation-science-pack")
