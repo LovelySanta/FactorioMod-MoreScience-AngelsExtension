@@ -30,6 +30,7 @@ require("angelsrefining.data-final-fixes")
 local containsExtension = false
 for _,extension in pairs({
   "ScienceCostTweakerExtension",
+  "SeaBlockExtension",
 }) do
   if mods["MoreScience-" .. extension] then
     containsExtension = true
@@ -37,5 +38,6 @@ for _,extension in pairs({
   end
 end
 if not containsExtension then
+  log("cleaning up the tech tree")
   MoreScience.lib.technology.removeAllRedundantPrerequisites()
 end

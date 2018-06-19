@@ -23,10 +23,12 @@ if mods["bobtech"] then
     MoreScience.lib.technology.addPrerequisite("advanced-science-research-2", "ceramics")
   end
 
-  -- check all researches to make sure it does not require logistics-science-pack
+  -- check all researches to make sure it does not require logistics-science-pack or science-pack-gold
   for technologyName, technology in pairs(data.raw["technology"]) do
     for ingredientIndex, ingredient in pairs(technology.unit.ingredients) do
       if ingredient[1] == "logistic-science-pack" or ingredient["name"] == "logistic-science-pack" then
+        table.remove(data.raw["technology"][technologyName].unit.ingredients, ingredientIndex)
+      elseif ingredient[1] == "science-pack-gold" or ingredient["name"] == "science-pack-gold" then
         table.remove(data.raw["technology"][technologyName].unit.ingredients, ingredientIndex)
       end
     end
