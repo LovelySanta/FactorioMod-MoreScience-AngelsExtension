@@ -1,0 +1,22 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0 - Initial release
+Date: 23. 6. 2018
+  Major Features:
+    - Added initial support for Angel's Bio Processing
+    - Added initial support for Angel's Petro Chemical Processing
+    - Added initial support for Angel's Refining
+    - Added initial support for Angel's Smelting
+    - Added initial support for Angel's Addons - Warehouses](https
+    - Added initial support for Bob's Assembling machines
+    - Added initial support for Bob's Electronics
+    - Added initial support for Bob's Enemies
+    - Added initial support for Bob's Adjustable Inserters
+    - Added initial support for Bob's Logistics mod
+    - Added initial support for Bob's Mining
+    - Added initial support for Bob's Modules
+    - Added initial support for Bob's Metals, Chemicals and Intermediates
+    - Added initial support for Bob's Power
+    - Added initial support for Bob's Revamp mod
+    - Added initial support for Bob's Tech
+    - Added initial support for Bob's Warfare
+    - Added initial support for Circuit Processing
