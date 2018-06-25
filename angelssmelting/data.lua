@@ -239,6 +239,8 @@ if mods["angelssmelting"] then
 
   --STONE
   -- smelting 1:
+  MoreScience.lib.technology.removePrerequisite("angels-stone-smelting-1", "water-washing-1")
+  MoreScience.lib.technology.addPrerequisite("angels-stone-smelting-1", "water-washing-2")
 
   -- smelting 2:
   MoreScience.lib.technology.addPrerequisite("angels-stone-smelting-2", "concrete")
