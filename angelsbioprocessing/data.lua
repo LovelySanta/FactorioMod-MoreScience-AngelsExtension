@@ -51,6 +51,8 @@ if mods["angelsbioprocessing"] then
         stack_size = 1,
         fuel_value = (1 + recipeIndex * 3) * 10 .. "MJ",
         fuel_category = fuelCategory.name,
+        order = "d" .. recipeIndex,
+        subgroup = data.raw["recipe"][recipeName].subgroup,
       }
 
       -- create recipe to convert tree into wood
@@ -81,8 +83,7 @@ if mods["angelsbioprocessing"] then
           {"hand-saw", 1},
         },
         results = util.table.deepcopy(data.raw["recipe"][recipeName].results),
-        order = "d" .. recipeIndex,
-        subgroup = data.raw["recipe"][recipeName].subgroup,
+        subgroup = treeItem.subgroup,
       }
 
       -- unlock recipe at the tech

@@ -3,6 +3,8 @@ Version: 0.1.1
 Date: 24. 6. 2018
   Changes:
     - Cement processing 1 requires washing 2 instead of washing 1 becose of the limestone
+  Fixes:
+    - Fixed organic trees didn't have a subgroup
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.0 - Initial release
 Date: 23. 6. 2018
