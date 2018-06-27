@@ -9,7 +9,7 @@ require("boblogistics.data-updates")
 require("bobassembly.data-updates")
 --require("bobmodules.data-updates")
 --require("bobpower.data-updates")
---require("bobrevamp.data-updates")
+require("bobrevamp.data-updates")
 --require("bobwarfare.data-updates")
 
 --require("CircuitProcessing.data-updates")

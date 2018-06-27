@@ -5,6 +5,7 @@ Date: 24. 6. 2018
     - Cement processing 1 requires washing 2 instead of washing 1 becose of the limestone
   Fixes:
     - Fixed organic trees didn't have a subgroup
+    - Fixed that the rocket couldn't be made in the rocket silo when playing with Bob's Revamp mod
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.0 - Initial release
 Date: 23. 6. 2018
