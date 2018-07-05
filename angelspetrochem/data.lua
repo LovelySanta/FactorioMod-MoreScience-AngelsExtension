@@ -11,11 +11,15 @@ if mods["angelspetrochem"] then
   MoreScience.lib.technology.addPrerequisite("oil-gas-extraction", "basic-science-research-1")
 
   -- replace chemical plant with angelschemical plants
-  MoreScience.lib.technology.removeRecipeUnlock("basic-science-research-1", "chemical-plant")
   MoreScience.lib.technology.removePrerequisite("basic-science-research-1", "steel-processing")
-  MoreScience.lib.technology.addPrerequisite("basic-science-research-1", "basic-chemistry-2")
   MoreScience.lib.technology.addPrerequisite("basic-chemistry-2", "steel-processing")
-
+  MoreScience.lib.technology.addPrerequisite("basic-science-research-1", "basic-chemistry-2")
+  if mods["bobrevamp"] then
+    MoreScience.lib.technology.removePrerequisite("basic-science-research-1", "chemical-plant")
+    MoreScience.lib.technology.addPrerequisite("basic-chemistry-2", "chemical-plant")
+  else
+    MoreScience.lib.technology.removeRecipeUnlock("basic-science-research-1", "chemical-plant")
+  end
   -- add new recipe category to only use the regular chemical plants
   data:extend({
     {

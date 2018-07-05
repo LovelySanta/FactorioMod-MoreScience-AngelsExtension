@@ -7,6 +7,7 @@ if mods["bobrevamp"] then
 
   -- chemical plant has its own research, let's require it for the green science
   MoreScience.lib.technology.addPrerequisite("basic-science-research-1", "chemical-plant")
+  MoreScience.lib.technology.removeRecipeUnlock("basic-science-research-1", "chemical-plant")
   -- but we have to remove the green science requirement now
   MoreScience.lib.technology.removeIngredient("chemical-plant", "science-pack-2")
   if mods["bobplates"] then
