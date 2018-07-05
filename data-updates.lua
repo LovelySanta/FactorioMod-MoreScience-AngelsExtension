@@ -22,3 +22,5 @@ require("angelssmelting.data-updates")
 require("angelsbioprocessing.data-updates")
 
 --require("angelsaddons-warehouses.data-updates")
+--require("angelsaddons-petrotrain.data-updates")
+--require("angelsaddons-smeltingtrain.data-updates")

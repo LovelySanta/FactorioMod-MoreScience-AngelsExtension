@@ -14,6 +14,8 @@ As of now, these are the supported modules:
 
 ### Angel's addons
 + [Angel's Addons - Warehouses](https://mods.factorio.com/mod/angelsaddons-warehouses)
++ [Angel's Addons - Petrochem Train](https://mods.factorio.com/mod/angelsaddons-petrotrain)
++ [Angel's Addons - Smelting Train](https://mods.factorio.com/mod/angelsaddons-smeltingtrain)
 
 ### Bob's mods
 + [Bob's Assembling machines](https://mods.factorio.com/mod/bobassembly)

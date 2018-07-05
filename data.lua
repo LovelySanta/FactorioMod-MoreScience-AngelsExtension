@@ -22,3 +22,5 @@ require("angelssmelting.data")
 require("angelsbioprocessing.data")
 
 require("angelsaddons-warehouses.data")
+require("angelsaddons-petrotrain.data")
+require("angelsaddons-smeltingtrain.data")
