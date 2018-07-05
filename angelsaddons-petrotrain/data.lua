@@ -4,7 +4,6 @@ require "util"
 --------------------------------------------------------------------------------
 ----- Angels petrotrain                                                    -----
 --------------------------------------------------------------------------------
-
 if mods["angelsaddons-petrotrain"] then
 
   if data.raw["technology"]["angels-petro-train"] then

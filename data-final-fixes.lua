@@ -24,6 +24,7 @@ require("angelsrefining.data-final-fixes")
 --require("angelsaddons-warehouses.data-final-fixes")
 --require("angelsaddons-petrotrain.data-final-fixes")
 --require("angelsaddons-smeltingtrain.data-final-fixes")
+--require("angelsaddons-pressuretanks.data-final-fixes")
 
 
 

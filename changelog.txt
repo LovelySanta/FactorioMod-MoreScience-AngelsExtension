@@ -4,6 +4,7 @@ Date: 5. 7. 2018
   Features:
     - Added support for Angel's Addons - Petrochem Train
     - Added support for Angel's Addons - Smelting Train
+    - Added support for Angel's Addons - Pressure Tanks
   Changes:
     - [angel's petro chem] Angel's chemical plant now require chemical plant research from bob's revamp (if available)
   Fixes:

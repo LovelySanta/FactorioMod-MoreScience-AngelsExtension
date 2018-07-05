@@ -4,7 +4,6 @@ require "util"
 --------------------------------------------------------------------------------
 ----- Angels smeltingtrain                                                 -----
 --------------------------------------------------------------------------------
-
 if mods["angelsaddons-smeltingtrain"] then
 
   -- update technology ingredients
