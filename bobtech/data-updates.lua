@@ -7,12 +7,17 @@ if mods["bobtech"] then
 
   if mods["bobplates"] then
 
+    -- adapt blue science fluid to ingredients from blue science pack
+    MoreScience.lib.recipe.removeIngredient("science-pack-3", "bronze-alloy")
+    MoreScience.lib.recipe.addIngredient("basic-science-fluid-3", "bronze-alloy", 1, "item")
     if mods["angelssmelting"] then
-      -- adapt blue science fluid to ingredients from blue science pack
-      MoreScience.lib.recipe.removeIngredient("science-pack-3", "bronze-alloy")
-      MoreScience.lib.recipe.addIngredient("basic-science-fluid-3", "bronze-alloy", 1, "item")
       MoreScience.lib.technology.addPrerequisite("basic-science-research-2", "angels-bronze-smelting-1")
+    else
+      MoreScience.lib.technology.addPrerequisite("basic-science-research-2", "alloy-processing-1")
     end
+
+    -- make sure science-pack-3 has a result count of 1
+    MoreScience.lib.recipe.setResultCount("science-pack-3", "science-pack-3", 1)
 
     --adapt yellow science fluid to ingredients from yellow science pack
     MoreScience.lib.recipe.removeIngredient("high-tech-science-pack", "lithium-ion-battery")
