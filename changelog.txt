@@ -7,6 +7,7 @@ Date: 5. 7. 2018
     - [bob's tech] Fixed basic science pack 3 recipe result in 1 packs (before it was 2, not intended).
     - [bob's tech] Fixed basic science pack 3 recipe required bronze plates when angelsmelting wasn't present
     - [bob's revamp] Fixed that with the chemical plant research the basic science research would still unlock the chemical plant
+    - [bob's logistics] Fixed that basic science fluid 2 was uncraftable when requiring express inserters (inserter overhaul)
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.1
 Date: 24. 6. 2018
