@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.3
 Date: 2. 8. 2018
+  Features:
+    - Added support for Angels Industries
   Balancing:
     - Basic science fluid 3 require half the amount of circuits
 ---------------------------------------------------------------------------------------------------

@@ -8,6 +8,7 @@ This mod requires the mod More Science installed.
 As of now, these are the supported modules:
 ### Angel's mods
 + [Angel's Bio Processing](https://mods.factorio.com/mod/angelsbioprocessing)
++ [Angel's Industries](https://mods.factorio.com/mod/angelsindustries)
 + [Angel's Petro Chemical Processing](https://mods.factorio.com/mod/angelspetrochem)
 + [Angel's Refining](https://mods.factorio.com/mod/angelsrefining)
 + [Angel's Smelting](https://mods.factorio.com/mod/angelssmelting)

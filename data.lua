@@ -22,6 +22,7 @@ for _,modName in pairs({
   "angelspetrochem",
   "angelssmelting",
   "angelsbioprocessing",
+  "angelsindustries",
 
   "angelsaddons-warehouses",
   "angelsaddons-petrotrain",
