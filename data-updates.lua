@@ -3,7 +3,7 @@ for _,modName in pairs({
 
   --"bobenemies",
   "bobtech",
-  --"bobplates",
+  "bobplates",
   --"bobinserters",
   "boblogistics",
   --"bobmining",

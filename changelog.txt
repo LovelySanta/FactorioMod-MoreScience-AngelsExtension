@@ -5,6 +5,8 @@ Date: 2. 8. 2018
     - Added support for Angels Industries
   Balancing:
     - Basic science fluid 3 require half the amount of circuits
+  Fixes:
+    - [bob's plates] Fixed that science fluid barreling recipes did not require barreling pump when angels refining is present
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.2
 Date: 5. 7. 2018
