@@ -5,6 +5,11 @@
 
 if mods["bobtech"] then
 
+  if mods["bobelectronics"] then
+    -- rebalance blue science cost
+    MoreScience.lib.recipe.editIngredient("basic-science-fluid-3", "advanced-circuit", "advanced-circuit", .5)
+  end
+
   if mods["bobplates"] then
 
     -- adapt blue science fluid to ingredients from blue science pack

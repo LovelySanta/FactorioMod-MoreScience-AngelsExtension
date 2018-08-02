@@ -115,6 +115,7 @@ if mods["angelspetrochem"] then
   MoreScience.lib.technology.addPrerequisite("oil-steam-cracking-2", "basic-science-research-2")
   MoreScience.lib.technology.addPrerequisite("gas-steam-cracking-2", "basic-science-research-2")
   MoreScience.lib.technology.addPrerequisite("chlorine-processing-2", "basic-science-research-2")
+  MoreScience.lib.technology.addPrerequisite("angels-sulfur-processing-3", "basic-science-research-2")
 
 
 

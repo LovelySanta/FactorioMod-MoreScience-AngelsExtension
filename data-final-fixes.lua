@@ -1,30 +1,36 @@
 
---require("bobenemies.data-final-fixes")
---require("bobtech.data-final-fixes")
---require("bobplates.data-final-fixes")
---require("bobinserters.data-final-fixes")
-require("boblogistics.data-final-fixes")
---require("bobmining.data-final-fixes")
---require("bobelectronics.data-final-fixes")
-require("bobassembly.data-final-fixes")
---require("bobmodules.data-final-fixes")
---require("bobpower.data-final-fixes")
---require("bobrevamp.data-final-fixes")
---require("bobwarfare.data-final-fixes")
+for _,modName in pairs({
 
---require("CircuitProcessing.data-final-fixes")
+  --"bobenemies",
+  --"bobtech",
+  --"bobplates",
+  --"bobinserters",
+  "boblogistics",
+  --"bobmining",
+  --"bobelectronics",
+  "bobassembly",
+  --"bobmodules",
+  --"bobpower",
+  --"bobrevamp",
+  --"bobwarfare",
+
+  --"CircuitProcessing",
 
 
 
-require("angelsrefining.data-final-fixes")
---require("angelspetrochem.data-final-fixes")
---require("angelssmelting.data-final-fixes")
---require("angelsbioprocessing.data-final-fixes")
+  "angelsrefining",
+  --"angelspetrochem",
+  --"angelssmelting",
+  --"angelsbioprocessing",
 
---require("angelsaddons-warehouses.data-final-fixes")
---require("angelsaddons-petrotrain.data-final-fixes")
---require("angelsaddons-smeltingtrain.data-final-fixes")
---require("angelsaddons-pressuretanks.data-final-fixes")
+  --"angelsaddons-warehouses",
+  --"angelsaddons-petrotrain",
+  --"angelsaddons-smeltingtrain",
+  --"angelsaddons-pressuretanks",
+
+  }) do
+    require(modName .. ".data-final-fixes")
+  end
 
 
 

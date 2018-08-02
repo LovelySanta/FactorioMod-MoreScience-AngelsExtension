@@ -1,27 +1,33 @@
 
---require("bobenemies.data-updates")
-require("bobtech.data-updates")
---require("bobplates.data-updates")
---require("bobinserters.data-updates")
-require("boblogistics.data-updates")
---require("bobmining.data-updates")
---require("bobelectronics.data-updates")
-require("bobassembly.data-updates")
---require("bobmodules.data-updates")
---require("bobpower.data-updates")
-require("bobrevamp.data-updates")
---require("bobwarfare.data-updates")
+for _,modName in pairs({
 
---require("CircuitProcessing.data-updates")
+  --"bobenemies",
+  "bobtech",
+  --"bobplates",
+  --"bobinserters",
+  "boblogistics",
+  --"bobmining",
+  --"bobelectronics",
+  "bobassembly",
+  --"bobmodules",
+  --"bobpower",
+  "bobrevamp",
+  --"bobwarfare",
+
+  --"CircuitProcessing",
 
 
 
-require("angelsrefining.data-updates")
-require("angelspetrochem.data-updates")
-require("angelssmelting.data-updates")
-require("angelsbioprocessing.data-updates")
+  "angelsrefining",
+  "angelspetrochem",
+  "angelssmelting",
+  "angelsbioprocessing",
 
---require("angelsaddons-warehouses.data-updates")
---require("angelsaddons-petrotrain.data-updates")
---require("angelsaddons-smeltingtrain.data-updates")
---require("angelsaddons-pressuretanks.data-updates")
+  --"angelsaddons-warehouses",
+  --"angelsaddons-petrotrain",
+  --"angelsaddons-smeltingtrain",
+  --"angelsaddons-pressuretanks",
+
+}) do
+  require(modName .. ".data-updates")
+end

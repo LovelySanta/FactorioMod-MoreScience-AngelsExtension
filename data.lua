@@ -1,27 +1,33 @@
 
---require("bobenemies.data")
-require("bobtech.data")
-require("bobplates.data")
-require("bobinserters.data")
-require("boblogistics.data")
-require("bobmining.data")
-require("bobelectronics.data")
-require("bobassembly.data")
-require("bobmodules.data")
-require("bobpower.data")
-require("bobrevamp.data")
-require("bobwarfare.data")
+for _,modName in pairs({
 
-require("CircuitProcessing.data")
+  --"bobenemies",
+  "bobtech",
+  "bobplates",
+  "bobinserters",
+  "boblogistics",
+  "bobmining",
+  "bobelectronics",
+  "bobassembly",
+  "bobmodules",
+  "bobpower",
+  "bobrevamp",
+  "bobwarfare",
+
+  "CircuitProcessing",
 
 
 
-require("angelsrefining.data")
-require("angelspetrochem.data")
-require("angelssmelting.data")
-require("angelsbioprocessing.data")
+  "angelsrefining",
+  "angelspetrochem",
+  "angelssmelting",
+  "angelsbioprocessing",
 
-require("angelsaddons-warehouses.data")
-require("angelsaddons-petrotrain.data")
-require("angelsaddons-smeltingtrain.data")
-require("angelsaddons-pressuretanks.data")
+  "angelsaddons-warehouses",
+  "angelsaddons-petrotrain",
+  "angelsaddons-smeltingtrain",
+  "angelsaddons-pressuretanks",
+
+}) do
+  require(modName .. ".data")
+end

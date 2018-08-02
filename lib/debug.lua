@@ -63,6 +63,11 @@ function Debug:reseachAllTechnologies()
     end
   end
 
+  -- PART 11: bobrevamp
+  if game.active_mods["bobrevamp"] then
+    researchTechnology("chemical-plant")
+  end
+
   -- PART 3: angelspetrochem
   if game.active_mods["angelspetrochem"] then
     researchTechnology("basic-chemistry")
@@ -81,7 +86,7 @@ function Debug:reseachAllTechnologies()
     researchTechnology("angels-solder-smelting-1")
     researchTechnology("angels-copper-smelting-1")
     researchTechnology("angels-iron-smelting-1")
-    researchTechnology("angels-stone-smelting-1")
+    --researchTechnology("angels-stone-smelting-1")
     if game.active_mods["bobplates"] then
       researchTechnology("angels-bronze-smelting-1")
     end
@@ -136,11 +141,6 @@ function Debug:reseachAllTechnologies()
   -- PART 10: bobpower
   if game.active_mods["bobpower"] then
     researchTechnology("bob-steam-power-1")
-  end
-
-  -- PART 11: bobrevamp
-  if game.active_mods["bobrevamp"] then
-    researchTechnology("chemical-plant")
   end
 
   -- PART 12: bobwarfare
@@ -308,7 +308,12 @@ function Debug:reseachAllTechnologies()
     return
   end
 
-  -- PART 12: morescience
+  -- PART 12: angelsindustries
+  if game.active_mods["angelsindustries"] then
+    researchTechnology("angels-vequipment-1")
+  end
+
+  -- PART 13: morescience
   researchTechnology("basic-military-science-research")
 
 
@@ -413,11 +418,12 @@ function Debug:reseachAllTechnologies()
     researchTechnology("strand-casting-1")
 
     researchTechnology("angels-copper-smelting-2")
-    researchTechnology("angels-glass-smelting-2")
     researchTechnology("angels-iron-smelting-2")
     researchTechnology("angels-lead-smelting-2")
+    researchTechnology("angels-stone-smelting-1")
     researchTechnology("angels-stone-smelting-2")
     researchTechnology("angels-tin-smelting-2")
+    researchTechnology("angels-glass-smelting-2")
   end
 
   -- PART 5: angelsbioprocessing
@@ -470,11 +476,26 @@ function Debug:reseachAllTechnologies()
     researchTechnology("radars-2")
   end
 
+  -- PART 12: angels smelting train
+  if game.active_mods["angelsaddons-smeltingtrain"] then
+    researchTechnology("angels-smelting-train")
+  end
+
   if self.returnValue == 4 then
     return
   end
 
-  -- PART 12: morescience
+  -- PART 13: angelsindustries
+  if game.active_mods["angelsindustries"] then
+    researchTechnology("angels-crawler")
+    researchTechnology("angels-crawler-train")
+
+    researchTechnology("cargo-robots")
+    researchTechnology("cargo-robots-2")
+    researchTechnology("cargo-robots-3")
+  end
+
+  -- PART 14: morescience
   researchTechnology("basic-power-science-research")
 
 
@@ -619,6 +640,7 @@ function Debug:reseachAllTechnologies()
     researchTechnology("chlorine-processing-3")
     researchTechnology("sodium-processing")
     researchTechnology("gas-synthesis")
+    researchTechnology("angels-sulfur-processing-3")
   end
 
   -- PART 4: angelssmelting
@@ -810,11 +832,16 @@ function Debug:reseachAllTechnologies()
 
   end
 
+  -- PART 13: angelsindustries
+  if game.active_mods["angelsindustries"] then
+    researchTechnology("angels-vequipment-2")
+  end
+
   if self.returnValue == 6 then
     return
   end
 
-  -- PART 13: morescience
+  -- PART 14: morescience
   researchTechnology("basic-logistics-science-research")
 
 
@@ -882,9 +909,14 @@ function Debug:reseachAllTechnologies()
     researchTechnology("distractor-mine")
 
     for level = 1, 6, 1 do
-      researchTechnology("follower-robot-count-" .. level)
-      if level < 6 then
+      if level < 5 then
+        researchTechnology("follower-robot-count-" .. level)
         researchTechnology("combat-robot-damage-" .. level)
+      else
+        researchTechnology("follower-robot-count-" .. level, false)
+        if level < 6 then
+          researchTechnology("combat-robot-damage-" .. level, false)
+        end
       end
     end
 
@@ -894,6 +926,11 @@ function Debug:reseachAllTechnologies()
       researchTechnology("bob-artillery-damage-" .. level)
     end
 
+  end
+
+  -- PART 5: angels petrochem train
+  if game.active_mods["angelsaddons-petrotrain"] then
+    researchTechnology("angels-petro-train")
   end
 
   if self.returnValue == 7 then
@@ -1006,6 +1043,11 @@ function Debug:reseachAllTechnologies()
   if game.active_mods["bobwarfare"] then
     researchTechnology("bob-laser-rifle-ammo-5")
     researchTechnology("bob-laser-rifle-ammo-6")
+  end
+
+  -- PART 12: angels pressure tank
+  if game.active_mods["angelsaddons-pressuretanks"] then
+    researchTechnology("pressure-tanks")
   end
 
   if self.returnValue == 8 then
