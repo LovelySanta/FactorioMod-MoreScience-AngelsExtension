@@ -12,6 +12,7 @@ for _,modName in pairs({
   "bobmodules",
   "bobpower",
   "bobrevamp",
+  "bobvehicleequipment",
   "bobwarfare",
 
   "CircuitProcessing",

@@ -12,6 +12,7 @@ for _,modName in pairs({
   --"bobmodules",
   --"bobpower",
   --"bobrevamp",
+  --"bobvehicleequipment",
   --"bobwarfare",
 
   --"CircuitProcessing",
@@ -32,8 +33,6 @@ for _,modName in pairs({
   }) do
     require(modName .. ".data-final-fixes")
   end
-
-
 
 -- technology tree cleanup
 local containsExtension = false

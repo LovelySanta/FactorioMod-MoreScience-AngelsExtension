@@ -65,7 +65,8 @@ if mods["bobwarfare"] then
   for level = 3, 6, 1 do
     MoreScience.lib.technology.addIngredient("battery-equipment-" .. level, 1, "basic-power-science-pack")
   end
-  MoreScience.lib.technology.removeIngredient("battery-equipment-4", 1, "production-science-pack")
+  --MoreScience.lib.technology.removeIngredient("battery-equipment-4", 1, "production-science-pack")
+  MoreScience.lib.technology.addPrerequisite("battery-equipment-4", "advanced-science-research-1")
   MoreScience.lib.technology.addIngredient("battery-equipment-4", 1, "high-tech-science-pack")
   MoreScience.lib.technology.addIngredient("battery-equipment-5", 1, "high-tech-science-pack")
 
@@ -73,7 +74,7 @@ if mods["bobwarfare"] then
   for level = 2, 6, 1 do
     MoreScience.lib.technology.addIngredient("personal-laser-defense-equipment-" .. level, 1, "basic-power-science-pack")
   end
-  MoreScience.lib.technology.addPrerequisite("personal-laser-defense-equipment-4", "advanced-science-research-2")
+  MoreScience.lib.technology.addPrerequisite("personal-laser-defense-equipment-4", "military-4")
 
   -- energy shield equipments
   for level = 3, 6, 1 do

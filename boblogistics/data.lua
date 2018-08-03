@@ -60,6 +60,7 @@ if mods["boblogistics"] then
   MoreScience.lib.technology.addPrerequisite("express-inserters", "inserter-stack-size-bonus-2")
   MoreScience.lib.technology.addIngredient("express-inserters", 1, "basic-automation-science-pack")
   MoreScience.lib.technology.addIngredient("stack-inserter-2", 1, "basic-automation-science-pack")
+  MoreScience.lib.technology.addPrerequisite("stack-inserter-2", "basic-logistics-science-research")
   MoreScience.lib.technology.addIngredient("stack-inserter-2", 1, "basic-logistics-science-pack")
 
   MoreScience.lib.technology.addPrerequisite("inserter-stack-size-bonus-1", "basic-automation-science-research")
@@ -71,6 +72,10 @@ if mods["boblogistics"] then
   MoreScience.lib.technology.addPrerequisite("inserter-stack-size-bonus-4", "advanced-science-research-2")
   MoreScience.lib.technology.addIngredient("inserter-stack-size-bonus-4", 1, "basic-automation-science-pack")
 
+  MoreScience.lib.technology.addIngredient("inserter-capacity-bonus-1", 1, "basic-power-science-pack")
+  MoreScience.lib.technology.removeIngredient("inserter-capacity-bonus-1", "basic-logistics-science-pack")
+  MoreScience.lib.technology.addIngredient("inserter-capacity-bonus-2", 1, "basic-power-science-pack")
+  MoreScience.lib.technology.removeIngredient("inserter-capacity-bonus-2", "basic-logistics-science-pack")
   MoreScience.lib.technology.addPrerequisite("inserter-capacity-bonus-3", "inserter-stack-size-bonus-2")
   MoreScience.lib.technology.addPrerequisite("inserter-capacity-bonus-3", "stack-inserter-2")
   MoreScience.lib.technology.removePrerequisite("inserter-capacity-bonus-4", "advanced-science-research-1")

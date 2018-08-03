@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.4
+Date: 3. 8. 2018
+  Features:
+    - Added support for bob's vehicle equipment
+  Balancing:
+    - [bob's logistics] Inserter upgrades are somewhat downgraded, mirroring the changes made in MoreScience v0.1.14
+  Fixes:
+    - Fixed (optional) dependency list, resulting in a beter expected loading in the data stage
+    - [bob's warfare] personal laser defense equipment 4 research now depend on military 4 research
+---------------------------------------------------------------------------------------------------
 Version: 0.1.3
 Date: 2. 8. 2018
   Features:

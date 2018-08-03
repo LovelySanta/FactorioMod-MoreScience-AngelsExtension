@@ -11,7 +11,7 @@ if mods["angelsindustries"] then
 
   -- crawler
   MoreScience.lib.technology.addIngredient("angels-crawler", 1, "basic-automation-science-pack")
-  MoreScience.lib.technology.addPrerequisite("angels-crawler", "engine")
+  MoreScience.lib.technology.addPrerequisite("angels-crawler", "automobilism")
   MoreScience.lib.technology.addIngredient("angels-crawler-train", 1, "basic-automation-science-pack")
 
   -- robots

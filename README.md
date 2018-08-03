@@ -31,6 +31,7 @@ As of now, these are the supported modules:
 + [Bob's Power](https://mods.factorio.com/mod/bobpower)
 + [Bob's Revamp mod](https://mods.factorio.com/mod/bobrevamp)
 + [Bob's Tech](https://mods.factorio.com/mod/bobtech)
++ [Bob's Vehicle Equipment](https://mods.factorio.com/mod/bobvehicleequipment)
 + [Bob's Warfare](https://mods.factorio.com/mod/bobwarfare)
 
 ### Bob's addons
