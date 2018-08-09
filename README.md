@@ -14,6 +14,7 @@ As of now, these are the supported modules:
 + [Angel's Smelting](https://mods.factorio.com/mod/angelssmelting)
 
 ### Angel's addons
++ [Angel's Addons - Decorations - ShredNation](https://mods.factorio.com/mod/angelsaddons-shred)
 + [Angel's Addons - Warehouses](https://mods.factorio.com/mod/angelsaddons-warehouses)
 + [Angel's Addons - Petrochem Train](https://mods.factorio.com/mod/angelsaddons-petrotrain)
 + [Angel's Addons - Pressure Tanks](https://mods.factorio.com/mod/angelsaddons-pressuretanks)

@@ -25,6 +25,7 @@ for _,modName in pairs({
   --"angelsbioprocessing",
   --"angelsindustries",
 
+  --"angelsaddons-shred",
   --"angelsaddons-warehouses",
   --"angelsaddons-petrotrain",
   --"angelsaddons-smeltingtrain",
