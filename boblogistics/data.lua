@@ -173,9 +173,9 @@ if mods["boblogistics"] then
     end
     for level = 1, 4, 1 do
       if level == 1 then
-        data.raw["item"]["storage-tank"].order = "b" .. level .. string.format("-a[%s]", data.raw["item"]["storage-tank"].name)
+        data.raw["item"]["storage-tank"].order = "c" .. level .. string.format("-a[%s-1]", data.raw["item"]["storage-tank"].name)
       elseif data.raw["item"]["storage-tank-" .. level] then
-        data.raw["item"]["storage-tank-" .. level].order = "b" .. level .. string.format("-b[%s]", data.raw["item"]["storage-tank-" .. level].name)
+        data.raw["item"]["storage-tank-" .. level].order = "c" .. level .. string.format("-b[%s]", data.raw["item"]["storage-tank-" .. level].name)
       end
     end
   end

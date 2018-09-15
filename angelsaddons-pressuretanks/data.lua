@@ -29,4 +29,10 @@ if mods["angelsaddons-pressuretanks"] then
     end
   end
 
+  -- move pressure tank over to barreling
+  data.raw["item"]["angels-pressure-tank-1"].subgroup = data.raw["item"]["angels-storage-tank-3"].subgroup
+  data.raw["recipe"]["angels-pressure-tank-1"].subgroup = nil
+  data.raw["item"]["angels-pressure-tank-1"].order = "b" .. string.format("-a[%s]", data.raw["item"]["angels-pressure-tank-1"].name)
+  data.raw["recipe"]["angels-pressure-tank-1"].order = nil
+
 end

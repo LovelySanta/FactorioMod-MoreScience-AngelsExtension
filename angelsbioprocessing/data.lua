@@ -8,7 +8,8 @@ require "util"
 if mods["angelsbioprocessing"] then
 
   -- disable wood production as this is part of angel now
-  data.raw["technology"]["wood-plantation"].enabled = false
+  MoreScience.lib.item.setHidden("item", "organic-tree")
+  MoreScience.lib.technology.disable("wood-plantation")
 
   -- fuel category for the organic trees
   local fuelCategory =
