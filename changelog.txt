@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.6
+Date: 15. 9. 2018
+  Fixes:
+    - Jax 35 pressure tank now shows with the other tanks
+    - Fixed disabled items where showing up in item guis
+---------------------------------------------------------------------------------------------------
 Version: 0.1.5
 Date: 9. 8. 2018
   Features:
