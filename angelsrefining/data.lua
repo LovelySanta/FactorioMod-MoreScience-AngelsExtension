@@ -19,12 +19,12 @@ if mods["angelsrefining"] then
     MoreScience.lib.technology.removeRecipeUnlock("fluid-handling-3", "empty-purified-water-barrel")
 
     -- adapt recipes its used in
-    MoreScience.lib.technology.removeRecipeUnlock("basic-science-research-1", "purified-water")
+    MoreScience.lib.technology.removeRecipeUnlock("bottling-research", "purified-water")
     MoreScience.lib.technology.addPrerequisite("basic-science-research-1", "water-treatment")
     MoreScience.lib.technology.removePrerequisite("MoreScience.lib.technology.removePrerequisite", "basic-science-research-1", "steel-processing")
     MoreScience.lib.technology.addPrerequisite("water-treatment", "steel-processing")
     for _, scienceRecipeName in pairs({ -- science recipes
-      --"basic-science-fluid-1",
+      "basic-science-fluid-1",
       "basic-science-fluid-2",
       "basic-science-fluid-3",
       "advanced-science-fluid-1",
