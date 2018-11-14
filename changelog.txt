@@ -1,8 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.8
+Date: 14. 11. 2018
+  Changes:
+    - Basic science fluid 2 require regular inserters instead of fast inserters
+---------------------------------------------------------------------------------------------------
 Version: 0.1.7
 Date: 22. 9. 2018
-Changes:
-  - Removed iron pickaxe required for red science fluid.
+  Changes:
+    - Removed iron pickaxe required for red science fluid.
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.6
 Date: 15. 9. 2018

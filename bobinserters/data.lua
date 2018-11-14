@@ -23,6 +23,7 @@ if mods["bobinserters"] then
   MoreScience.lib.technology.addIngredient("more-inserters-2", 1, "basic-logistics-science-pack")
   MoreScience.lib.technology.addIngredient("long-inserters-2", 1, "basic-logistics-science-pack")
 
-
+  -- make sure the green science uses yellow inserters
+  MoreScience.lib.recipe.editIngredient("basic-science-fluid-2", "fast-inserter", "inserter", 1)
 
 end
