@@ -87,6 +87,12 @@ if mods["angelsbioprocessing"] then
         subgroup = treeItem.subgroup,
       }
 
+      -- and finaly add the new recipes
+      data:extend({
+        treeItem,
+        treeRecipe,
+      })
+
       -- unlock recipe at the tech
       MoreScience.lib.technology.addRecipeUnlock("bio-aboretum-" .. recipeIndex, treeRecipe.name)
 
@@ -97,12 +103,6 @@ if mods["angelsbioprocessing"] then
       data.raw["recipe"][recipeName].results = {{type = "item", name = treeItem.name, amount = 1,}}
       data.raw["recipe"][recipeName].order = "e" .. recipeIndex
 
-      -- and finaly add the new recipes
-      data:extend({
-        treeItem,
-        treeRecipe,
-        fuelCategory,
-      })
     end
   end
 
@@ -156,6 +156,7 @@ if mods["angelsbioprocessing"] then
     }
 
     data:extend({
+      fuelCategory,
       bioLabItem,
       bioLabRecipe,
       bioLabEntity,
