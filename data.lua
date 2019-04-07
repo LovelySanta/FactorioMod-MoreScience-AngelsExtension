@@ -1,36 +1,38 @@
+LSlib.utils.log.enable()
 
 for _,modName in pairs({
 
-  --"bobenemies",
+  "bobores",
+  "bobenemies",
   "bobtech",
-  "bobplates",
-  "bobinserters",
-  "boblogistics",
-  "bobmining",
-  "bobelectronics",
-  "bobassembly",
-  "bobmodules",
-  "bobpower",
-  "bobrevamp",
-  "bobvehicleequipment",
-  "bobwarfare",
+  --"bobplates",
+  --"bobinserters",
+  --"boblogistics",
+  --"bobmining",
+  --"bobelectronics",
+  --"bobassembly",
+  --"bobmodules",
+  --"bobpower",
+  --"bobrevamp",
+  --"bobvehicleequipment",
+  --"bobwarfare",
 
-  "CircuitProcessing",
+  --"CircuitProcessing",
 
 
 
-  "angelsrefining",
-  "angelspetrochem",
-  "angelssmelting",
-  "angelsbioprocessing",
-  "angelsindustries",
+  --"angelsrefining",
+  --"angelspetrochem",
+  --"angelssmelting",
+  --"angelsbioprocessing",
+  --"angelsindustries",
 
-  "angelsaddons-shred",
-  "angelsaddons-warehouses",
-  "angelsaddons-petrotrain",
-  "angelsaddons-smeltingtrain",
-  "angelsaddons-pressuretanks",
+  --"angelsaddons-shred",
+  --"angelsaddons-warehouses",
+  --"angelsaddons-petrotrain",
+  --"angelsaddons-smeltingtrain",
+  --"angelsaddons-pressuretanks",
 
 }) do
-  require(modName .. ".data")
+  require("prototypes." .. modName .. ".data")
 end

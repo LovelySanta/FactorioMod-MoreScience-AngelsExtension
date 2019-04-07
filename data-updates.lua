@@ -1,17 +1,18 @@
 
 for _,modName in pairs({
 
-  --"bobenemies",
+  "bobores",
+  "bobenemies",
   "bobtech",
-  "bobplates",
+  --"bobplates",
   --"bobinserters",
-  "boblogistics",
+  --"boblogistics",
   --"bobmining",
   --"bobelectronics",
-  "bobassembly",
+  --"bobassembly",
   --"bobmodules",
   --"bobpower",
-  "bobrevamp",
+  --"bobrevamp",
   --"bobvehicleequipment",
   --"bobwarfare",
 
@@ -19,10 +20,10 @@ for _,modName in pairs({
 
 
 
-  "angelsrefining",
-  "angelspetrochem",
-  "angelssmelting",
-  "angelsbioprocessing",
+  --"angelsrefining",
+  --"angelspetrochem",
+  --"angelssmelting",
+  --"angelsbioprocessing",
   --"angelsindustries",
 
   --"angelsaddons-shred",
@@ -32,5 +33,5 @@ for _,modName in pairs({
   --"angelsaddons-pressuretanks",
 
 }) do
-  require(modName .. ".data-updates")
+  require("prototypes." .. modName .. ".data-updates")
 end

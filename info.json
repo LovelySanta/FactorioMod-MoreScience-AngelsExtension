@@ -1,13 +1,15 @@
 {
   "name": "MoreScience-BobAngelsExtension",
-  "version": "0.1.9",
-  "factorio_version": "0.16",
+  "version": "0.2.0",
+  "factorio_version": "0.17",
   "title": "More Science - BobAngels Extension",
   "author": "lovely_santa",
   "homepage": "https://mods.factorio.com/mod/MoreScience-BobAngelsExtension",
   "description": "An extension to bob and angel mods: Change the way science is beiing made.",
   "dependencies": [
-    "MoreScience >= 0.1.19",
+    "MoreScience >= 0.2.4",
+
+
 
     "? angelsbioprocessing",
     "? angelsindustries",
@@ -30,6 +32,7 @@
     "? boblogistics",
     "? bobmining",
     "? bobmodules",
+    "? bobores",
     "? bobplates",
     "? bobpower",
     "? bobrevamp",

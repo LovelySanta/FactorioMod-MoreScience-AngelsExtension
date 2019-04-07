@@ -1,14 +1,15 @@
 
 for _,modName in pairs({
 
-  --"bobenemies",
-  --"bobtech",
+  "bobores",
+  "bobenemies",
+  "bobtech",
   --"bobplates",
   --"bobinserters",
-  "boblogistics",
+  --"boblogistics",
   --"bobmining",
   --"bobelectronics",
-  "bobassembly",
+  --"bobassembly",
   --"bobmodules",
   --"bobpower",
   --"bobrevamp",
@@ -19,7 +20,7 @@ for _,modName in pairs({
 
 
 
-  "angelsrefining",
+  --"angelsrefining",
   --"angelspetrochem",
   --"angelssmelting",
   --"angelsbioprocessing",
@@ -32,14 +33,14 @@ for _,modName in pairs({
   --"angelsaddons-pressuretanks",
 
   }) do
-    require(modName .. ".data-final-fixes")
+    require("prototypes." .. modName .. ".data-final-fixes")
   end
 
 -- technology tree cleanup
 local containsExtension = false
 for _,extension in pairs({
   "ScienceCostTweakerExtension",
-  "SeaBlockExtension",
+  --"SeaBlockExtension",
 }) do
   if mods["MoreScience-" .. extension] then
     containsExtension = true
@@ -47,6 +48,7 @@ for _,extension in pairs({
   end
 end
 if not containsExtension then
-  log("cleaning up the tech tree")
-  MoreScience.lib.technology.removeAllRedundantPrerequisites()
+  LSlib.utils.log.log("----- Cleaning up the tech tree -----")
+  LSlib.technology.removeAllRedundantPrerequisites()
 end
+log(serpent.block(data.raw.tool["alien-artifact-yellow"]))

@@ -1,10 +1,49 @@
+local scienceNames = require("prototypes/settings").scienceNames
 
 --------------------------------------------------------------------------------
 ----- Bob technology                                                       -----
 --------------------------------------------------------------------------------
 
 if mods["bobtech"] then
+  -- fix the logistic science pack ---------------------------------------------
+  -- fix other technologies
+  local packName  = string.format(scienceNames.pink, "pack" )
+  for techName,techLevels in pairs{
+    ["logistic-system"                  ] = {},
+    ["character-logistic-trash-slots-%i"] = {3},
+    ["worker-robots-storage-%i"         ] = {2, 3},
+    ["worker-robots-speed-%i"           ] = {4},
+    ["inserter-capacity-bonus-%i"       ] = {5, 6},
+    ["braking-force-%i"                 ] = {5, 6},
+    ["personal-roboport-equipment-%i"   ] = {2}
+  } do
+    if LSlib.utils.table.isEmpty(techLevels) then
+      LSlib.technology.removeIngredient(techName, packName)
+    else
+      for _,techLevel in pairs(techLevels) do
+        LSlib.technology.removeIngredient(string.format(techName, techLevel), packName)
 
+      end
+    end
+  end
+  for _,techName in pairs{
+    "worker-robots-speed-4",
+    "character-logistic-slots-4",
+    "character-logistic-trash-slots-3"
+  } do
+    LSlib.technology.removePrerequisite(techName, "personal-roboport-equipment-2")
+  end
+  LSlib.technology.addIngredient("personal-roboport-equipment-2", 1, string.format(scienceNames.yellow, "pack"))
+
+  -- fix purple science
+  LSlib.recipe.removeIngredient(string.format(scienceNames.purple, "pack"), "assembling-machine-2")
+  LSlib.recipe.removeIngredient(string.format(scienceNames.purple, "pack"), "chemical-plant")
+
+  -- fix yellow science
+  LSlib.recipe.removeIngredient(string.format(scienceNames.yellow, "pack"), "processing-unit")
+  LSlib.recipe.removeIngredient(string.format(scienceNames.yellow, "pack"), "battery")
+
+  --[[
   if mods["bobelectronics"] then
     -- rebalance blue science cost
     MoreScience.lib.recipe.editIngredient("basic-science-fluid-3", "advanced-circuit", "advanced-circuit", .5)
@@ -43,5 +82,5 @@ if mods["bobtech"] then
       end
     end
   end
-
+  ]]
 end
