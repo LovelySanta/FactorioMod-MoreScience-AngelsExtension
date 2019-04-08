@@ -5,7 +5,8 @@ for _,modName in pairs({
   "bobores",
   "bobenemies",
   "bobtech",
-  --"bobplates",
+  "bobplates",
+  "bobrevamp",
   --"bobinserters",
   --"boblogistics",
   --"bobmining",
@@ -13,7 +14,6 @@ for _,modName in pairs({
   --"bobassembly",
   --"bobmodules",
   --"bobpower",
-  --"bobrevamp",
   --"bobvehicleequipment",
   --"bobwarfare",
 

@@ -23,12 +23,13 @@ if mods["bobenemies"] then
       LSlib.item.changeIcon("tool", "alien-science-pack-green" , string.format(potionLocation, 03), 32)
       LSlib.item.changeIcon("tool", "alien-science-pack-blue"  , string.format(potionLocation, 07), 32)
       LSlib.item.changeIcon("tool", "alien-science-pack-purple", string.format(potionLocation, 10), 32)
+      LSlib.item.changeIcon("tool", "science-pack-gold"        , string.format(potionLocation, 09), 32)
 
       data:extend{
         {
           type = "item",
           name = "alien-"..bottle,
-          icon = string.format(potionLocation, 09),
+          icon = string.format(potionLocation, 00),
           icon_size = 32,
           stack_size = 50,
           subgroup = "ms-science-bottling",
@@ -38,6 +39,7 @@ if mods["bobenemies"] then
           type = "recipe",
           name = "alien-"..bottle,
           energy_required = 12,
+          enabled = false,
           ingredients = {
             {"empty-bottle", 100},
             {"alien-artifact", 1},
@@ -49,6 +51,7 @@ if mods["bobenemies"] then
         }
       }
       LSlib.technology.addRecipeUnlock("alien-research", "alien-"..bottle)
+      LSlib.technology.addIngredient("alien-research", 1, string.format(scienceNames.gray, "pack"))
 
       local alienScienceGroup = "ms-science-alien-science-pack"
       data:extend{{
@@ -57,6 +60,30 @@ if mods["bobenemies"] then
         group = data.raw["item-subgroup"]["science-pack"].group,
         order = "g-c[science-pack]-c"
       }}
+      local alienSciencePack = "alien-science-pack%s"
+      for _,sciencePack in pairs{
+        string.format(alienSciencePack, ""       ),
+        string.format(alienSciencePack, "-red"   ),
+        string.format(alienSciencePack, "-orange"),
+        string.format(alienSciencePack, "-yellow"),
+        string.format(alienSciencePack, "-green" ),
+        string.format(alienSciencePack, "-blue"  ),
+        string.format(alienSciencePack, "-purple"),
+        "science-pack-gold"                       ,
+      } do
+        LSlib.item.setSubgroup("tool", sciencePack, alienScienceGroup)
+        LSlib.item.setOrderstring("tool", sciencePack, string.format("%s-%s",
+          LSlib.item.getOrderstring("tool", string.format(scienceNames.blue, "pack")),
+          LSlib.item.getOrderstring("tool", sciencePack)))
+        LSlib.recipe.addIngredient(sciencePack, "alien-"..bottle, 10)
+      end
+      LSlib.recipe.editIngredient("science-pack-gold", "alien-"..bottle, "alien-"..bottle, .1)
+
+      LSlib.technology.addIngredient("alien-research", 1, string.format(scienceNames.orange, "pack"))
+
+      -- move the unlocks around for astetics
+      LSlib.technology.moveRecipeUnlock("alien-research", "alien-research", "science-pack-gold")
+      LSlib.technology.moveRecipeUnlock("alien-research", "alien-research", "lab-alien")
       for _,color in pairs{
         ""       ,
         "-red"   ,
@@ -66,15 +93,8 @@ if mods["bobenemies"] then
         "-blue"  ,
         "-purple",
       } do
-        LSlib.item.setSubgroup("tool", string.format("alien-science-pack%s", color), alienScienceGroup)
-        LSlib.recipe.addIngredient(string.format("alien-science-pack%s", color), "alien-"..bottle, 10)
+        LSlib.technology.moveRecipeUnlock("alien-research", "alien-research", string.format("alien-science-pack%s", color))
       end
-
-      LSlib.item.setSubgroup("tool",  "science-pack-gold", alienScienceGroup)
-      --LSlib.item.changeIcon("tool", "science-pack-gold", string.format(potionLocation, 09), 32)
-
-      LSlib.technology.addIngredient("alien-research", 1, string.format(scienceNames.orange, "pack"))
-
     end
   end
 

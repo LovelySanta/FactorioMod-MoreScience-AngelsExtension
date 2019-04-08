@@ -1,3 +1,4 @@
+local scienceNames = require("prototypes/settings").scienceNames
 
 --------------------------------------------------------------------------------
 ----- Bob revamp                                                       -----
@@ -5,6 +6,29 @@
 
 if mods["bobrevamp"] then
 
+  -- solid fuel
+  LSlib.technology.movePrerequisite("solid-fuel", "chemical-plant", "flammables")
+  LSlib.technology.addIngredient("solid-fuel", 1, string.format(scienceNames.orange, "pack"))
+  for _,recipeName in pairs{
+    "solid-fuel-from-petroleum-gas",
+    "solid-fuel-from-light-oil"    ,
+    "solid-fuel-from-heavy-oil"    ,
+  } do
+    LSlib.technology.removeRecipeUnlock("flammables", recipeName)
+  end
+  LSlib.technology.movePrerequisite("rocket-fuel", "flammables", "solid-fuel")
+
+  -- rocket part: heat shield
+  LSlib.technology.addPrerequisite("rocketpart-ion-thruster" ,"heat-shield")
+  LSlib.recipe.addIngredient("rocketpart-ion-thruster", "heat-shield-tile", 20)
+  LSlib.recipe.addIngredient("rocketpart-ion-booster", "heat-shield-tile", 50)
+
+  LSlib.technology.addPrerequisite("rocketpart-hull-component" ,"heat-shield")
+  LSlib.recipe.addIngredient("rocketpart-hull-component", "heat-shield-tile", 25)
+
+  LSlib.recipe.removeIngredient("rocket-part", "heat-shield-tile")
+
+--[[
   -- chemical plant has its own research, let's require it for the green science
   MoreScience.lib.technology.addPrerequisite("bottling-research", "chemical-plant")
   MoreScience.lib.technology.removeRecipeUnlock("bottling-research", "chemical-plant")
@@ -44,5 +68,5 @@ if mods["bobrevamp"] then
   if data.raw["item"]["silver-zinc-battery"] then
     MoreScience.lib.technology.removePrerequisite("rocket-silo", "electric-energy-accumulators-1")
   end
-
+]]
 end
