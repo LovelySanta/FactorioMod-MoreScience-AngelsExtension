@@ -8,8 +8,8 @@ if mods["bobrevamp"] then
 
   -- chemical plant has its own research, let's require it for the green science
   LSlib.technology.removePrerequisite("chemical-plant", "oil-processing")
-  LSlib.technology.addPrerequisite("chemical-plant", "electronics")
-  LSlib.technology.addPrerequisite("chemical-plant", "steel-processing")
+  --LSlib.technology.addPrerequisite("chemical-plant", "electronics")
+  --LSlib.technology.addPrerequisite("chemical-plant", "steel-processing")
 
   LSlib.technology.addPrerequisite("purification-research", "chemical-plant")
   LSlib.technology.removePrerequisite("purification-research", "electronics")

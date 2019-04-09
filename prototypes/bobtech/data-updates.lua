@@ -36,12 +36,12 @@ if mods["bobtech"] then
   LSlib.technology.addIngredient("personal-roboport-equipment-2", 1, string.format(scienceNames.yellow, "pack"))
 
   -- fix purple science
-  LSlib.recipe.removeIngredient(string.format(scienceNames.purple, "pack"), "assembling-machine-2")
-  LSlib.recipe.removeIngredient(string.format(scienceNames.purple, "pack"), "chemical-plant")
+  --LSlib.recipe.removeIngredient(string.format(scienceNames.purple, "pack"), "assembling-machine-2")
+  --LSlib.recipe.removeIngredient(string.format(scienceNames.purple, "pack"), "chemical-plant")
 
   -- fix yellow science
-  LSlib.recipe.removeIngredient(string.format(scienceNames.yellow, "pack"), "processing-unit")
-  LSlib.recipe.removeIngredient(string.format(scienceNames.yellow, "pack"), "battery")
+  --LSlib.recipe.removeIngredient(string.format(scienceNames.yellow, "pack"), "processing-unit")
+  --LSlib.recipe.removeIngredient(string.format(scienceNames.yellow, "pack"), "battery")
 
   --[[
   if mods["bobelectronics"] then
