@@ -1,10 +1,94 @@
+local scienceNames = require("prototypes/settings").scienceNames
 
 --------------------------------------------------------------------------------
------ Bob vehicle equipment                                                       -----
+----- Bob vehicle equipment                                                -----
 --------------------------------------------------------------------------------
 
 if mods["bobvehicleequipment"] then
+  -- solar panel equipment
+  for level = 1, 6 do
+    LSlib.technology.addIngredient(string.format("vehicle-solar-panel-equipment-%i", level), 1, string.format(scienceNames.cyan, "pack"))
+  end
+  for level = 2, 6 do
+    LSlib.technology.addIngredient(string.format("vehicle-solar-panel-equipment-%i", level), 1, string.format(scienceNames.orange, "pack"))
+  end
+  LSlib.technology.addPrerequisite("vehicle-solar-panel-equipment-1", string.format(scienceNames.cyan, "pack"))
+  LSlib.technology.addPrerequisite("vehicle-solar-panel-equipment-2", "advanced-electronics")
+  LSlib.technology.addPrerequisite("vehicle-solar-panel-equipment-5", string.format(scienceNames.yellow, "pack"))
 
+  -- battery equipment
+  for level = 1, 6 do
+    LSlib.technology.addIngredient(string.format("vehicle-battery-equipment-%i", level), 1, string.format(scienceNames.cyan, "pack"))
+  end
+  for level = 2, 6 do
+    LSlib.technology.addIngredient(string.format("vehicle-battery-equipment-%i", level), 1, string.format(scienceNames.orange, "pack"))
+    LSlib.technology.addPrerequisite(string.format("vehicle-battery-equipment-%i", level), string.format("vehicle-solar-panel-equipment-%i", level))
+  end
+
+  -- fusion cell equipment
+  for level = 1, 6 do
+    LSlib.technology.addIngredient(string.format("vehicle-fusion-cell-equipment-%i", level), 1, string.format(scienceNames.cyan, "pack"))
+    LSlib.technology.addIngredient(string.format("vehicle-fusion-cell-equipment-%i", level), 1, string.format(scienceNames.orange, "pack"))
+  end
+  for level = 2, 6 do
+    LSlib.technology.addPrerequisite(string.format("vehicle-fusion-cell-equipment-%i", level), string.format("vehicle-solar-panel-equipment-%i", level))
+  end
+  LSlib.technology.addPrerequisite("vehicle-fusion-cell-equipment-1", "advanced-electronics-2")
+  LSlib.technology.addPrerequisite("vehicle-fusion-cell-equipment-2", string.format(scienceNames.purple, "pack"))
+  LSlib.technology.addPrerequisite("vehicle-fusion-cell-equipment-3", string.format(scienceNames.yellow, "pack"))
+
+  -- fusion reactor equipment
+  for level = 1, 6 do
+    LSlib.technology.addPrerequisite(string.format("vehicle-fusion-reactor-equipment-%i", level), string.format("vehicle-fusion-cell-equipment-%i", level))
+    LSlib.technology.addIngredient(string.format("vehicle-fusion-reactor-equipment-%i", level), 1, string.format(scienceNames.cyan, "pack"))
+    LSlib.technology.addIngredient(string.format("vehicle-fusion-reactor-equipment-%i", level), 1, string.format(scienceNames.orange, "pack"))
+  end
+
+  -- overdrive motor/engine
+  LSlib.technology.addPrerequisite("vehicle-motor-equipment", "braking-force-4")
+  LSlib.technology.addIngredient("vehicle-motor-equipment", 1, string.format(scienceNames.cyan, "pack"))
+  LSlib.technology.addIngredient("vehicle-motor-equipment", 1, string.format(scienceNames.orange, "pack"))
+
+  LSlib.technology.addPrerequisite("vehicle-engine-equipment", "braking-force-6")
+  LSlib.technology.addIngredient("vehicle-engine-equipment", 1, string.format(scienceNames.cyan, "pack"))
+  LSlib.technology.addIngredient("vehicle-engine-equipment", 1, string.format(scienceNames.orange, "pack"))
+  LSlib.technology.addIngredient("vehicle-engine-equipment", 1, string.format(scienceNames.yellow, "pack"))
+
+  -- robot equipment
+  LSlib.technology.addIngredient("vehicle-roboport-equipment", 1, string.format(scienceNames.cyan, "pack"))
+  LSlib.technology.addIngredient("vehicle-roboport-equipment", 1, string.format(scienceNames.orange, "pack"))
+
+  LSlib.technology.addIngredient("vehicle-roboport-equipment-2", 1, string.format(scienceNames.cyan, "pack"))
+  LSlib.technology.addIngredient("vehicle-roboport-equipment-2", 1, string.format(scienceNames.orange, "pack"))
+
+  -- shield equipment
+  LSlib.technology.addPrerequisite("vehicle-energy-shield-equipment-1", string.format(scienceNames.gray, "pack"))
+  LSlib.technology.addPrerequisite("vehicle-energy-shield-equipment-2", string.format(scienceNames.blue, "pack"))
+  LSlib.technology.addPrerequisite("vehicle-energy-shield-equipment-4", "military-4")
+  for level = 1, 6 do
+    LSlib.technology.addIngredient(string.format("vehicle-energy-shield-equipment-%i", level), 1, string.format(scienceNames.cyan, "pack"))
+    LSlib.technology.addIngredient(string.format("vehicle-energy-shield-equipment-%i", level), 1, string.format(scienceNames.orange, "pack"))
+  end
+
+  -- laser equipment
+  for level = 1, 6 do
+    LSlib.technology.addIngredient(string.format("vehicle-laser-defense-equipment-%i", level), 1, string.format(scienceNames.cyan, "pack"))
+    LSlib.technology.addIngredient(string.format("vehicle-laser-defense-equipment-%i", level), 1, string.format(scienceNames.orange, "pack"))
+  end
+  for level = 5, 6 do
+    LSlib.technology.addIngredient(string.format("vehicle-laser-defense-equipment-%i", level), 1, string.format(scienceNames.purple, "pack"))
+  end
+  LSlib.technology.addPrerequisite("vehicle-laser-defense-equipment-6", "military-4")
+
+  -- plasma equipment
+  for level = 1, 6 do
+    LSlib.technology.addIngredient(string.format("vehicle-big-turret-equipment-%i", level), 1, string.format(scienceNames.cyan, "pack"))
+    LSlib.technology.addIngredient(string.format("vehicle-big-turret-equipment-%i", level), 1, string.format(scienceNames.orange, "pack"))
+  end
+  LSlib.technology.addPrerequisite("vehicle-big-turret-equipment-1", "military-3")
+  LSlib.technology.addPrerequisite("vehicle-big-turret-equipment-3", "military-4")
+
+--[[
   -- solar panel equipment
   if mods["angelsindustries"] then
     MoreScience.lib.technology.addPrerequisite("vehicle-solar-panel-equipment-1", "angels-vequipment-1")
@@ -125,5 +209,5 @@ if mods["bobvehicleequipment"] then
     MoreScience.lib.technology.addPrerequisite("vehicle-big-turret-equipment-" .. level, "vehicle-laser-defense-equipment-" .. level)
     MoreScience.lib.technology.addIngredient("vehicle-fusion-reactor-equipment-" .. level, 1, "basic-power-science-pack")
   end
-
+]]
 end

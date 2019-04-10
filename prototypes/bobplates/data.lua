@@ -37,6 +37,8 @@ if mods["bobplates"] then
   LSlib.technology.addIngredient("water-bore-3", 1, string.format(scienceNames.orange, "pack"))
   LSlib.technology.addIngredient("water-bore-4", 1, string.format(scienceNames.orange, "pack"))
 
+  LSlib.technology.addPrerequisite("advanced-electronics-3", string.format(scienceNames.purple, "pack"))
+
   -- gas bottle ----------------------------------------------------------------
   LSlib.technology.addPrerequisite("gas-canisters", string.format(scienceNames.green, "pack"))
   LSlib.technology.addPrerequisite("fluid-handling-2", "gas-canisters")
