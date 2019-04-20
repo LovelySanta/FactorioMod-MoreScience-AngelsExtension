@@ -19,6 +19,7 @@ if mods["bobrevamp"] then
 
   -- oil research
   LSlib.technology.addPrerequisite("pumpjack", string.format(scienceNames.orange, "pack"))
+  LSlib.technology.addIngredient("pumpjack", 1, string.format(scienceNames.orange, "pack"))
   LSlib.technology.addPrerequisite("oil-processing", "pumpjack")
   LSlib.technology.movePrerequisite("lubricant", "chemical-plant", "oil-processing")
   LSlib.technology.removePrerequisite("plastics", "chemical-plant")
