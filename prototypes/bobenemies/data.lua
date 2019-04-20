@@ -25,6 +25,7 @@ if mods["bobenemies"] then
       LSlib.item.changeIcon("tool", "alien-science-pack-purple", string.format(potionLocation, 10), 32)
       LSlib.item.changeIcon("tool", "science-pack-gold"        , string.format(potionLocation, 09), 32)
 
+      -- new bottle for alien research
       data:extend{
         {
           type = "item",
@@ -78,6 +79,7 @@ if mods["bobenemies"] then
         LSlib.recipe.addIngredient(sciencePack, "alien-"..bottle, 10)
       end
       LSlib.recipe.editIngredient("science-pack-gold", "alien-"..bottle, "alien-"..bottle, .1)
+      LSlib.recipe.addIngredient ("science-pack-gold", string.format(scienceNames.orange, "pack"), 1)
 
       LSlib.technology.addIngredient("alien-research", 1, string.format(scienceNames.orange, "pack"))
 
