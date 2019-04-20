@@ -27,7 +27,7 @@ if mods["boblogistics"] then
   LSlib.technology.addPrerequisite("logistics-5", string.format(scienceNames.yellow, "pack"))
 
   -- inserters -----------------------------------------------------------------
-  local inserteroverhaul  = settings.startup["bobmods-logistics-inserteroverhaul"].value
+  local inserteroverhaul = settings.startup["bobmods-logistics-inserteroverhaul"].value
   for _,techName in pairs{
     "inserter-stack-size-bonus-3"                  ,
     "inserter-stack-size-bonus-4"                  ,
