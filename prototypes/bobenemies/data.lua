@@ -77,6 +77,8 @@ if mods["bobenemies"] then
           LSlib.item.getOrderstring("tool", string.format(scienceNames.blue, "pack")),
           LSlib.item.getOrderstring("tool", sciencePack)))
         LSlib.recipe.addIngredient(sciencePack, "alien-"..bottle, 10)
+        LSlib.recipe.setCraftingCategory(sciencePack, "ms-advanced-crafting")
+        LSlib.recipe.setShowMadeIn(sciencePack, true)
       end
       LSlib.recipe.editIngredient("science-pack-gold", "alien-"..bottle, "alien-"..bottle, .1)
       LSlib.recipe.addIngredient ("science-pack-gold", string.format(scienceNames.orange, "pack"), 1)

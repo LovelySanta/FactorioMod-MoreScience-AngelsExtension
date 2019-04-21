@@ -12,8 +12,8 @@ for _,modName in pairs({
   "bobpower",
   "bobmining",
   "bobwarfare",
-  --"bobelectronics",
-  --"bobassembly",
+  "bobelectronics",
+  "bobassembly",
   --"bobmodules",
 
   --"CircuitProcessing",

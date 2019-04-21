@@ -87,6 +87,9 @@ if mods["bobvehicleequipment"] then
   end
   LSlib.technology.addPrerequisite("vehicle-big-turret-equipment-1", "military-3")
   LSlib.technology.addPrerequisite("vehicle-big-turret-equipment-3", "military-4")
+  if mods["bobwarfare"] then
+    LSlib.technology.addPrerequisite("vehicle-big-turret-equipment-1", "bob-laser-rifle")
+  end
 
 --[[
   -- solar panel equipment
