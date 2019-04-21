@@ -29,6 +29,34 @@ if mods["bobvehicleequipment"] then
     LSlib.technology.addPrerequisite("vehicle-laser-defense-equipment-1", "personal-laser-defense-equipment")
 
     LSlib.technology.addPrerequisite("vehicle-big-turret-equipment-1", "discharge-defense-equipment")
+
+    if mods["bobwarfare"] then
+
+      for level = 3, 6 do -- energy shield equipment
+        LSlib.technology.addPrerequisite(string.format("vehicle-energy-shield-equipment-%i", level), string.format("bob-energy-shield-equipment-%i", level))
+      end
+
+      for level = 3, 6 do -- battery equipment
+        LSlib.technology.addPrerequisite(string.format("vehicle-battery-equipment-%i", level), string.format("bob-battery-equipment-%i", level))
+      end
+
+      for level = 2, 4 do -- fusion reactor equipment
+        LSlib.technology.addPrerequisite(string.format("vehicle-fusion-reactor-equipment-%i", level + 2), string.format("fusion-reactor-equipment-%i", level))
+      end
+
+      for level = 2, 4 do -- solar panel equipment
+        LSlib.technology.addPrerequisite(string.format("vehicle-solar-panel-equipment-%i", level), string.format("solar-panel-equipment-%i", level))
+      end
+
+      for level = 2, 6 do -- laser equipment
+        LSlib.technology.addPrerequisite(string.format("vehicle-laser-defense-equipment-%i", level), string.format("personal-laser-defense-equipment-%i", level))
+      end
+
+      -- exoskeleton
+      LSlib.technology.addPrerequisite("vehicle-motor-equipment", "exoskeleton-equipment")
+      LSlib.technology.addPrerequisite("vehicle-engine-equipment", "exoskeleton-equipment-2")
+
+    end
   end
 
   if mods["bobenemies"] and mods["bobtech"] and
