@@ -27,6 +27,15 @@ if mods["bobrevamp"] then
   -- Remove heat shield ingredient as this is part of the components instead
   LSlib.recipe.removeIngredient("rocket-part", "heat-shield-tile")
 
+  -- update rocket control units to contain speed modules anyway
+  if data.raw.item["basic-electronic-components"] and
+     data.raw.item["electronic-components"      ] and
+     data.raw.item["intergrated-electronics"    ] and
+     data.raw.item["processing-electronics"     ]
+  then
+    LSlib.recipe.addIngredient("rocket-control-unit", "speed-module")
+  end
+
   if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen then
     LSlib.technology.addPrerequisite("hydrazine", "solid-fuel")
     for barrel, fuelTech in pairs{

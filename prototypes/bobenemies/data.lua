@@ -54,6 +54,11 @@ if mods["bobenemies"] then
       LSlib.technology.addRecipeUnlock("alien-research", "alien-"..bottle)
       LSlib.technology.addIngredient("alien-research", 1, string.format(scienceNames.gray, "pack"))
 
+      -- move the lab over
+      LSlib.item.setSubgroup("item", "lab-alien", "ms-science-bottling")
+      LSlib.item.setOrderstring("item", "lab-alien", LSlib.item.getOrderstring("item", "lab")  .. "-a[alien]")
+      LSlib.recipe.setCraftingCategory("lab-alien", "ms-advanced-crafting")
+
       local alienScienceGroup = "ms-science-alien-science-pack"
       data:extend{{
         type = "item-subgroup",

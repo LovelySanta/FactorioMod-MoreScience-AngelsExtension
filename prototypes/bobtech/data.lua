@@ -28,6 +28,8 @@ if mods["bobtech"] then
 
   -- update advanced lab tech
   LSlib.technology.addIngredient("advanced-research", 1, string.format(scienceNames.orange, "pack"))
+  LSlib.technology.removeRecipeUnlock("advanced-research", "lab-2") -- we have our own lab-2
+  LSlib.item.setHidden("item", "lab-2")
 
   -- fix the logistic science pack
   local function getFluidOrder(scienceName)
