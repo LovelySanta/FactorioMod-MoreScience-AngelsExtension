@@ -18,6 +18,7 @@ for _,modName in pairs({
   "bobmodules",
 
   "CircuitProcessing",
+  "ShinyBobGFX",
 
 
 

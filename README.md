@@ -7,18 +7,18 @@ This mod requires the mod More Science installed.
 # Supported modules
 As of now, these are the supported modules:
 ### Angel's mods
-+ [Angel's Bio Processing](https://mods.factorio.com/mod/angelsbioprocessing)
-+ [Angel's Industries](https://mods.factorio.com/mod/angelsindustries)
-+ [Angel's Petro Chemical Processing](https://mods.factorio.com/mod/angelspetrochem)
-+ [Angel's Refining](https://mods.factorio.com/mod/angelsrefining)
-+ [Angel's Smelting](https://mods.factorio.com/mod/angelssmelting)
++ [Angel's Bio Processing](https://mods.factorio.com/mod/angelsbioprocessing) (not in 0.17 yet)
++ [Angel's Industries](https://mods.factorio.com/mod/angelsindustries) (not in 0.17 yet)
++ [Angel's Petro Chemical Processing](https://mods.factorio.com/mod/angelspetrochem) (not in 0.17 yet)
++ [Angel's Refining](https://mods.factorio.com/mod/angelsrefining) (not in 0.17 yet)
++ [Angel's Smelting](https://mods.factorio.com/mod/angelssmelting) (not in 0.17 yet)
 
 ### Angel's addons
-+ [Angel's Addons - Decorations - ShredNation](https://mods.factorio.com/mod/angelsaddons-shred)
-+ [Angel's Addons - Warehouses](https://mods.factorio.com/mod/angelsaddons-warehouses)
-+ [Angel's Addons - Petrochem Train](https://mods.factorio.com/mod/angelsaddons-petrotrain)
-+ [Angel's Addons - Pressure Tanks](https://mods.factorio.com/mod/angelsaddons-pressuretanks)
-+ [Angel's Addons - Smelting Train](https://mods.factorio.com/mod/angelsaddons-smeltingtrain)
++ [Angel's Addons - Decorations - ShredNation](https://mods.factorio.com/mod/angelsaddons-shred) (not in 0.17 yet)
++ [Angel's Addons - Warehouses](https://mods.factorio.com/mod/angelsaddons-warehouses) (not in 0.17 yet)
++ [Angel's Addons - Petrochem Train](https://mods.factorio.com/mod/angelsaddons-petrotrain) (not in 0.17 yet)
++ [Angel's Addons - Pressure Tanks](https://mods.factorio.com/mod/angelsaddons-pressuretanks) (not in 0.17 yet)
++ [Angel's Addons - Smelting Train](https://mods.factorio.com/mod/angelsaddons-smeltingtrain) (not in 0.17 yet)
 
 ### Bob's mods
 + [Bob's Assembling machines](https://mods.factorio.com/mod/bobassembly)
@@ -37,6 +37,7 @@ As of now, these are the supported modules:
 
 ### Bob's addons
 + [Circuit Processing](https://mods.factorio.com/mod/CircuitProcessing)
++ [ShinyBobGFX](https://mods.factorio.com/mod/ShinyBobGFX)
 
 # Changelog
 ### Future
