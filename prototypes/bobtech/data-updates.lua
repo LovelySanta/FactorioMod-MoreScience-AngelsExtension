@@ -40,13 +40,66 @@ if mods["bobtech"] then
     LSlib.technology.addIngredient("vehicle-roboport-equipment-2", 1, string.format(scienceNames.yellow, "pack"))
   end
 
-  -- fix purple science
-  --LSlib.recipe.removeIngredient(string.format(scienceNames.purple, "pack"), "assembling-machine-2")
-  --LSlib.recipe.removeIngredient(string.format(scienceNames.purple, "pack"), "chemical-plant")
 
-  -- fix yellow science
-  --LSlib.recipe.removeIngredient(string.format(scienceNames.yellow, "pack"), "processing-unit")
-  --LSlib.recipe.removeIngredient(string.format(scienceNames.yellow, "pack"), "battery")
+  -- remove unwanted science ingredients
+  for scienceName, ingredients in pairs{
+    [string.format(scienceNames.purple, "pack")] = {"chemical-plant", "assembling-machine-2"},
+    [string.format(scienceNames.yellow, "fluid")] = {"processing-unit", "flying-robot-frame"},
+  } do
+    for _,ingredientName in pairs(ingredients) do
+      -- check if the ingredient is present
+      local containsIngredient = false
+      for _,scienceIngredient in pairs(data.raw.recipe[scienceName].ingredients or {}) do
+        if ingredientName == (scienceIngredient[1] or scienceIngredient.name or "") then
+          containsIngredient = true
+        end
+      end
+
+      if containsIngredient then
+        -- if it is present, we move it over to the fluid
+        LSlib.recipe.removeIngredient(scienceName, ingredientName)
+      end
+    end
+  end
+
+  -- move science ingredients over from pack to fluid
+  for scienceName, ingredients in pairs{
+    [scienceNames.blue] = {"sodium-hydroxide"},
+    [scienceNames.yellow] = {
+      "processing-unit",
+      "battery", "silver-zinc-battery",
+      "silicon-nitride",
+      "titanium-bearing"
+    },
+  } do
+    for _,ingredientName in pairs(ingredients) do
+      -- check if the ingredient is present
+      local containsIngredient = false
+      local ingredientAmount = 0
+      local ingredientType = nil
+      for _,scienceIngredient in pairs(data.raw.recipe[string.format(scienceName, "pack")].ingredients or {}) do
+        if ingredientName == (scienceIngredient[1] or scienceIngredient.name or "") then
+          containsIngredient = true
+          ingredientAmount = scienceIngredient[2] or scienceIngredient.amount or 1
+          ingredientType = scienceIngredient.type
+        end
+      end
+
+      if containsIngredient then
+        -- if it is present, we move it over to the fluid
+        LSlib.recipe.removeIngredient(string.format(scienceName, "pack"), ingredientName)
+        LSlib.recipe.addIngredient(string.format(scienceName, "fluid"), ingredientName, ingredientAmount, ingredientType)
+      end
+    end
+  end
+
+  -- fix science packs timing and count
+  LSlib.recipe.setResultCount(string.format(scienceNames.yellow, "pack"), string.format(scienceNames.yellow, "pack"), 1)
+  LSlib.recipe.setResultCount(string.format(scienceNames.pink, "pack"), string.format(scienceNames.pink, "pack"), 1)
+
+  LSlib.recipe.setEngergyRequired(string.format(scienceNames.blue  , "pack"), 10)
+  LSlib.recipe.setEngergyRequired(string.format(scienceNames.yellow, "pack"), 20)
+  LSlib.recipe.setEngergyRequired(string.format(scienceNames.pink  , "pack"), 30)
 
   --[[
   if mods["bobelectronics"] then

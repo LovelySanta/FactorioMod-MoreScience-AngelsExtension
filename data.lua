@@ -34,5 +34,6 @@ for _,modName in pairs({
   --"angelsaddons-pressuretanks",
 
 }) do
+  LSlib.utils.log.log(string.format("--- %q ---", modName))
   require("prototypes." .. modName .. ".data")
 end

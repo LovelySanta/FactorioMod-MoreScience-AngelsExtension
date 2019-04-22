@@ -12,7 +12,7 @@ if mods["CircuitProcessing"] then
     "speed-module-2",
     "effectivity-module-2",
   } do
-    LSlib.technology.addPrerequisite(module, "advanced-electronics-2")
+    --LSlib.technology.addPrerequisite(module, "advanced-electronics-2")
   end
 
   -- module lvl 2
