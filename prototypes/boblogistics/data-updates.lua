@@ -43,6 +43,25 @@ if mods["boblogistics"] then
   end
   LSlib.technology.addIngredient("inserter-capacity-bonus-5", 1, string.format(scienceNames.purple, "pack"))
   LSlib.technology.addIngredient("inserter-capacity-bonus-6", 1, string.format(scienceNames.purple, "pack"))
+  LSlib.technology.addIngredient("inserter-capacity-bonus-8", 1, string.format(scienceNames.orange, "pack"))
+  LSlib.technology.addIngredient("inserter-capacity-bonus-8", 1, string.format(scienceNames.cyan, "pack"))
+  LSlib.technology.addIngredient("inserter-capacity-bonus-8", 1, string.format(scienceNames.pink, "pack"))
+
+  for _, scienceName in pairs{
+    scienceNames.red,
+    scienceNames.green,
+    scienceNames.orange,
+    scienceNames.cyan,
+    scienceNames.blue,
+    scienceNames.purple,
+    scienceNames.yellow,
+    scienceNames.pink,
+    scienceNames.white,
+  } do
+    LSlib.technology.removeIngredient("inserter-capacity-bonus-8", string.format(scienceName, "pack"))
+    LSlib.technology.addIngredient("inserter-capacity-bonus-8", 1, "infused-"..string.format(scienceName, "pack"))
+  end
+  LSlib.technology.addPrerequisite("inserter-capacity-bonus-8", "infused-"..string.format(scienceNames.pink, "pack"))
 
   -- character -----------------------------------------------------------------
   for _,techName in pairs{
@@ -55,11 +74,13 @@ if mods["boblogistics"] then
     "character-logistic-slots-7" ,
     "character-logistic-slots-8" ,
     "character-logistic-slots-9" ,
-    "character-logistic-slots-10",
+    --"character-logistic-slots-10",
   } do
     LSlib.technology.removeIngredient(techName, string.format(scienceNames.pink, "pack"))
     LSlib.technology.addIngredient(techName, 1, string.format(scienceNames.purple, "pack"))
   end
+  LSlib.technology.addIngredient("toolbelt-5", 1, string.format(scienceNames.pink, "pack"))
+  LSlib.technology.addIngredient("character-logistic-slots-10", 1, string.format(scienceNames.purple, "pack"))
 
   -- logistic network ----------------------------------------------------------
   local flyingrobotframes = settings.startup["bobmods-logistics-flyingrobotframes"].value
@@ -78,6 +99,26 @@ if mods["boblogistics"] then
   end
   LSlib.technology.removePrerequisite("bob-robotics-3", string.format(scienceNames.pink, "pack"))
 
+  -- infinite worker robot storage
+  LSlib.technology.addIngredient("bob-infinite-worker-robots-storage", 1, string.format(scienceNames.orange, "pack"))
+  LSlib.technology.addIngredient("bob-infinite-worker-robots-storage", 1, string.format(scienceNames.cyan, "pack"))
+  LSlib.technology.addIngredient("bob-infinite-worker-robots-storage", 1, string.format(scienceNames.purple, "pack"))
+
+  for _, scienceName in pairs{
+    scienceNames.red,
+    scienceNames.green,
+    scienceNames.orange,
+    scienceNames.cyan,
+    scienceNames.blue,
+    scienceNames.purple,
+    scienceNames.yellow,
+    scienceNames.pink,
+    scienceNames.white,
+  } do
+    LSlib.technology.removeIngredient("bob-infinite-worker-robots-storage", string.format(scienceName, "pack"))
+    LSlib.technology.addIngredient("bob-infinite-worker-robots-storage", 1, "infused-"..string.format(scienceName, "pack"))
+  end
+  LSlib.technology.addPrerequisite("bob-infinite-worker-robots-storage", "infused-"..string.format(scienceNames.pink, "pack"))
 
 --[[
   if mods["angelspetrochem"] then
