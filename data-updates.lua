@@ -1,28 +1,30 @@
 
-for _,modName in pairs({
+for _,modName in pairs{
 
-  --"bobenemies",
+  "bobores",
+  "bobenemies",
   "bobtech",
   "bobplates",
-  --"bobinserters",
-  "boblogistics",
-  --"bobmining",
-  --"bobelectronics",
-  "bobassembly",
-  --"bobmodules",
-  --"bobpower",
   "bobrevamp",
-  --"bobvehicleequipment",
-  --"bobwarfare",
+  "bobinserters",
+  "boblogistics",
+  "bobvehicleequipment",
+  "bobpower",
+  "bobmining",
+  "bobwarfare",
+  "bobelectronics",
+  "bobassembly",
+  "bobmodules",
 
-  --"CircuitProcessing",
+  "CircuitProcessing",
+  "ShinyBobGFX",
 
 
 
-  "angelsrefining",
-  "angelspetrochem",
-  "angelssmelting",
-  "angelsbioprocessing",
+  --"angelsrefining",
+  --"angelspetrochem",
+  --"angelssmelting",
+  --"angelsbioprocessing",
   --"angelsindustries",
 
   --"angelsaddons-shred",
@@ -31,6 +33,7 @@ for _,modName in pairs({
   --"angelsaddons-smeltingtrain",
   --"angelsaddons-pressuretanks",
 
-}) do
-  require(modName .. ".data-updates")
+} do
+  LSlib.utils.log.log(string.format("--- %q ---", modName))
+  require("prototypes." .. modName .. ".data-updates")
 end

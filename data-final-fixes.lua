@@ -1,25 +1,27 @@
 
-for _,modName in pairs({
+for _,modName in pairs{
 
-  --"bobenemies",
-  --"bobtech",
-  --"bobplates",
-  --"bobinserters",
+  "bobores",
+  "bobenemies",
+  "bobtech",
+  "bobplates",
+  "bobrevamp",
+  "bobinserters",
   "boblogistics",
-  --"bobmining",
-  --"bobelectronics",
+  "bobvehicleequipment",
+  "bobpower",
+  "bobmining",
+  "bobwarfare",
+  "bobelectronics",
   "bobassembly",
-  --"bobmodules",
-  --"bobpower",
-  --"bobrevamp",
-  --"bobvehicleequipment",
-  --"bobwarfare",
+  "bobmodules",
 
-  --"CircuitProcessing",
+  "CircuitProcessing",
+  "ShinyBobGFX",
 
 
 
-  "angelsrefining",
+  --"angelsrefining",
   --"angelspetrochem",
   --"angelssmelting",
   --"angelsbioprocessing",
@@ -31,22 +33,23 @@ for _,modName in pairs({
   --"angelsaddons-smeltingtrain",
   --"angelsaddons-pressuretanks",
 
-  }) do
-    require(modName .. ".data-final-fixes")
+  } do
+    LSlib.utils.log.log(string.format("--- %q ---", modName))
+    require("prototypes." .. modName .. ".data-final-fixes")
   end
 
 -- technology tree cleanup
 local containsExtension = false
-for _,extension in pairs({
+for _,extension in pairs{
   "ScienceCostTweakerExtension",
-  "SeaBlockExtension",
-}) do
+  --"SeaBlockExtension",
+} do
   if mods["MoreScience-" .. extension] then
     containsExtension = true
     break
   end
 end
 if not containsExtension then
-  log("cleaning up the tech tree")
-  MoreScience.lib.technology.removeAllRedundantPrerequisites()
+  LSlib.utils.log.log("----- Cleaning up the tech tree -----")
+  LSlib.technology.removeAllRedundantPrerequisites()
 end

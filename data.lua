@@ -1,24 +1,7 @@
+--LSlib.utils.log.enable()
 
-for _,modName in pairs({
-
-  --"bobenemies",
-  "bobtech",
-  "bobplates",
-  "bobinserters",
-  "boblogistics",
-  "bobmining",
-  "bobelectronics",
-  "bobassembly",
-  "bobmodules",
-  "bobpower",
-  "bobrevamp",
-  "bobvehicleequipment",
-  "bobwarfare",
-
-  "CircuitProcessing",
-
-
-
+-- temporary not supporting angels mods
+for _,modName in pairs{
   "angelsrefining",
   "angelspetrochem",
   "angelssmelting",
@@ -30,7 +13,49 @@ for _,modName in pairs({
   "angelsaddons-petrotrain",
   "angelsaddons-smeltingtrain",
   "angelsaddons-pressuretanks",
+} do
+  if mods[modName] then
+    error("The initial 0.17 release does NOT support angels mods yet. Be patient.")
+  end
+end
 
-}) do
-  require(modName .. ".data")
+
+
+for _,modName in pairs{
+
+  "bobores",
+  "bobenemies",
+  "bobtech",
+  "bobplates",
+  "bobrevamp",
+  "bobinserters",
+  "boblogistics",
+  "bobvehicleequipment",
+  "bobpower",
+  "bobmining",
+  "bobwarfare",
+  "bobelectronics",
+  "bobassembly",
+  "bobmodules",
+
+  "CircuitProcessing",
+  "ShinyBobGFX",
+
+
+
+  --"angelsrefining",
+  --"angelspetrochem",
+  --"angelssmelting",
+  --"angelsbioprocessing",
+  --"angelsindustries",
+
+  --"angelsaddons-shred",
+  --"angelsaddons-warehouses",
+  --"angelsaddons-petrotrain",
+  --"angelsaddons-smeltingtrain",
+  --"angelsaddons-pressuretanks",
+
+} do
+  LSlib.utils.log.log(string.format("--- %q ---", modName))
+  require("prototypes." .. modName .. ".data")
 end
