@@ -42,12 +42,12 @@ if mods["bobenemies"] then
           energy_required = 12,
           enabled = false,
           ingredients = {
-            {"empty-bottle", 100},
+            {"empty-bottle", 10},
             {"alien-artifact", 1},
             {name = string.format(scienceNames.gray, "fluid"), amount = 10, type = "fluid"},
           },
           result = "alien-"..bottle,
-          result_count = 100,
+          result_count = 10,
           category = "ms-chemical-crafting",
         }
       }
