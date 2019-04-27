@@ -100,9 +100,9 @@ if mods["boblogistics"] then
   LSlib.technology.removePrerequisite("bob-robotics-3", string.format(scienceNames.pink, "pack"))
 
   -- infinite worker robot storage
-  LSlib.technology.addIngredient("bob-infinite-worker-robots-storage", 1, string.format(scienceNames.orange, "pack"))
-  LSlib.technology.addIngredient("bob-infinite-worker-robots-storage", 1, string.format(scienceNames.cyan, "pack"))
-  LSlib.technology.addIngredient("bob-infinite-worker-robots-storage", 1, string.format(scienceNames.purple, "pack"))
+  LSlib.technology.addIngredient("bob-infinite-worker-robots-storage-1", 1, string.format(scienceNames.orange, "pack"))
+  LSlib.technology.addIngredient("bob-infinite-worker-robots-storage-1", 1, string.format(scienceNames.cyan, "pack"))
+  LSlib.technology.addIngredient("bob-infinite-worker-robots-storage-1", 1, string.format(scienceNames.purple, "pack"))
 
   for _, scienceName in pairs{
     scienceNames.red,
@@ -115,10 +115,10 @@ if mods["boblogistics"] then
     scienceNames.pink,
     scienceNames.white,
   } do
-    LSlib.technology.removeIngredient("bob-infinite-worker-robots-storage", string.format(scienceName, "pack"))
-    LSlib.technology.addIngredient("bob-infinite-worker-robots-storage", 1, "infused-"..string.format(scienceName, "pack"))
+    LSlib.technology.removeIngredient("bob-infinite-worker-robots-storage-1", string.format(scienceName, "pack"))
+    LSlib.technology.addIngredient("bob-infinite-worker-robots-storage-1", 1, "infused-"..string.format(scienceName, "pack"))
   end
-  LSlib.technology.addPrerequisite("bob-infinite-worker-robots-storage", "infused-"..string.format(scienceNames.pink, "pack"))
+  LSlib.technology.addPrerequisite("bob-infinite-worker-robots-storage-1", "infused-"..string.format(scienceNames.pink, "pack"))
 
 --[[
   if mods["angelspetrochem"] then

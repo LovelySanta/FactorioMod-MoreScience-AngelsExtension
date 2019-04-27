@@ -6,7 +6,7 @@ local scienceNames = require("prototypes/settings").scienceNames
 
 if mods["bobplates"] then
 
-  LSlib.technology.addPrerequisite("electrolysis-1", "purification-research")
+  --LSlib.technology.addPrerequisite("electrolysis-1", "purification-research")
   LSlib.technology.addPrerequisite("electrolysis-1", "brick-processing")
   LSlib.technology.removeRecipeUnlock("electrolysis-2", "storage-tank")
 

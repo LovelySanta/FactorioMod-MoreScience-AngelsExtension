@@ -1,5 +1,5 @@
 
-for _,modName in pairs({
+for _,modName in pairs{
 
   "bobores",
   "bobenemies",
@@ -33,7 +33,7 @@ for _,modName in pairs({
   --"angelsaddons-smeltingtrain",
   --"angelsaddons-pressuretanks",
 
-}) do
+} do
   LSlib.utils.log.log(string.format("--- %q ---", modName))
   require("prototypes." .. modName .. ".data-updates")
 end

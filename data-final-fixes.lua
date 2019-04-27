@@ -1,5 +1,5 @@
 
-for _,modName in pairs({
+for _,modName in pairs{
 
   "bobores",
   "bobenemies",
@@ -33,17 +33,17 @@ for _,modName in pairs({
   --"angelsaddons-smeltingtrain",
   --"angelsaddons-pressuretanks",
 
-  }) do
+  } do
     LSlib.utils.log.log(string.format("--- %q ---", modName))
     require("prototypes." .. modName .. ".data-final-fixes")
   end
 
 -- technology tree cleanup
 local containsExtension = false
-for _,extension in pairs({
+for _,extension in pairs{
   "ScienceCostTweakerExtension",
   --"SeaBlockExtension",
-}) do
+} do
   if mods["MoreScience-" .. extension] then
     containsExtension = true
     break
@@ -53,4 +53,3 @@ if not containsExtension then
   LSlib.utils.log.log("----- Cleaning up the tech tree -----")
   LSlib.technology.removeAllRedundantPrerequisites()
 end
-log(serpent.block(data.raw.tool["alien-artifact-yellow"]))

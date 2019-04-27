@@ -9,6 +9,7 @@ if mods["bobplates"] then
   for barrel, fluidTech in pairs{
     ["nitric-acid"  ] = "nitrogen-processing",
     ["tungstic-acid"] = "tungsten-processing",
+    --["pure-water"   ] = "electrolysis-1"     ,
   } do
     for _,barreling in pairs{"fill-%s-barrel", "empty-%s-barrel"} do
       LSlib.technology.moveRecipeUnlock("fluid-handling", fluidTech, string.format(barreling, barrel))
