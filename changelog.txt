@@ -1,13 +1,18 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.1
+Date: 07. 05. 2019
+  Bugfixes:
+    - Fixed crash as a result of the base game renaming technology names
+---------------------------------------------------------------------------------------------------
 Version: 0.2.0
 Date: 27. 04. 2019
   Features:
-    - Initial 0.17 release, only support bobs mods as of now.
+    - Initial 0.17 release, only support bobs mods as of now
     - Addes ShinyBobGFX support.
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.9
 Date: 21. 12. 2018
-  Fixes:
+  Bugfixes:
     - Fixed raw wood production from organic trees.
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.8
@@ -18,11 +23,11 @@ Date: 14. 11. 2018
 Version: 0.1.7
 Date: 22. 9. 2018
   Changes:
-    - Removed iron pickaxe required for red science fluid.
+    - Removed iron pickaxe required for red science fluid
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.6
 Date: 15. 9. 2018
-  Fixes:
+  Bugfixes:
     - Jax 35 pressure tank now shows with the other tanks
     - Fixed disabled items where showing up in item guis
 ---------------------------------------------------------------------------------------------------
@@ -37,7 +42,7 @@ Date: 3. 8. 2018
     - Added support for bob's vehicle equipment
   Balancing:
     - [bob's logistics] Inserter upgrades are somewhat downgraded, mirroring the changes made in MoreScience v0.1.14
-  Fixes:
+  Bugfixes:
     - Fixed (optional) dependency list, resulting in a beter expected loading in the data stage
     - [bob's warfare] personal laser defense equipment 4 research now depend on military 4 research
 ---------------------------------------------------------------------------------------------------
@@ -47,7 +52,7 @@ Date: 2. 8. 2018
     - Added support for Angels Industries
   Balancing:
     - Basic science fluid 3 require half the amount of circuits
-  Fixes:
+  Bugfixes:
     - [bob's plates] Fixed that science fluid barreling recipes did not require barreling pump when angels refining is present
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.2
@@ -58,7 +63,7 @@ Date: 5. 7. 2018
     - Added support for Angel's Addons - Pressure Tanks
   Changes:
     - [angel's petro chem] Angel's chemical plant now require chemical plant research from bob's revamp (if available)
-  Fixes:
+  Bugfixes:
     - [bob's tech] Fixed basic science pack 3 recipe result in 1 packs (before it was 2, not intended).
     - [bob's tech] Fixed basic science pack 3 recipe required bronze plates when angelsmelting wasn't present
     - [bob's revamp] Fixed that with the chemical plant research the basic science research would still unlock the chemical plant
@@ -68,7 +73,7 @@ Version: 0.1.1
 Date: 24. 6. 2018
   Changes:
     - Cement processing 1 requires washing 2 instead of washing 1 becose of the limestone
-  Fixes:
+  Bugfixes:
     - Fixed organic trees didn't have a subgroup
     - Fixed that the rocket couldn't be made in the rocket silo when playing with Bob's Revamp mod
 ---------------------------------------------------------------------------------------------------

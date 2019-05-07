@@ -21,7 +21,7 @@ if mods["bobvehicleequipment"] then
     end
 
     LSlib.technology.addPrerequisite("vehicle-roboport-equipment", "personal-roboport-equipment")
-    LSlib.technology.addPrerequisite("vehicle-roboport-equipment-2", "personal-roboport-equipment-2")
+    LSlib.technology.addPrerequisite("vehicle-roboport-equipment-2", "personal-roboport-mk2-equipment")
 
     LSlib.technology.addPrerequisite("vehicle-energy-shield-equipment-1", "energy-shield-equipment")
     LSlib.technology.addPrerequisite("vehicle-energy-shield-equipment-2", "energy-shield-mk2-equipment")
