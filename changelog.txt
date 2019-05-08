@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.2
+Date: 08. 05. 2019
+  Bugfixes:
+    - Fixed loop in technology tree that made it impossible to craft solder without transport science.
+---------------------------------------------------------------------------------------------------
 Version: 0.2.1
 Date: 07. 05. 2019
   Bugfixes:
