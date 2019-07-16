@@ -30,7 +30,7 @@ if mods["bobvehicleequipment"] then
 
     LSlib.technology.addPrerequisite("vehicle-big-turret-equipment-1", "discharge-defense-equipment")
 
-    if mods["bobwarfare"] then
+    if mods["bobequipment"] then
 
       for level = 3, 6 do -- energy shield equipment
         LSlib.technology.addPrerequisite(string.format("vehicle-energy-shield-equipment-%i", level), string.format("bob-energy-shield-equipment-%i", level))

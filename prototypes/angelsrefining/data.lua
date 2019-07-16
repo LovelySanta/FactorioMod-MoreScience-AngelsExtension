@@ -1,5 +1,4 @@
-
-
+local scienceNames = require("prototypes/settings").scienceNames
 
 --------------------------------------------------------------------------------
 ----- Angels Refining                                                      -----
@@ -7,6 +6,63 @@
 
 if mods["angelsrefining"] then
 
+  -- adapt purified-water recipe to use water-purified
+  if data.raw["fluid"]["water-purified"] and data.raw["fluid"]["purified-water"] then
+    -- adapt recipes its used in
+    LSlib.technology.addPrerequisite("water-treatment", "steel-processing")
+    LSlib.technology.addPrerequisite("purification-research", "water-treatment")
+    LSlib.technology.moveRecipeUnlock("water-treatment", "purification-research", "water-purification")
+    LSlib.technology.removeRecipeUnlock("purification-research", "purified-water")
+
+    for _, scienceRecipeName in pairs({ -- science recipes
+      string.format(scienceNames.red   , "fluid"),
+      string.format(scienceNames.green , "fluid"),
+      string.format(scienceNames.orange, "fluid"),
+      string.format(scienceNames.gray  , "fluid"),
+      string.format(scienceNames.blue  , "fluid"),
+      string.format(scienceNames.cyan  , "fluid"),
+      string.format(scienceNames.purple, "fluid"),
+      string.format(scienceNames.yellow, "fluid"),
+      string.format(scienceNames.pink  , "fluid"),
+      string.format(scienceNames.white , "fluid"),
+    }) do
+        LSlib.recipe.editIngredient(scienceRecipeName, "purified-water", "water-purified", 2)
+    end
+    for _, scienceRecipeName in pairs({ -- science recipes
+      string.format(scienceNames.red   , "pack"),
+      string.format(scienceNames.green , "pack"),
+      string.format(scienceNames.orange, "pack"),
+      string.format(scienceNames.gray  , "pack"),
+      string.format(scienceNames.blue  , "pack"),
+      string.format(scienceNames.cyan  , "pack"),
+      string.format(scienceNames.purple, "pack"),
+      string.format(scienceNames.yellow, "pack"),
+      string.format(scienceNames.pink  , "pack"),
+      string.format(scienceNames.white , "pack"),
+    }) do
+        LSlib.recipe.editIngredient(string.format("infused-%s", scienceRecipeName), "purified-water", "water-purified", 2)
+    end
+  end
+
+  -- add green science requirements
+  LSlib.technology.addPrerequisite("advanced-ore-refining-1", string.format(scienceNames.green, "pack"))
+  LSlib.technology.addPrerequisite("slag-processing-1", string.format(scienceNames.green, "pack"))
+
+  -- add orange science requirements
+  LSlib.technology.addIngredient("ore-floatation", 1, string.format(scienceNames.orange, "pack"))
+  LSlib.technology.addIngredient("advanced-ore-refining-2", 1, string.format(scienceNames.orange, "pack"))
+  LSlib.technology.addIngredient("advanced-ore-refining-3", 1, string.format(scienceNames.orange, "pack"))
+  LSlib.technology.addIngredient("ore-leaching", 1, string.format(scienceNames.orange, "pack"))
+  LSlib.technology.addIngredient("slag-processing-2", 1, string.format(scienceNames.orange, "pack"))
+  LSlib.technology.addIngredient("thermal-water-extraction", 1, string.format(scienceNames.orange, "pack"))
+  LSlib.technology.addIngredient("ore-refining", 1, string.format(scienceNames.orange, "pack"))
+
+  -- add blue science requirements
+  LSlib.technology.addPrerequisite("thermal-water-extraction", string.format(scienceNames.blue, "pack"))
+  LSlib.technology.addPrerequisite("slag-processing-2", string.format(scienceNames.blue, "pack"))
+  LSlib.technology.addPrerequisite("ore-leaching", string.format(scienceNames.blue, "pack"))
+
+--[[
   -- adapt purified water recipe
   if data.raw["fluid"]["water-purified"] and data.raw["fluid"]["purified-water"] then
     -- delete purified-water
@@ -148,5 +204,5 @@ if mods["angelsrefining"] then
 
 
 
-
+]]
 end

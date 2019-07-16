@@ -8,6 +8,7 @@ for _,modName in pairs{
   "bobrevamp",
   "bobinserters",
   "boblogistics",
+  "bobequipment",
   "bobvehicleequipment",
   "bobpower",
   "bobmining",
@@ -21,7 +22,7 @@ for _,modName in pairs{
 
 
 
-  --"angelsrefining",
+  "angelsrefining",
   --"angelspetrochem",
   --"angelssmelting",
   --"angelsbioprocessing",

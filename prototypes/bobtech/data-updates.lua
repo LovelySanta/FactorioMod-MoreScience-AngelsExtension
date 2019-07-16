@@ -15,7 +15,7 @@ if mods["bobtech"] then
     ["worker-robots-speed-%i"           ] = {4},
     ["inserter-capacity-bonus-%i"       ] = {5, 6},
     ["braking-force-%i"                 ] = {5, 6},
-    ["personal-roboport-equipment-%i"   ] = {2},
+    ["personal-roboport-mk%i-equipment" ] = {2},
   } do
     if LSlib.utils.table.isEmpty(techLevels) then
       LSlib.technology.removeIngredient(techName, packName)
@@ -30,9 +30,9 @@ if mods["bobtech"] then
     "character-logistic-slots-4",
     "character-logistic-trash-slots-3"
   } do
-    LSlib.technology.removePrerequisite(techName, "personal-roboport-equipment-2")
+    LSlib.technology.removePrerequisite(techName, "personal-roboport-mk2-equipment")
   end
-  LSlib.technology.addIngredient("personal-roboport-equipment-2", 1, string.format(scienceNames.yellow, "pack"))
+  LSlib.technology.addIngredient("personal-roboport-mk2-equipment", 1, string.format(scienceNames.yellow, "pack"))
 
 
   if mods["bobvehicleequipment"] then

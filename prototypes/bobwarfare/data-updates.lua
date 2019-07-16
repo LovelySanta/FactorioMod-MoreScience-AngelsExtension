@@ -46,9 +46,9 @@ if mods["bobwarfare"] then
 
       -- power armor & equipment
       "bob-power-armor-3",
-      "bob-energy-shield-equipment-4",
-      "bob-battery-equipment-4",
-      "fusion-reactor-equipment-2",
+      --"bob-energy-shield-equipment-4",
+      --"bob-battery-equipment-4",
+      --"fusion-reactor-equipment-2",
     } do
       LSlib.technology.addPrerequisite(techName, "alien-research")
     end

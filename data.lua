@@ -1,4 +1,4 @@
---LSlib.utils.log.enable()
+LSlib.utils.log.enable()
 
 -- temporary not supporting angels mods
 for _,modName in pairs{
@@ -15,7 +15,7 @@ for _,modName in pairs{
   "angelsaddons-pressuretanks",
 } do
   if mods[modName] then
-    error("The initial 0.17 release does NOT support angels mods yet. Be patient.")
+    --error("The initial 0.17 release does NOT support angels mods yet. Be patient.")
   end
 end
 
@@ -30,6 +30,7 @@ for _,modName in pairs{
   "bobrevamp",
   "bobinserters",
   "boblogistics",
+  "bobequipment",
   "bobvehicleequipment",
   "bobpower",
   "bobmining",
@@ -43,7 +44,7 @@ for _,modName in pairs{
 
 
 
-  --"angelsrefining",
+  "angelsrefining",
   --"angelspetrochem",
   --"angelssmelting",
   --"angelsbioprocessing",
