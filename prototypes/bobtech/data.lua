@@ -57,8 +57,8 @@ if mods["bobtech"] then
   LSlib.recipe.removeIngredient(packName, "flying-robot-frame"    )
   LSlib.recipe.removeIngredient(packName, "filter-inserter"       )
   LSlib.recipe.removeIngredient(packName, "steel-chest"           )
-  LSlib.recipe.addIngredient(packName, "empty-bottle", 1     )
-  LSlib.recipe.addIngredient(packName, fluidName, 10, "fluid")
+  --LSlib.recipe.addIngredient(packName, "empty-bottle", 1     )
+  --LSlib.recipe.addIngredient(packName, fluidName, 10, "fluid")
   LSlib.recipe.setCraftingCategory(packName, "ms-advanced-crafting")
 
   LSlib.technology.changeIcon(packName, scienceTech.icon .. "potion-pink.png", scienceTech.icon_size)

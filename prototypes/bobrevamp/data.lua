@@ -18,7 +18,12 @@ if mods["bobrevamp"] then
   end
   LSlib.technology.movePrerequisite("rocket-fuel", "flammables", "solid-fuel")
 
+  -- rocket fuel
+  LSlib.technology.addIngredient("rocket-fuel", 1, string.format(scienceNames.orange, "pack"))
+
   -- rocket part: heat shield
+  LSlib.technology.addIngredient("heat-shield", 1, string.format(scienceNames.orange, "pack"))
+
   LSlib.technology.addPrerequisite("rocketpart-ion-thruster" ,"heat-shield")
   LSlib.recipe.addIngredient("rocketpart-ion-thruster", "heat-shield-tile", 20)
   LSlib.recipe.addIngredient("rocketpart-ion-booster", "heat-shield-tile", 50)

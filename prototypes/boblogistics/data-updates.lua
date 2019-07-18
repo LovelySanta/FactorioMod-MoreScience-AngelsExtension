@@ -82,6 +82,10 @@ if mods["boblogistics"] then
   LSlib.technology.addIngredient("toolbelt-5", 1, string.format(scienceNames.pink, "pack"))
   LSlib.technology.addIngredient("character-logistic-slots-10", 1, string.format(scienceNames.purple, "pack"))
 
+  -- infinite trash slots
+  LSlib.technology.addIngredient("bob-infinite-character-logistic-trash-slots-1", 1, string.format(scienceNames.orange, "pack"))
+  LSlib.technology.addIngredient("bob-infinite-character-logistic-trash-slots-1", 1, string.format(scienceNames.cyan  , "pack"))
+
   -- logistic network ----------------------------------------------------------
   local flyingrobotframes = settings.startup["bobmods-logistics-flyingrobotframes"].value
   for _,techName in pairs{
@@ -101,7 +105,7 @@ if mods["boblogistics"] then
 
   -- infinite worker robot storage
   LSlib.technology.addIngredient("bob-infinite-worker-robots-storage-1", 1, string.format(scienceNames.orange, "pack"))
-  LSlib.technology.addIngredient("bob-infinite-worker-robots-storage-1", 1, string.format(scienceNames.cyan, "pack"))
+  LSlib.technology.addIngredient("bob-infinite-worker-robots-storage-1", 1, string.format(scienceNames.cyan  , "pack"))
   LSlib.technology.addIngredient("bob-infinite-worker-robots-storage-1", 1, string.format(scienceNames.purple, "pack"))
 
   for _, scienceName in pairs{

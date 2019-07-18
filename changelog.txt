@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.3
+Date: xx. xx. 2019
+  Changes:
+    - Added support for Angel's Refining
+  Bugfixes:
+    - Fixed power armor technology where renamed in base game
+---------------------------------------------------------------------------------------------------
 Version: 0.2.2
 Date: 08. 05. 2019
   Bugfixes:

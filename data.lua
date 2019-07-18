@@ -1,4 +1,3 @@
-LSlib.utils.log.enable()
 
 -- temporary not supporting angels mods
 for _,modName in pairs{
