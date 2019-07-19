@@ -28,11 +28,11 @@ for _,modName in pairs{
   "angelsbioprocessing",
   "angelsindustries",
 
-  --"angelsaddons-shred",
-  --"angelsaddons-warehouses",
-  --"angelsaddons-petrotrain",
-  --"angelsaddons-smeltingtrain",
-  --"angelsaddons-pressuretanks",
+  "angelsaddons-shred",
+  "angelsaddons-warehouses",
+  "angelsaddons-petrotrain",
+  "angelsaddons-smeltingtrain",
+  "angelsaddons-pressuretanks",
 
   } do
     LSlib.utils.log.log(string.format("--- %q ---", modName))

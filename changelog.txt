@@ -2,8 +2,7 @@
 Version: 0.2.3
 Date: xx. xx. 2019
   Changes:
-    - Added support for Angel's Refining
-    - Added support for Angel's PetroChem
+    - Full 0.17 release, including support for all previously supported angels mods
   Bugfixes:
     - Fixed power armor technology where renamed in base game
 ---------------------------------------------------------------------------------------------------
