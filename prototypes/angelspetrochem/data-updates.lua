@@ -3,7 +3,7 @@
 ----- Angels PetroChem                                                     -----
 --------------------------------------------------------------------------------
 if mods["angelspetrochem"] then
-
+--[[
   if mods["bobplates"] then
     -- check if we can disable gas-canisters
     if data.raw["technology"]["gas-canisters"] then
@@ -24,5 +24,5 @@ if mods["angelspetrochem"] then
       end
     end
   end
-
+]]
 end
