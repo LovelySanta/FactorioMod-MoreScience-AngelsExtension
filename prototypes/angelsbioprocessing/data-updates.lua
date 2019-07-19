@@ -16,4 +16,9 @@ if mods["angelsbioprocessing"] then
     end
   end
 
+  -- update organic tree cutting recipes
+  for recipeIndex = 1, 3 do
+    LSlib.recipe.editResult("organic-wood" .. recipeIndex, "solid-tree", "wood", 1)
+  end
+
 end

@@ -46,7 +46,7 @@ for _,modName in pairs{
   "angelsrefining",
   "angelspetrochem",
   "angelssmelting",
-  --"angelsbioprocessing",
+  "angelsbioprocessing",
   --"angelsindustries",
 
   --"angelsaddons-shred",
