@@ -23,8 +23,8 @@ for _,modName in pairs{
 
 
   "angelsrefining",
-  --"angelspetrochem",
-  --"angelssmelting",
+  "angelspetrochem",
+  "angelssmelting",
   --"angelsbioprocessing",
   --"angelsindustries",
 

@@ -62,6 +62,77 @@ if mods["angelsrefining"] then
   LSlib.technology.addPrerequisite("slag-processing-2", string.format(scienceNames.blue, "pack"))
   LSlib.technology.addPrerequisite("ore-leaching", string.format(scienceNames.blue, "pack"))
 
+
+
+--------------------------------------------------------------------------------
+----- Angels PetroChem                                                     -----
+--------------------------------------------------------------------------------
+  if mods["angelspetrochem"] then
+    -- add green science requirements
+    LSlib.technology.addPrerequisite("water-treatment-3", string.format(scienceNames.green, "pack"))
+
+    -- adapt fluid handling
+    LSlib.technology.addPrerequisite("angels-fluid-control", "fluid-handling")
+    LSlib.technology.removePrerequisite("fluid-handling-2", "fluid-handling")
+    LSlib.technology.addPrerequisite("fluid-handling-2", "angels-fluid-control")
+    data.raw["technology"]["fluid-handling-2"].icon = data.raw["technology"]["angels-fluid-control"].icon
+    data.raw["technology"]["fluid-handling-3"].icon = data.raw["technology"]["angels-fluid-control"].icon
+    data.raw["technology"]["fluid-handling-2"].icon_size = data.raw["technology"]["angels-fluid-control"].icon_size
+    data.raw["technology"]["fluid-handling-3"].icon_size = data.raw["technology"]["angels-fluid-control"].icon_size
+
+    -- add orange science requirements
+    LSlib.technology.addPrerequisite("ore-floatation", string.format(scienceNames.orange, "pack"))
+    LSlib.technology.addPrerequisite("water-treatment-3", string.format(scienceNames.orange, "pack"))
+    LSlib.technology.addIngredient("water-treatment-3", 1, string.format(scienceNames.orange, "pack"))
+    LSlib.technology.addIngredient("water-treatment-4", 1, string.format(scienceNames.orange, "pack"))
+  end
+
+
+
+--------------------------------------------------------------------------------
+----- Angels Smelting                                                      -----
+--------------------------------------------------------------------------------
+  if mods["angelssmelting"] then
+    -- move sand over to solid-sand
+    if data.raw["item"]["solid-sand"] and data.raw["item"]["sand"] then
+      -- delete sand
+      LSlib.technology.removeRecipeUnlock("purification-research", "sand")
+      data.raw["recipe"]["sand"] = nil
+      data.raw["item"]["sand"] = nil
+
+      -- use solid-sand instead
+      LSlib.recipe.editIngredient("glass", "sand", "solid-sand", 1)
+      LSlib.technology.addPrerequisite("bottling-research", "water-washing-1")
+      LSlib.recipe.editIngredient("tree-seed-creator", "sand", "solid-sand", 1)
+      LSlib.recipe.editIngredient("wood-plantation", "sand", "solid-sand", 1)
+
+      for index,result in pairs(data.raw["recipe"]["tree-seed-creator"].results) do
+        if result.name == "sand" then
+          data.raw["recipe"]["tree-seed-creator"].results[index].name = "solid-sand"
+          break
+        end
+      end
+    end
+
+  end
+
+
+
+--------------------------------------------------------------------------------
+----- bobs plates                                                          -----
+--------------------------------------------------------------------------------
+  if mods["bobplates"] then
+    -- add green science prerequisites
+    LSlib.technology.addPrerequisite("geode-processing-1", string.format(scienceNames.green, "pack"))
+
+    -- add orange science prerequisites
+    LSlib.technology.addPrerequisite("geode-processing-2", string.format(scienceNames.orange, "pack"))
+    LSlib.technology.addIngredient("geode-processing-2", 1, string.format(scienceNames.orange, "pack"))
+    LSlib.technology.addIngredient("ore-advanced-floatation", 1, string.format(scienceNames.orange, "pack"))
+    LSlib.technology.addIngredient("ore-electro-whinning-cell", 1, string.format(scienceNames.orange, "pack"))
+  end
+
+
 --[[
   -- adapt purified water recipe
   if data.raw["fluid"]["water-purified"] and data.raw["fluid"]["purified-water"] then
