@@ -21,8 +21,17 @@ if mods["bobvehicleequipment"] then
     end
 
     LSlib.technology.addPrerequisite("vehicle-roboport-equipment", "personal-roboport-equipment")
-    LSlib.technology.addPrerequisite("vehicle-roboport-equipment-2", "personal-roboport-mk2-equipment")
+    for level = 2, 4 do
+      LSlib.technology.addPrerequisite(string.format("vehicle-roboport-equipment-%i", level), string.format("personal-roboport-mk%i-equipment", level))
+    end
+    LSlib.technology.addIngredient("vehicle-roboport-equipment-3", 1, string.format(scienceNames.yellow, "pack"))
+    
+    LSlib.technology.addIngredient("vehicle-roboport-modular-equipment-3", 1, string.format(scienceNames.yellow, "pack"))
 
+    for level = 1, 4 do
+      LSlib.technology.addPrerequisite(string.format("vehicle-roboport-modular-equipment-%i", level), string.format("personal-roboport-modular-equipment-%i", level))
+    end
+    
     LSlib.technology.addPrerequisite("vehicle-energy-shield-equipment-1", "energy-shield-equipment")
     LSlib.technology.addPrerequisite("vehicle-energy-shield-equipment-2", "energy-shield-mk2-equipment")
 

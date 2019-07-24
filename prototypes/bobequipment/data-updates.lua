@@ -1,3 +1,4 @@
+local scienceNames = require("prototypes/settings").scienceNames
 
 --------------------------------------------------------------------------------
 ----- Bobs equipment                                                       -----
@@ -17,5 +18,8 @@ if mods["bobequipment"] then
       LSlib.technology.addPrerequisite(techName, "alien-research")
     end
   end
+
+  LSlib.technology.addIngredient("personal-roboport-mk3-equipment", 1, string.format(scienceNames.yellow, "pack"))
+  LSlib.technology.addIngredient("personal-roboport-modular-equipment-3", 1, string.format(scienceNames.yellow, "pack"))
 
 end

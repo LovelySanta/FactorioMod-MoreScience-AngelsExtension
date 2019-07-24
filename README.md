@@ -7,28 +7,31 @@ This mod requires the mod More Science installed.
 # Supported modules
 As of now, these are the supported modules:
 ### Angel's mods
-+ [Angel's Bio Processing](https://mods.factorio.com/mod/angelsbioprocessing) (not in 0.17 yet)
-+ [Angel's Industries](https://mods.factorio.com/mod/angelsindustries) (not in 0.17 yet)
-+ [Angel's Petro Chemical Processing](https://mods.factorio.com/mod/angelspetrochem) (not in 0.17 yet)
-+ [Angel's Refining](https://mods.factorio.com/mod/angelsrefining) (not in 0.17 yet)
-+ [Angel's Smelting](https://mods.factorio.com/mod/angelssmelting) (not in 0.17 yet)
++ [Angel's Bio Processing](https://mods.factorio.com/mod/angelsbioprocessing)
++ [Angel's Industries](https://mods.factorio.com/mod/angelsindustries)
++ [Angel's Petro Chemical Processing](https://mods.factorio.com/mod/angelspetrochem)
++ [Angel's Refining](https://mods.factorio.com/mod/angelsrefining)
++ [Angel's Smelting](https://mods.factorio.com/mod/angelssmelting)
 
 ### Angel's addons
-+ [Angel's Addons - Decorations - ShredNation](https://mods.factorio.com/mod/angelsaddons-shred) (not in 0.17 yet)
-+ [Angel's Addons - Warehouses](https://mods.factorio.com/mod/angelsaddons-warehouses) (not in 0.17 yet)
-+ [Angel's Addons - Petrochem Train](https://mods.factorio.com/mod/angelsaddons-petrotrain) (not in 0.17 yet)
-+ [Angel's Addons - Pressure Tanks](https://mods.factorio.com/mod/angelsaddons-pressuretanks) (not in 0.17 yet)
-+ [Angel's Addons - Smelting Train](https://mods.factorio.com/mod/angelsaddons-smeltingtrain) (not in 0.17 yet)
++ [Angel's Addons - C.A.B.](https://mods.factorio.com/mod/angelsaddons-cab)
++ [Angel's Addons - Decorations - ShredNation](https://mods.factorio.com/mod/angelsaddons-shred)
++ [Angel's Addons - Warehouses](https://mods.factorio.com/mod/angelsaddons-warehouses)
++ [Angel's Addons - Petrochem Train](https://mods.factorio.com/mod/angelsaddons-petrotrain)
++ [Angel's Addons - Pressure Tanks](https://mods.factorio.com/mod/angelsaddons-pressuretanks)
++ [Angel's Addons - Smelting Train](https://mods.factorio.com/mod/angelsaddons-smeltingtrain)
 
 ### Bob's mods
++ [Bob's Adjustable Inserters](https://mods.factorio.com/mod/bobinserters)
 + [Bob's Assembling machines](https://mods.factorio.com/mod/bobassembly)
 + [Bob's Electronics](https://mods.factorio.com/mod/bobelectronics)
 + [Bob's Enemies](https://mods.factorio.com/mod/bobenemies)
-+ [Bob's Adjustable Inserters](https://mods.factorio.com/mod/bobinserters)
 + [Bob's Logistics mod](https://mods.factorio.com/mod/boblogistics)
++ [Bob's Metals, Chemicals and Intermediates](https://mods.factorio.com/mod/bobplates)
 + [Bob's Mining](https://mods.factorio.com/mod/bobmining)
 + [Bob's Modules](https://mods.factorio.com/mod/bobmodules)
-+ [Bob's Metals, Chemicals and Intermediates](https://mods.factorio.com/mod/bobplates)
++ [Bob's Ores](https://mods.factorio.com/mod/bobores)
++ [Bob's Personal Equipment mod](https://mods.factorio.com/mod/bobequipment)
 + [Bob's Power](https://mods.factorio.com/mod/bobpower)
 + [Bob's Revamp mod](https://mods.factorio.com/mod/bobrevamp)
 + [Bob's Tech](https://mods.factorio.com/mod/bobtech)

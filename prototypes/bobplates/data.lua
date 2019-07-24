@@ -43,7 +43,7 @@ if mods["bobplates"] then
   LSlib.technology.addPrerequisite("gas-canisters", string.format(scienceNames.green, "pack"))
   LSlib.technology.addPrerequisite("fluid-handling-2", "gas-canisters")
 
-  LSlib.recipe.addIngredient("gas-canister", "empty-barrel", 5)
+  LSlib.recipe.addIngredient("gas-canister", "empty-barrel", 1)
   if settings.startup["MS-allow-empty-barrel-recycling"].value == true then
     local gasBottleRecycling = util.table.deepcopy(data.raw["recipe"]["gas-canister"])
     gasBottleRecycling.name = gasBottleRecycling.name.."-recycling"
@@ -56,6 +56,7 @@ if mods["bobplates"] then
     gasBottleRecycling.results = {{type="item", name="empty-barrel", amount=1, probability=.95}}
     gasBottleRecycling.order = data.raw["item"]["gas-canister"].order .. "-b[recycle]"
     data:extend{gasBottleRecycling}
+    data.raw.recipe[gasBottleRecycling.name].allow_as_intermediate = false
     LSlib.technology.addRecipeUnlock("gas-canisters", "gas-canister-recycling")
   end
 
@@ -85,6 +86,7 @@ if mods["bobplates"] then
     canisterRecycling.results = {{type="item", name="empty-barrel", amount=1, probability=.95}}
     canisterRecycling.order = data.raw["item"]["empty-canister"].order .. "-b[recycle]"
     data:extend{canisterRecycling}
+    data.raw.recipe[canisterRecycling.name].allow_as_intermediate = false
     LSlib.technology.addRecipeUnlock("fuel-canisters", "empty-canister-recycling")
   end
 

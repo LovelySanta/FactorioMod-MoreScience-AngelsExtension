@@ -57,9 +57,20 @@ if mods["bobvehicleequipment"] then
   -- robot equipment
   LSlib.technology.addIngredient("vehicle-roboport-equipment", 1, string.format(scienceNames.cyan, "pack"))
   LSlib.technology.addIngredient("vehicle-roboport-equipment", 1, string.format(scienceNames.orange, "pack"))
+  for level = 2, 4 do
+    LSlib.technology.addIngredient(string.format("vehicle-roboport-equipment-%i", level), 1, string.format(scienceNames.cyan, "pack"))
+    LSlib.technology.addIngredient(string.format("vehicle-roboport-equipment-%i", level), 1, string.format(scienceNames.orange, "pack"))
+  end
+  LSlib.technology.addIngredient("vehicle-roboport-equipment-3", 1, string.format(scienceNames.yellow, "pack"))
 
-  LSlib.technology.addIngredient("vehicle-roboport-equipment-2", 1, string.format(scienceNames.cyan, "pack"))
-  LSlib.technology.addIngredient("vehicle-roboport-equipment-2", 1, string.format(scienceNames.orange, "pack"))
+  -- robot equipment modules
+  for level = 1, 4 do
+    LSlib.technology.addIngredient(string.format("vehicle-roboport-modular-equipment-%i", level), 1, string.format(scienceNames.cyan, "pack"))
+    LSlib.technology.addIngredient(string.format("vehicle-roboport-modular-equipment-%i", level), 1, string.format(scienceNames.orange, "pack"))
+  end
+  for level = 2, 3 do
+    LSlib.technology.addIngredient(string.format("vehicle-roboport-modular-equipment-%i", level), 1, string.format(scienceNames.yellow, "pack"))
+  end
 
   -- shield equipment
   LSlib.technology.addPrerequisite("vehicle-energy-shield-equipment-1", string.format(scienceNames.gray, "pack"))

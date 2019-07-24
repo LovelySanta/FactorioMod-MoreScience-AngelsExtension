@@ -1,8 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.3
-Date: xx. xx. 2019
+Date: 24. 07. 2019
+  Features:
+    - Added support for Angel's Addons - C.A.B
+    - Added initial support for Bob's Personal Equipment
   Changes:
     - Full 0.17 release, including support for all previously supported angels mods
+    - Updated bobs mod for new additions to Bob's Power and Bob's Vehicle Equipment
   Bugfixes:
     - Fixed power armor technology where renamed in base game
 ---------------------------------------------------------------------------------------------------

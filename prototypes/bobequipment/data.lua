@@ -6,6 +6,22 @@ local scienceNames = require("prototypes/settings").scienceNames
 
 if mods["bobequipment"] then
 
+  -- personal roboport
+  for level = 3, 4 do
+    LSlib.technology.addIngredient(string.format("personal-roboport-mk%i-equipment", level), 1, string.format(scienceNames.orange, "pack"))
+    LSlib.technology.addIngredient(string.format("personal-roboport-mk%i-equipment", level), 1, string.format(scienceNames.cyan, "pack"))
+  end
+  LSlib.technology.addIngredient("personal-roboport-mk3-equipment", 1, string.format(scienceNames.yellow, "pack"))
+
+  -- personal roboport modules
+  for level = 1, 4 do
+    LSlib.technology.addIngredient(string.format("personal-roboport-modular-equipment-%i", level), 1, string.format(scienceNames.orange, "pack"))
+    LSlib.technology.addIngredient(string.format("personal-roboport-modular-equipment-%i", level), 1, string.format(scienceNames.cyan, "pack"))
+  end
+  for level = 2, 3 do
+    LSlib.technology.addIngredient(string.format("personal-roboport-modular-equipment-%i", level), 1, string.format(scienceNames.yellow, "pack"))
+  end
+
   -- energy shield equipment
   LSlib.technology.addPrerequisite("bob-energy-shield-equipment-4", "military-4")
   for level = 3, 6 do
