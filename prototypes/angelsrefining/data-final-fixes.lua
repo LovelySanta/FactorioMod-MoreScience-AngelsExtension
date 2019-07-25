@@ -419,6 +419,8 @@ if mods["angelsrefining"] then
     "liquid-perchloric-acid",
 
     "crude-oil",
+    "heavy-oil",
+    "light-oil",
     "liquid-naphtha",
     "liquid-mineral-oil",
     "liquid-toluene",
