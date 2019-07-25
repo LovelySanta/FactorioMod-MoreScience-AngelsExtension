@@ -51,7 +51,7 @@ if mods["bobplates"] then
     table.insert(gasBottleRecycling.icons, data.raw["recipe"]["empty-barrel-recycling"].icons[2])
     gasBottleRecycling.normal = nil
     gasBottleRecycling.expensive = nil
-    gasBottleRecycling.ingredients = {{"gas-canister", 1}}
+    gasBottleRecycling.ingredients = {{"gas-canister", 5}}
     gasBottleRecycling.category = "advanced-crafting"
     gasBottleRecycling.results = {{type="item", name="empty-barrel", amount=1, probability=.95}}
     gasBottleRecycling.order = data.raw["item"]["gas-canister"].order .. "-b[recycle]"
@@ -81,7 +81,7 @@ if mods["bobplates"] then
     table.insert(canisterRecycling.icons, data.raw["recipe"]["empty-barrel-recycling"].icons[2])
     canisterRecycling.normal = nil
     canisterRecycling.expensive = nil
-    canisterRecycling.ingredients = {{"empty-canister", 1}}
+    canisterRecycling.ingredients = {{"empty-canister", 5}}
     canisterRecycling.category = "advanced-crafting"
     canisterRecycling.results = {{type="item", name="empty-barrel", amount=1, probability=.95}}
     canisterRecycling.order = data.raw["item"]["empty-canister"].order .. "-b[recycle]"

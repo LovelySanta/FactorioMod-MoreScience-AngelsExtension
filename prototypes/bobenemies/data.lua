@@ -60,12 +60,15 @@ if mods["bobenemies"] then
       LSlib.recipe.setCraftingCategory("lab-alien", "ms-advanced-crafting")
 
       local alienScienceGroup = "ms-science-alien-science-pack"
-      data:extend{{
-        type = "item-subgroup",
-        name = alienScienceGroup,
-        group = data.raw["item-subgroup"]["science-pack"].group,
-        order = "g-c[science-pack]-c"
-      }}
+      if not data.raw["item-subgroup"][alienScienceGroup] then
+        data:extend{{
+          type = "item-subgroup",
+          name = alienScienceGroup,
+          group = data.raw["item-subgroup"]["science-pack"].group,
+          order = "g-c[science-pack]-c"
+        }}
+      end
+      
       local alienSciencePack = "alien-science-pack%s"
       for _,sciencePack in pairs{
         string.format(alienSciencePack, ""       ),
