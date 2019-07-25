@@ -9,6 +9,7 @@ Date: 25. 07. 2019
     - Updated bobs mod for new additions to Bob's Power and Bob's Vehicle Equipment
     - Rework of barreling system to use bobs canisters as well
     - Fixed storage tank being placed wrongly in crafting menu when playing with angelrefining
+    - Updated bob's nuclear power update
   Bugfixes:
     - Fixed power armor technology where renamed in base game
 ---------------------------------------------------------------------------------------------------

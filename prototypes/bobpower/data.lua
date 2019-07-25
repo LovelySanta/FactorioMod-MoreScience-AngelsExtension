@@ -62,9 +62,11 @@ if mods["bobpower"] then
   -- NUCLEAR POWER -------------------------------------------------------------
   if settings.startup["bobmods-power-steam"].value == true then
     -- heat exchanger
+    for level = 1, 3 do
+      LSlib.technology.addIngredient(string.format("bob-heat-exchanger-%i", level), 1, string.format(scienceNames.cyan, "pack"))
+    end
     for level = 2, 3 do
       LSlib.technology.addIngredient(string.format("bob-heat-exchanger-%i", level), 1, string.format(scienceNames.orange, "pack"))
-      LSlib.technology.addIngredient(string.format("bob-heat-exchanger-%i", level), 1, string.format(scienceNames.cyan, "pack"))
     end
 
     -- steam turbine
@@ -72,8 +74,47 @@ if mods["bobpower"] then
       LSlib.technology.addIngredient(string.format("bob-steam-turbine-%i", level), 1, string.format(scienceNames.orange, "pack"))
       LSlib.technology.addIngredient(string.format("bob-steam-turbine-%i", level), 1, string.format(scienceNames.cyan, "pack"))
     end
+    if settings.startup["bobmods-power-steam"].value == true then
+      for level = 2, 3 do
+        LSlib.technology.addPrerequisite(string.format("bob-steam-turbine-%i", level), string.format("bob-steam-engine-%i", level + 2))
+      end
+    end
+  end
+
+  if settings.startup["bobmods-power-steam"].value == true or
+     settings.startup["bobmods-power-nuclear"].value == true or
+     settings.startup["bobmods-power-heatsources"].value == true then
+    -- heat pipe
+    LSlib.technology.addPrerequisite("bob-heat-pipe-1", string.format(scienceNames.cyan, "pack"))
+    for level = 1, 3 do
+      LSlib.technology.addIngredient(string.format("bob-heat-pipe-%i", level), 1, string.format(scienceNames.cyan, "pack"))
+    end
     for level = 2, 3 do
-      LSlib.technology.addPrerequisite(string.format("bob-steam-turbine-%i", level), string.format("bob-steam-engine-%i", level + 2))
+      LSlib.technology.addIngredient(string.format("bob-heat-pipe-%i", level), 1, string.format(scienceNames.orange, "pack"))
+    end
+  end
+
+  if settings.startup["bobmods-power-heatsources"].value == true then
+    -- heat source (regular and fluid)
+    for level = 1, 3 do
+      LSlib.technology.addIngredient(string.format("burner-reactor-%i", level), 1, string.format(scienceNames.cyan, "pack"))
+      LSlib.technology.addIngredient(string.format("fluid-reactor-%i", level), 1, string.format(scienceNames.cyan, "pack"))
+      LSlib.technology.addPrerequisite(string.format("fluid-reactor-%i", level), string.format("bob-oil-boiler-%i", level))
+    end
+    for level = 2, 3 do
+      LSlib.technology.addIngredient(string.format("burner-reactor-%i", level), 1, string.format(scienceNames.orange, "pack"))
+      LSlib.technology.addIngredient(string.format("fluid-reactor-%i", level), 1, string.format(scienceNames.orange, "pack"))
+      LSlib.technology.addPrerequisite(string.format("fluid-reactor-%i", level), string.format("burner-reactor-%i", level))
+    end
+  end
+
+  if settings.startup["bobmods-power-nuclear"].value == true then
+    -- nuclear reactor
+    LSlib.technology.addPrerequisite("nuclear-power", "burner-reactor-1")
+    for level = 2, 3 do
+      LSlib.technology.addPrerequisite(string.format("bob-nuclear-power-%i", level), string.format("burner-reactor-%i", level))
+      LSlib.technology.addIngredient(string.format("bob-nuclear-power-%i", level), 1, string.format(scienceNames.orange, "pack"))
+      LSlib.technology.addIngredient(string.format("bob-nuclear-power-%i", level), 1, string.format(scienceNames.cyan, "pack"))
     end
   end
 

@@ -15,4 +15,9 @@ if mods["bobpower"] then
       LSlib.technology.addIngredient(techName, 1, string.format(scienceNames.purple, "pack"))
     end
   end
+
+  if settings.startup["bobmods-power-nuclear"].value == true then
+    LSlib.technology.addPrerequisite("bob-nuclear-power-2", "nuclear-power")
+    LSlib.technology.addPrerequisite("bob-nuclear-power-3", "bob-nuclear-power-2")
+  end
 end
