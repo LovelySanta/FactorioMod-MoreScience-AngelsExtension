@@ -7,6 +7,7 @@ for _,modName in pairs{
   "bobplates",
   "bobrevamp",
   "bobinserters",
+  "bobassembly",
   "boblogistics",
   "bobequipment",
   "bobvehicleequipment",
@@ -14,7 +15,6 @@ for _,modName in pairs{
   "bobmining",
   "bobwarfare",
   "bobelectronics",
-  "bobassembly",
   "bobmodules",
 
   "CircuitProcessing",

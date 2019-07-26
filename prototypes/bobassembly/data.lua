@@ -6,6 +6,15 @@ local scienceNames = require("prototypes/settings").scienceNames
 
 if mods["bobassembly"] then
 
+  -- burner assembling machine
+  if settings.startup["bobmods-assembly-burner"].value == true then
+    -- add the items back to the basic automation tech as bob removed them...
+    LSlib.technology.addRecipeUnlock("basic-automation", "electric-mining-drill")
+    LSlib.technology.addRecipeUnlock("basic-automation", "lab")
+    LSlib.technology.addRecipeUnlock("basic-automation", "transport-belt")
+    LSlib.technology.addRecipeUnlock("basic-automation", "inserter")
+  end
+
   -- assembling machine
   for level = 4, 6 do
     LSlib.technology.addIngredient(string.format("automation-%i", level), 1, string.format(scienceNames.orange, "pack"))
