@@ -20,6 +20,7 @@ As of now, these are the supported modules:
 + [Angel's Addons - Petrochem Train](https://mods.factorio.com/mod/angelsaddons-petrotrain)
 + [Angel's Addons - Pressure Tanks](https://mods.factorio.com/mod/angelsaddons-pressuretanks)
 + [Angel's Addons - Smelting Train](https://mods.factorio.com/mod/angelsaddons-smeltingtrain)
++ [ShinyAngelGFX](https://mods.factorio.com/mod/ShinyAngelGFX)
 
 ### Bob's mods
 + [Bob's Adjustable Inserters](https://mods.factorio.com/mod/bobinserters)

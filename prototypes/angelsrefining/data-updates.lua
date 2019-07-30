@@ -21,10 +21,15 @@ if mods["angelsrefining"] then
       -- analyse recipe name to check for barreling recipes
       local effectNameParts = LSlib.utils.string.split(effect.recipe, "-")
       if (#effectNameParts > 2 and effectNameParts[#effectNameParts] =="barrel") and (effectNameParts[1] == "fill" or effectNameParts[1] =="empty") then
-        LSlib.technology.removeRecipeUnlock("fluid-handling", effect.recipe)
-        LSlib.technology.addRecipeUnlock("fluid-handling-2", effect.recipe)
+        LSlib.technology.moveRecipeUnlock("fluid-handling", "fluid-handling-2", effect.recipe)
       end
     end
+  end
+
+  if mods["boblogistics"] then
+    -- move pump recipes around
+    LSlib.technology.moveRecipeUnlock("fluid-handling-2", "angels-fluid-control", "pump")
+    LSlib.technology.addPrerequisite("bob-fluid-handling-2", "angels-fluid-control")
   end
 
 end

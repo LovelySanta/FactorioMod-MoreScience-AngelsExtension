@@ -1,3 +1,4 @@
+local scienceNames = require("prototypes/settings").scienceNames
 
 --------------------------------------------------------------------------------
 ----- Angels PetroChem                                                     -----

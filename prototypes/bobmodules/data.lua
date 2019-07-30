@@ -1,3 +1,4 @@
+local scienceNames = require("prototypes/settings").scienceNames
 
 --------------------------------------------------------------------------------
 ----- Bob modules                                                          -----
@@ -19,6 +20,46 @@ if mods["bobmodules"] then
   end
 
   LSlib.technology.removePrerequisite("combat-robotics-3", "speed-module")
+
+  -- update productivity modules
+  for lvl = 1, 8 do
+    for _,scienceName in pairs{
+      scienceNames.red,
+      scienceNames.green,
+      scienceNames.gray,
+      scienceNames.blue,
+      scienceNames.purple,
+      scienceNames.yellow,
+    } do
+        LSlib.recipe.removeModuleEffect(string.format("productivity-module%s", lvl == 1 and "" or ("-"..lvl)), string.format(scienceName, "pack"))
+    end
+
+    for _,scienceName in pairs{
+      scienceNames.red,
+      scienceNames.green,
+      scienceNames.gray,
+      scienceNames.orange,
+      scienceNames.cyan,
+      scienceNames.blue,
+      scienceNames.purple,
+      scienceNames.yellow,
+      scienceNames.pink,
+    } do
+      LSlib.recipe.allowModuleEffect(string.format("productivity-module%s", lvl == 1 and "" or ("-"..lvl)), string.format(scienceName, "fluid"))
+      LSlib.recipe.allowModuleEffect(string.format("productivity-module%s", lvl == 1 and "" or ("-"..lvl)), string.format("infused-"..scienceName, "pack"))
+
+      if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == true then
+        LSlib.recipe.removeModuleEffect(string.format("raw-productivity-module-%i", lvl), string.format(scienceName, "pack"))
+        LSlib.recipe.allowModuleEffect(string.format("raw-productivity-module-%i", lvl), string.format(scienceName, "fluid"))
+        LSlib.recipe.allowModuleEffect(string.format("raw-productivity-module-%i", lvl), string.format("infused-"..scienceName, "pack"))
+      end
+    end
+
+    if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == true then
+      LSlib.recipe.allowModuleEffect(string.format("productivity-module%s", lvl == 1 and "" or ("-"..lvl)), string.format("infused-"..scienceNames.white, "pack"))
+      LSlib.recipe.allowModuleEffect(string.format("raw-productivity-module-%i", lvl), string.format("infused-"..scienceNames.white, "pack"))
+    end
+  end
 
   --[[
   if mods["angelssmelting"] then

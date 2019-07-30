@@ -35,6 +35,7 @@ for _,modName in pairs{
   "angelsaddons-smeltingtrain",
   "angelsaddons-pressuretanks",
   "angelsaddons-cab",
+  "ShinyAngelGFX",
 
 } do
   LSlib.utils.log.log(string.format("--- %q ---", modName))

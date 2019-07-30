@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.5
+Date: 30. 07. 2019
+  Features:
+    - Addes ShinyAngelGFX support.
+  Bugfixes:
+    - Fixed productivity modules where not applied correctly to science fluid and science packs
+    - Fixed that the utility science pack could not be crafted due to too much ingredients
+    - Fixed that gas cannisters couldn't be researched in some cases
+    - Fixed crash related to bob vehicle equipment when bob personal equipment is not present
+    - Fixed pump MK2 would be unlocked before the pump MK1
+---------------------------------------------------------------------------------------------------
 Version: 0.2.4
 Date: 26. 07. 2019
   Bugfixes:

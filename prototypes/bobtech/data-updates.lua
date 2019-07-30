@@ -34,11 +34,22 @@ if mods["bobtech"] then
   end
   LSlib.technology.addIngredient("personal-roboport-mk2-equipment", 1, string.format(scienceNames.yellow, "pack"))
 
-
   if mods["bobvehicleequipment"] then
     LSlib.technology.removeIngredient("vehicle-roboport-equipment-2", packName)
     LSlib.technology.addIngredient("vehicle-roboport-equipment-2", 1, string.format(scienceNames.yellow, "pack"))
   end
+
+  -- fix the productivity modules
+  LSlib.recipe.removeModuleEffect({
+    "productivity-module"  ,
+    "productivity-module-2",
+    "productivity-module-3",
+    mods["bobmodules"] and "productivity-module-4" or nil,
+    mods["bobmodules"] and "productivity-module-5" or nil,
+    mods["bobmodules"] and "productivity-module-6" or nil,
+    mods["bobmodules"] and "productivity-module-7" or nil,
+    mods["bobmodules"] and "productivity-module-8" or nil,
+  }, packName)
 
 
   -- remove unwanted science ingredients
