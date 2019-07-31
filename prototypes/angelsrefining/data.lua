@@ -28,6 +28,9 @@ if mods["angelsrefining"] then
     }) do
         LSlib.recipe.editIngredient(scienceRecipeName, "purified-water", "water-purified", 2)
     end
+    if settings.startup["MS-rocket-launching-extended"].value == true then
+      LSlib.recipe.editIngredient(string.format(scienceNames.mixing, "pack"), "purified-water", "water-purified", 0.5)
+    end
     for _, scienceRecipeName in pairs({ -- science recipes
       string.format(scienceNames.red   , "pack"),
       string.format(scienceNames.green , "pack"),

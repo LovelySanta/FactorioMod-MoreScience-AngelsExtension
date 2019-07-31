@@ -13,6 +13,10 @@ if mods["bobassembly"] then
     LSlib.technology.addRecipeUnlock("basic-automation", "lab")
     LSlib.technology.addRecipeUnlock("basic-automation", "transport-belt")
     LSlib.technology.addRecipeUnlock("basic-automation", "inserter")
+
+    -- make sure the red science pack can be crafting in these...
+    LSlib.entity.addCraftingCategory("assembling-machine", "burner-assembling-machine", "ms-manual-crafting")
+    LSlib.entity.addCraftingCategory("assembling-machine", "steam-assembling-machine" , "ms-manual-crafting")
   end
 
   -- assembling machine

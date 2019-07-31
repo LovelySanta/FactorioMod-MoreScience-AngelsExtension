@@ -36,6 +36,10 @@ if mods["angelspetrochem"] then
     "angels-chemical-plant-4",
   }) do
     LSlib.entity.addCraftingCategory("assembling-machine", buildingName, "basic-chemistry")
+    if settings.startup["MS-rocket-launching-extended"].value == true then
+      LSlib.recipe.setCraftingCategory(string.format(scienceNames.mixing, "pack"), "basic-chemistry")
+      LSlib.recipe.setShowMadeIn(string.format(scienceNames.mixing, "pack"), true)
+    end
   end
 
   -- adapt science fluids: only craftable in regular chemical plants
