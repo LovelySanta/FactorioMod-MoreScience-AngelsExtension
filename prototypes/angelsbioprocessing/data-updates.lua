@@ -16,9 +16,10 @@ if mods["angelsbioprocessing"] then
     end
   end
 
-  -- update organic tree cutting recipes
-  for recipeIndex = 1, 3 do
-    LSlib.recipe.editResult("organic-wood" .. recipeIndex, "solid-tree", "wood", 1)
+  -- update organic tree cutting recipes as 1 solid-tree produces 8 wood
+  for recipeTier = 1, 3 do
+    LSlib.recipe.editResult("organic-wood" .. recipeTier, "solid-tree", "wood", 8)
+    LSlib.recipe.setLocalisedName("organic-wood" .. recipeTier, {"recipe-name.recipe-amount", string.format("%i", LSlib.recipe.getResultCount("organic-wood" .. recipeTier, "wood")), {"item-name.wood"}})
   end
 
 end

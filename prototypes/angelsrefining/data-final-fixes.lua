@@ -1,3 +1,4 @@
+local scienceNames = require("prototypes/settings").scienceNames
 
 --------------------------------------------------------------------------------
 ----- Angels Refining                                                      -----
@@ -550,4 +551,22 @@ if mods["angelsrefining"] then
     createCanisterRecipe(fluidName, fluidOrder)
   end
 
+  -- science barrel recipes ---------------------------------------------------
+
+  for _,scienceName in pairs{
+    scienceNames.red   ,
+    scienceNames.green ,
+    scienceNames.gray  ,
+    scienceNames.orange,
+    scienceNames.cyan  ,
+    scienceNames.blue  ,
+    scienceNames.purple,
+    scienceNames.yellow,
+    scienceNames.pink  ,
+    scienceNames.white ,
+  } do
+    for _,barreling in pairs{ "fill-%s-barrel", "empty-%s-barrel" } do
+      LSlib.recipe.setCraftingCategory(string.format(barreling, string.format(scienceName, "fluid")), "barreling-pump")
+    end
+  end
 end

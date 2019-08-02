@@ -1,4 +1,4 @@
-LSlib.utils.log.enable()
+--LSlib.utils.log.enable()
 
 for _,modName in pairs{
 

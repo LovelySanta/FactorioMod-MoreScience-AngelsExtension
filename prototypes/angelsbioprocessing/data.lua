@@ -52,7 +52,7 @@ if mods["angelsbioprocessing"] then
         stack_size = 1,
         fuel_value = (1 + recipeIndex * 3) * 10 .. "MJ",
         fuel_category = fuelCategory.name,
-        order = "d" .. recipeIndex,
+        order = "d[organic-tree]-a" .. recipeIndex,
         subgroup = data.raw["recipe"][recipeName].subgroup,
       }
 
@@ -61,7 +61,7 @@ if mods["angelsbioprocessing"] then
       {
         type = "recipe",
         name = "organic-wood" .. recipeIndex,
-        localised_name = {"recipe-name.recipe-amount", string.format("%s", data.raw["recipe"][recipeName].results[1].amount), {"item-name.wood"}},
+        --localised_name = {"recipe-name.recipe-amount", string.format("%s", data.raw["recipe"][recipeName].results[1].amount), {"item-name.wood"}},
         icons =
         {
           {
@@ -85,6 +85,7 @@ if mods["angelsbioprocessing"] then
         },
         results = util.table.deepcopy(data.raw["recipe"][recipeName].results),
         subgroup = treeItem.subgroup,
+        order = "e[wood]-a" .. recipeIndex,
       }
       table.insert(treeRecipe.results, {
         name = "hand-saw",
