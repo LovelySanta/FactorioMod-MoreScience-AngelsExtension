@@ -160,6 +160,7 @@ if mods["bobtech"] then
     local bobRedTechName = "automation-science-pack"
     LSlib.technology.removeRecipeUnlock(bobRedTechName, string.format(scienceNames.red, "pack"))
     LSlib.technology.addRecipeUnlock(bobRedTechName, string.format(scienceNames.red, "pack").."-basic")
+    LSlib.recipe.disable(string.format(scienceNames.red, "pack").."-basic")
 
     if mods["angelsrefining"] then
       LSlib.technology.addPrerequisite("ore-crushing", bobRedTechName)
