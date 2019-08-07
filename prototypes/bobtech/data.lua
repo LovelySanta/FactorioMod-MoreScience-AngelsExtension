@@ -151,6 +151,33 @@ if mods["bobtech"] then
   end
 
 
+
+  if settings.startup["bobmods-burnerphase"].value == true then
+
+    LSlib.item.setSubgroup("tool", "steam-science-pack", LSlib.recipe.getSubgroup(string.format(scienceNames.red, "pack").."-basic"))
+    LSlib.item.setOrderstring("tool", "steam-science-pack", "e[science-pack-0]-a[steam]")
+
+    local bobRedTechName = "automation-science-pack"
+    LSlib.technology.removeRecipeUnlock(bobRedTechName, string.format(scienceNames.red, "pack"))
+    LSlib.technology.addRecipeUnlock(bobRedTechName, string.format(scienceNames.red, "pack").."-basic")
+
+    if mods["angelsrefining"] then
+      LSlib.technology.addPrerequisite("ore-crushing", bobRedTechName)
+    end
+    if mods["angelspetrochem"] then
+      LSlib.technology.addPrerequisite("basic-chemistry", bobRedTechName)
+    end
+    if mods["angelssmelting"] then
+      LSlib.technology.addPrerequisite("angels-metallurgy-1", bobRedTechName)
+    end
+    if mods["angelsbioprocessing"] then
+      LSlib.technology.addPrerequisite("bio-wood-processing", bobRedTechName)
+      LSlib.technology.addPrerequisite("gardens", bobRedTechName)
+    end
+
+  end
+
+
   --[[
   -- remove bobs logistics science pack since there is already a logistics science pack from moreScience that needs to be unlocked earlier then bobs.
   -- for that reason we remove bobs logistics science...
