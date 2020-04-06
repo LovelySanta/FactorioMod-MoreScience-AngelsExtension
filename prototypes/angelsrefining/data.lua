@@ -47,6 +47,11 @@ if mods["angelsrefining"] then
     end
   end
 
+  if settings.startup["MS-allow-empty-barrel-recycling"].value == true then
+    data.raw["recipe"]["empty-barrel-recycling"].subgroup = "angels-fluid-control"
+    data.raw["recipe"]["empty-barrel-recycling"].order = "h"
+  end
+
   -- add green science requirements
   LSlib.technology.addPrerequisite("advanced-ore-refining-1", string.format(scienceNames.green, "pack"))
   LSlib.technology.addPrerequisite("slag-processing-1", string.format(scienceNames.green, "pack"))

@@ -41,7 +41,7 @@ if mods["angelsbioprocessing"] then
             icon_size = data.raw["tree"]["tree-09"].icon_size,
           },
           {
-            icon = "__angelspetrochem__/graphics/icons/num_" .. recipeIndex .. ".png",
+            icon = "__angelsrefining__/graphics/icons/num_" .. recipeIndex .. ".png",
             icon_size = 32,
             tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
             scale = 0.32,
@@ -69,7 +69,7 @@ if mods["angelsbioprocessing"] then
             icon_size = data.raw["item"]["wood"].icon_size,
           },
           {
-            icon = "__angelspetrochem__/graphics/icons/num_" .. recipeIndex .. ".png",
+            icon = "__angelsrefining__/graphics/icons/num_" .. recipeIndex .. ".png",
             icon_size = 32,
             tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
             scale = 0.32,
@@ -174,6 +174,7 @@ if mods["angelsbioprocessing"] then
       string.format(scienceNames.red, "pack"),
       string.format(scienceNames.green, "pack"),
     }
+    angelsmods.triggers.lab_ignore_token[bioLabEntity.name] = true
     bioLabRecipe.normal = nil
     bioLabRecipe.expensive = nil
 
@@ -268,7 +269,7 @@ if mods["angelsbioprocessing"] then
             icon_size = data.raw["tree"]["tree-09"].icon_size,
           },
           {
-            icon = "__angelspetrochem__/graphics/icons/num_" .. recipeIndex .. ".png",
+            icon = "__angelsrefining__/graphics/icons/num_" .. recipeIndex .. ".png",
             icon_size = 32,
             tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
             scale = 0.32,
@@ -296,7 +297,7 @@ if mods["angelsbioprocessing"] then
             icon_size = data.raw["item"]["raw-wood"].icon_size,
           },
           {
-            icon = "__angelspetrochem__/graphics/icons/num_" .. recipeIndex .. ".png",
+            icon = "__angelsrefining__/graphics/icons/num_" .. recipeIndex .. ".png",
             icon_size = 32,
             tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
             scale = 0.32,

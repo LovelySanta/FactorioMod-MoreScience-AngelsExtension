@@ -78,7 +78,7 @@ if mods["bobtech"] then
     [scienceNames.blue] = {"sodium-hydroxide"},
     [scienceNames.yellow] = {
       "processing-unit",
-      "battery", "silver-zinc-battery",
+      "battery", "silver-zinc-battery", "lithium-ion-battery",
       "silicon-nitride",
       "titanium-bearing"
     },

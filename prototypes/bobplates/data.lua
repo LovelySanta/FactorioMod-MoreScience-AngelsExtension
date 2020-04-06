@@ -22,7 +22,7 @@ if mods["bobplates"] then
   LSlib.technology.addPrerequisite("alloy-processing-2", string.format(scienceNames.purple, "pack"))
   LSlib.technology.addIngredient("alloy-processing-2", 1, string.format(scienceNames.cyan, "pack"))
   LSlib.technology.addIngredient("alloy-processing-2", 1, string.format(scienceNames.purple, "pack"))
-
+  
   LSlib.technology.addPrerequisite("ceramics", string.format(scienceNames.orange, "pack"))
   LSlib.technology.addIngredient("ceramics", 1, string.format(scienceNames.orange, "pack"))
   LSlib.technology.removeIngredient("ceramics", string.format(scienceNames.blue, "pack"))
@@ -40,11 +40,7 @@ if mods["bobplates"] then
   LSlib.technology.addPrerequisite("advanced-electronics-3", string.format(scienceNames.purple, "pack"))
 
   -- gas bottle ----------------------------------------------------------------
-  LSlib.technology.addPrerequisite("gas-canisters", string.format(scienceNames.green, "pack"))
-  LSlib.technology.addPrerequisite("fluid-handling-2", "gas-canisters")
-
-  LSlib.recipe.addIngredient("gas-canister", "empty-barrel", 1)
-  if settings.startup["MS-allow-empty-barrel-recycling"].value == true then
+  if mods["angelsrefining"] and settings.startup["MS-allow-empty-barrel-recycling"].value == true then
     local gasBottleRecycling = util.table.deepcopy(data.raw["recipe"]["gas-canister"])
     gasBottleRecycling.name = gasBottleRecycling.name.."-recycling"
     gasBottleRecycling.icons = LSlib.item.getIcons("item", "gas-canister")
@@ -53,28 +49,16 @@ if mods["bobplates"] then
     gasBottleRecycling.expensive = nil
     gasBottleRecycling.ingredients = {{"gas-canister", 5}}
     gasBottleRecycling.category = "advanced-crafting"
-    gasBottleRecycling.results = {{type="item", name="empty-barrel", amount=1, probability=.95}}
-    gasBottleRecycling.order = data.raw["item"]["gas-canister"].order .. "-b[recycle]"
+    gasBottleRecycling.results = {{type="item", name="empty-canister", amount=1, probability=0.95}}
+    gasBottleRecycling.subgroup = mods["angelsrefining"] and "angels-fluid-control" or gasBottleRecycling.subgroup
+    gasBottleRecycling.order = mods["angelsrefining"] and "j" or data.raw["item"]["gas-canister"].order .. "-b[recycle]"
     data:extend{gasBottleRecycling}
     data.raw.recipe[gasBottleRecycling.name].allow_as_intermediate = false
     LSlib.technology.addRecipeUnlock("gas-canisters", "gas-canister-recycling")
   end
 
   -- canister -----------------------------------------------------------------
-  data:extend{{
-    type = "technology",
-    name = "fuel-canisters",
-    icon = "__MoreScience-BobAngelsExtension__/graphics/canister.png",
-    icon_size = 720,
-    prerequisites = {"fluid-handling-2", "flammables", "plastics"},
-    unit = util.table.deepcopy(data.raw.technology["flammables"].unit),
-    effects = {},
-    order = "c-b-i0",
-  }}
-  LSlib.technology.addRecipeUnlock("fuel-canisters", "empty-canister")
-
-  LSlib.recipe.editIngredient("empty-canister", "iron-plate", "empty-barrel", 1)
-  if settings.startup["MS-allow-empty-barrel-recycling"].value == true then
+  if mods["angelsrefining"] and settings.startup["MS-allow-empty-barrel-recycling"].value == true then
     local canisterRecycling = util.table.deepcopy(data.raw["recipe"]["empty-canister"])
     canisterRecycling.name = canisterRecycling.name.."-recycling"
     canisterRecycling.icons = LSlib.item.getIcons("item", "empty-canister")
@@ -83,11 +67,12 @@ if mods["bobplates"] then
     canisterRecycling.expensive = nil
     canisterRecycling.ingredients = {{"empty-canister", 5}}
     canisterRecycling.category = "advanced-crafting"
-    canisterRecycling.results = {{type="item", name="empty-barrel", amount=1, probability=.95}}
-    canisterRecycling.order = data.raw["item"]["empty-canister"].order .. "-b[recycle]"
+    canisterRecycling.results = {{type="item", name="empty-barrel", amount=1, probability=0.95}}
+    canisterRecycling.subgroup = mods["angelsrefining"] and "angels-fluid-control" or canisterRecycling.subgroup
+    canisterRecycling.order = mods["angelsrefining"] and "i" or data.raw["item"]["empty-canister"].order .. "-b[recycle]"
     data:extend{canisterRecycling}
     data.raw.recipe[canisterRecycling.name].allow_as_intermediate = false
-    LSlib.technology.addRecipeUnlock("fuel-canisters", "empty-canister-recycling")
+    LSlib.technology.addRecipeUnlock("fluid-handling", "empty-canister-recycling")
   end
 
   -- gem processing ------------------------------------------------------------

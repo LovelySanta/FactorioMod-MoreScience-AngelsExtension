@@ -11,7 +11,8 @@ if mods["bobrevamp"] then
   --LSlib.technology.addPrerequisite("chemical-plant", "electronics")
   --LSlib.technology.addPrerequisite("chemical-plant", "steel-processing")
 
-  LSlib.technology.addPrerequisite("purification-research", "chemical-plant")
+  LSlib.technology.removePrerequisite("chemical-plant", "logistic-science-pack")
+  --LSlib.technology.addPrerequisite("purification-research", "chemical-plant")
   LSlib.technology.removePrerequisite("purification-research", "electronics")
   LSlib.technology.removeRecipeUnlock("purification-research", "chemical-plant")
 

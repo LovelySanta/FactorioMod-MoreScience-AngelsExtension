@@ -44,7 +44,7 @@ for _,modName in pairs{
 -- technology tree cleanup
 local containsExtension = false
 for _,extension in pairs{
-  "ScienceCostTweakerExtension",
+  --"ScienceCostTweakerExtension",
   --"SeaBlockExtension",
 } do
   if mods["MoreScience-" .. extension] then
@@ -56,3 +56,5 @@ if not containsExtension then
   LSlib.utils.log.log("----- Cleaning up the tech tree -----")
   LSlib.technology.removeAllRedundantPrerequisites()
 end
+log(serpent.block(data.raw.technology["lead-processing"]))
+log(serpent.block(data.raw.technology["battery"]))
